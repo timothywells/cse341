@@ -1,0 +1,1 @@
+<p id="copyright">&copy; <script>document.write(new Date().getFullYear())</script> Timothy Wells | WDD 330 - Back End Development II | All rights reserved</p>
