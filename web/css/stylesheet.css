@@ -128,15 +128,19 @@ audio{
     align-items: center;
     justify-content: center 
 }
+
 img{
     margin: 0;
-    padding: 0;
+    Padding: 0;
 }
-#me_img{
-    float: left;
-    margin: 0;
-    padding: 0;
+figure{
+    margin: 0 1em;
+    Padding: 0;
+    max-width: 10%;
+    max-height: max-content;
+    float: right;
 }
+
 @media only screen and (max-width: 400px) {
     nav{
         max-width: 100%;
