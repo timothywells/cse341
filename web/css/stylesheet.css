@@ -136,6 +136,9 @@ audio{
     height: auto;
     float: left;
 }
+#desc{
+    text-align: center;
+}
 img{
     margin: 0;
     Padding: 0;
