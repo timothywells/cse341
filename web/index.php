@@ -18,6 +18,7 @@
     </nav> 
 
     <main>
+        <img id="me_img" src="/images/me.jpg" alt="Tim Wells">Tim Wells</img>
         <h1>Introduction</h1>
             <p></p>
             <p></p>
