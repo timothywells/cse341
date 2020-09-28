@@ -20,7 +20,11 @@
         <figcaption>Tim Wells - Designer and Developer</figcaption>
         </figure>
         <h2>Introduction</h2>
-            <p></p>
+            <p>
+            <figure id="me_img">
+                <img src="/images/me.jpg" alt="Tim Wells"></img>
+                <figcaption>Tim Wells - Designer and Developer</figcaption>
+            </figure></p>
     </main>
 </div>
     <footer>

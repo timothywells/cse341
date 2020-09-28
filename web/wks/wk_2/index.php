@@ -20,6 +20,8 @@
             <h3>Team Assignment</h3>    
                 <p></p>
             <h3>Personal Assignment</h3>
+                <p></p>
+
     </main>
 </div>
     <footer>
