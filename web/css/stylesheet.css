@@ -132,13 +132,12 @@ audio{
 img{
     margin: 0;
     Padding: 0;
+    width: 50%;
+    height: auto;
 }
 figure{
-    margin: 0 1em;
+    margin: 0;
     Padding: 0;
-    max-width: 10%;
-    max-height: max-content;
-    float: right;
 }
 
 @media only screen and (max-width: 400px) {
