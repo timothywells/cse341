@@ -130,21 +130,18 @@ audio{
 }
 
 #img_me{
-    margin: 0;
+    margin: 0 1em 1em 0;
     Padding: 0;
     width: 25%;
     height: auto;
     float: left;
-}
-#desc{
     text-align: center;
 }
 img{
     margin: 0;
     Padding: 0;
-    width: 25%;
+    width: 100%;
     height: auto;
-    float: left;
 }
 /*Meida for Phones*/
 @media only screen and (max-width: 400px) {
