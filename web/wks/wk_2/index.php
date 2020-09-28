@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home Page | CSE 341 - Back End Development II</title>
-        <meta name="description" content="CSE 341 - Back End Development Home Page designed and developed by Tim Wells">
+        <title>Week 2 | CSE 341 - Back End Development II</title>
+        <meta name="description" content="WDD 330 - Front End Development Home Page designed and developed by Tim Wells">
         <?php include $_SERVER['DOCUMENT_ROOT'].'/common/head.php'; ?>
     </head>
     <header>
@@ -14,13 +14,12 @@
     </nav> 
 
     <main>
-        <h1>Home Page</h1>
-        <figure>
-        <img id="me_img" src="/images/me.jpg" alt="Tim Wells"></img>
-        <figcaption>Tim Wells - Designer and Developer</figcaption>
-        </figure>
-        <h2>Introduction</h2>
-            <p></p>
+        <h2>Week 2 - Home Page Creation</h2>
+            <h3>Introduction</h3>
+                <p></p>
+            <h3>Team Assignment</h3>    
+                <p></p>
+            <h3>Personal Assignment</h3>
     </main>
 </div>
     <footer>
