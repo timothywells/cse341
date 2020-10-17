@@ -19,7 +19,7 @@ function make_message_list(){
     $stmt->closeCursor();
     return $response;
 }
-
+/*
 function message_table($messages_list){
     $html = '<table>';
     $html .= '<tr><th>Name</th><th>Phone</th><th>E-Mail</th><th>Subject</th><th>Message</th></tr>';
@@ -29,6 +29,6 @@ function message_table($messages_list){
     $html = '</table>';
     return $html;
 }
-
+*/
 ?>
 
