@@ -19,6 +19,7 @@
         <h1>View Messages</h1>
         <?php
             print_r($messages_list);
+            echo $messages_list[0]['fullname'];
         ?>
     </body>
 	<footer>
