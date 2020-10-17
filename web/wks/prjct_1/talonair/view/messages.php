@@ -18,7 +18,7 @@
 	<body id="talon-air-home">
         <h1>View Messages</h1>
         <?php
-            echo $messages_table;
+            echo $message_table;
         ?>
     </body>
 	<footer>
