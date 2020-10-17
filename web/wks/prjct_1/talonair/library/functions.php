@@ -20,10 +20,10 @@ function make_message_list(){
     return $response;
 }
 
-function message_table($message_list){
+function message_table($messages_list){
     $html = '<table>';
     $html .= '<tr><th>Name</th><th>Phone</th><th>E-Mail</th><th>Subject</th><th>Message</th></tr>';
-    foreach($message_list as $line_item){
+    foreach($messages_list as $line_item){
         $html .= "<tr><td>" . $line_item['fullname'] . "</td><td>" . $line_item['form_phone'] . "</td><td>" . $line_item['form_email'] . "</td><td>" . $line_item['form_subject'] . "</td><td>" . $line_item['form_message'] . "</td></tr>";
     }
     $html = '</table>';
