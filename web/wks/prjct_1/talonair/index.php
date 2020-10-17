@@ -1,6 +1,8 @@
 <?php
+session_start();
 require_once 'library/connections.php';
 require_once 'library/functions.php';
+
 
 $action = filter_input(INPUT_POST, 'action');
  if ($action == NULL){
@@ -25,7 +27,9 @@ switch ($action){
     break;
     case 'view_messages':
         $messages_list = make_message_list();
+        $_SESSION['testvar1'] = $messages_list;
         $message_table = message_table($messages_list);
+        $_SESSION['testvar2'] = $message_table;
         include 'view/messages.php';
     break;
 
