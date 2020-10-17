@@ -25,8 +25,9 @@ switch ($action){
     break;
     case 'view_messages':
         $messages_list = make_message_list();
+        $message_table = message_table($messages_list);
         include 'view/messages.php';
-
+    break;
 
 
     default:
