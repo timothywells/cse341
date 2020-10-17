@@ -16,10 +16,11 @@ switch ($action){
     case 'send_message':
         $fullname=$_POST['fullname'];
         $form_phone=$_POST['form_phone'];
-        $form_email=$_POST['form_emal'];
+        $form_email=$_POST['form_email'];
         $form_subject=$_POST['form_subject'];
         $form_message=$_POST['form_message'];
         form_record($fullname, $form_phone, $form_email, $form_subject, $form_message);
+        include 'view/confirm.php';
     default:
         include 'view/home.php';
 }
