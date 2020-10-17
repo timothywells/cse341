@@ -23,6 +23,12 @@ switch ($action){
         form_record($fullname, $form_phone, $form_email, $form_subject, $form_message);
         include 'view/confirm.php';
     break;
+    case 'view_messages':
+        $messages_list = make_message_list();
+        include 'view/messages.php';
+
+
+
     default:
         include 'view/home.php';
     break;

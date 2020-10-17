@@ -16,10 +16,11 @@
 	</nav>
 	
 	<body id="talon-air-home">
-        <h1>Thank You</h1>
-        <p>We have recieved your message and will get back to you as soon as possible</p>
-        <a href="index.php?action=view_messages">View Messages</a>
-	</body>
+        <h1>View Messages</h1>
+        <?php
+            echo $messages_list;
+        ?>
+    </body>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>
