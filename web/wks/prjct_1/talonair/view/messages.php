@@ -23,9 +23,9 @@
 
             $html = '<table>';
             $html .= '<tr><th>Name</th><th>Phone</th><th>E-Mail</th><th>Subject</th><th>Message</th></tr>';
-            foreach($messages_list as $line_item){
-                $html .= "<tr><td>" . $line_item['fullname'] . "</td><td>" . $line_item['form_phone'] . "</td><td>" . $line_item['form_email'] . "</td><td>" . $line_item['form_subject'] . "</td><td>" . $line_item['form_message'] . "</td></tr>";
-            }
+            //foreach($messages_list as $line_item){
+            //    $html .= "<tr><td>" . $line_item['fullname'] . "</td><td>" . $line_item['form_phone'] . "</td><td>" . $line_item['form_email'] . "</td><td>" . $line_item['form_subject'] . "</td><td>" . $line_item['form_message'] . "</td></tr>";
+            //}
             $html = '</table>';
             echo $html;
         ?>
