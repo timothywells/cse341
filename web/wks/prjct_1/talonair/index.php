@@ -13,6 +13,7 @@ $action = filter_input(INPUT_POST, 'action');
 switch ($action){
     case 'home':
         include 'view/home.php';
+    break;
     case 'send_message':
         $fullname=$_POST['fullname'];
         $form_phone=$_POST['form_phone'];
@@ -21,8 +22,10 @@ switch ($action){
         $form_message=$_POST['form_message'];
         form_record($fullname, $form_phone, $form_email, $form_subject, $form_message);
         include 'view/confirm.php';
+    break;
     default:
         include 'view/home.php';
+    break;
 }
 
 
