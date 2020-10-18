@@ -43,7 +43,7 @@
 				</div>
 			</div>
 
-			<a href="index.php?action=view_messages">View Messages</a>
+			
 		</div>
 		<div class="logos" id="company_logos"></div>
 	</body>
