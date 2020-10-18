@@ -25,7 +25,7 @@
     </main>
 </div>
     <footer>
-        <?php include '/common/footer.php'; ?>
+        <?php include SERVER['DOCUMENT_ROOT'].'/common/footer.php'; ?>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 </html>

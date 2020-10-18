@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Week 3 | CSE 341 - Back End Development II</title>
-        <?php include '/common/head.php'; ?>
+        <?php include SERVER['DOCUMENT_ROOT'].'/common/head.php'; ?>
     </head>
     <header>
         <h1>CSE 341 - Back End Web Development II</h1>
@@ -24,5 +24,5 @@
     <footer>
         <?php include $_SERVER['DOCUMENT_ROOT'].'common/footer.php'; ?>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 </html>
