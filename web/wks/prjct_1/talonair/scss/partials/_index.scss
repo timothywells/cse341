@@ -1,0 +1,127 @@
+//index.html layout
+
+//Banner
+	#home_banner{
+		background: url('scss/images/stock/phx_zoom_out.jpg') no-repeat center center;
+	}
+//Main Content
+	.firstblock{
+//On Home Page First Block ID
+		@include MQ(S) {
+			#main_desc{
+				width: auto;
+				margin: 15px;
+			}
+    	}
+		@include MQ(M) {
+			#main_desc{
+				width: 40%;
+				margin: auto 0;
+			}
+			#ac_unit{
+				width: 60%;
+				background: url('scss/images/stock/hot_doggo.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center center;
+				clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+			}
+		}
+	}
+
+	.secondblock{
+//Only One FORM on site on Home Page
+		.form_container{
+			@include MQ(S){
+				width: auto;
+			}
+			@include MQ(M){
+				width: 60%;
+			}
+			//position: relative;
+			//display: block;
+			margin: auto;
+			padding: 0;
+			text-align: center;
+			color: white;
+			height: auto;
+		}
+		form{
+//			margin: auto;
+//			display: block;
+		}
+		.form{
+			//display: block;
+			margin: 0 auto;
+			padding: auto;
+			width: 50%;
+			height: auto;
+//			transform: translate(-50%, -50%);
+//			position: absolute;
+//			top: 50%;
+//			left: 50%;
+			background-color: #434343;
+			#form{
+				//display: block;
+				margin: 0;
+				padding: 10px;
+				width: auto;
+				height: aut0;
+				//background-color: yellow;
+			}
+			input[type=text], [type=email]{
+				display: inline-block;
+				margin: 5px auto;
+				padding: 0;
+				width: 75%;
+				height: auto;
+				box-sizing: border-box;
+				border: 2px solid #ccc;
+				border-radius: 4px;
+				background-color: #f8f8f8;
+				font-size: 1em;
+			}
+			textarea{
+				display: block;
+				margin: 5px auto;
+				padding: 0;
+				width: 75%;
+				height: auto;
+				box-sizing: border-box;
+				border: 2px solid #ccc;
+				border-radius: 4px;
+				background-color: #f8f8f8;
+				font-size: 1em;
+				resize: none;
+			}
+			input[type=submit] {
+				width: 75%;
+				background-color: darkgreen;
+				color: white;
+				padding: auto;
+				margin: 1em auto 1em;
+				border: none;
+				border-radius: 4px;
+				font-size: 2vw;
+				cursor: pointer;
+			}
+			input[type=submit]:hover {
+				background-color: green;
+				padding: auto;
+				margin: 1em auto 1em;
+			}
+		}
+		//Form Description
+		#form_desc{
+			@include MQ(S){
+				display: none;
+			}
+			@include MQ(M){
+			width: 50%;
+			display: block;
+			height: auto;
+			margin: auto 0;
+			//background-color: aqua;
+			}
+		}
+	}

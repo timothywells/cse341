@@ -1,0 +1,104 @@
+//about.html layout
+
+//Banner
+#about_banner{
+		background: url('scss/images/stock/phx_zoom_in.jpg') no-repeat center center;
+	}
+
+//		@include MQ(S) {
+//			#main_desc{
+//				width: 100%;
+//				margin: 15px;
+//			}
+//    	}
+//		@include MQ(M) {
+//			#main_desc{
+//				width: 40%;
+//				margin: auto 0;
+//			}
+
+
+//Main Content
+	.about{
+		width: auto;
+		height: auto;
+		padding: auto;
+		margin: 0;
+	}
+	#about_intro{
+		margin: 1vh 10vw;
+	}
+
+.firstblock{
+//On Home Page First Block ID
+	
+	@include MQ(S){
+	#mike_desc{
+		width: auto;
+		margin: 0;
+		padding: 5vh 5vw;
+	}
+	#mike_pic{
+		width: auto;
+		background: url('scss/images/personnel/mike.jpg');
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center center;
+		background-color: black;
+		margin: auto;
+		padding: 50%;
+		}
+	}
+	
+	@include MQ(M){	
+	#mike_desc{
+		width: 50%;
+		margin: auto 0;
+	}
+	#mike_pic{
+		width: 50%;
+		background: url('scss/images/personnel/mike.jpg');
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center center;
+		background-color: white;
+//		clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+		margin: 0;
+		padding: 0;
+		}
+	}
+}
+.secondblock{
+	@include MQ(S){
+		#cynthia_desc{
+		width: auto;
+		margin: 0;
+		padding: 5vh 5vw;
+		}
+	#cynthia_pic{
+		width: auto;
+		background: url('scss/images/personnel/cynthia.jpg');
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center center;
+		margin: auto;
+		padding: 50%;
+		}
+	}
+	@include MQ(M){	
+	#cynthia_desc{
+		width: 50%;
+		margin: auto 0;
+	}
+	#cynthia_pic{
+		width: 50%;
+		background: url('scss/images/personnel/cynthia.jpg');
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center center;
+		//clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+		margin: 0;
+		padding: 0;
+		}
+	}
+}

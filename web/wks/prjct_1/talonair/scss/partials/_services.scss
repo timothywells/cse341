@@ -1,0 +1,51 @@
+//service.html layout
+
+//Banner
+#services_banner{
+	background: url('scss/images/stock/phoenix.jpg') no-repeat center center;
+}
+
+//Main Content
+
+.firstblock{
+@include MQ(S) {
+			#service_call_desc{
+				width: auto;
+				margin: 15px;
+			}
+    	}		
+@include MQ(M) {	
+	#service_call_desc{
+		width: 40%;
+		margin: auto 0;
+	}
+	#service_call_img{
+		width: 60%;
+		background: url('scss/images/stock/ac-repair.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+		}
+	}
+}
+.secondblock{
+@include MQ(S) {
+		#hourly_rate_desc{
+			width: auto;
+			margin: 15px;
+		}
+	}
+@include MQ(M) {
+	#hourly_rate_desc{
+		width: 40%;
+		margin: auto 0;
+	}
+	#hourly_rate_img{
+		width: 60%;
+		background: url('scss/images/stock/acunit3.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+		}
+	}
+}

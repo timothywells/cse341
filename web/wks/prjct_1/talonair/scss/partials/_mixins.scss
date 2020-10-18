@@ -1,0 +1,25 @@
+//Mixins
+
+// old media queries
+//@mixin MQ($canvas) {
+//  @if $canvas == S {
+//   @media screen and (max-width: $S) { @content; } 
+//  }
+//  @else if $canvas == M {
+//   @media screen and (min-width: $S) and (max-width: $L) { @content; } 
+//  }
+//  @else if $canvas == L {
+//   @media screen and (min-width: $L) { @content; } 
+//  }
+//}
+
+
+// new media queries
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media screen and (max-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media screen and (min-width: $S) { @content; } 
+  }
+ }
