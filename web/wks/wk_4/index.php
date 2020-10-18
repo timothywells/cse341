@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Week 4 | CSE 341 - Back End Development II</title>
-        <?php include $_SERVER['DOCUMENT_ROOT'].'/common/head.php'; ?>
+        <?php '/common/head.php'; ?>
     </head>
     <header>
         <h1>CSE 341 - Back End Web Development II</h1>
