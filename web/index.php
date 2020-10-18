@@ -3,7 +3,7 @@
     <head>
         <title>Home Page | CSE 341 - Back End Development II</title>
         <meta name="description" content="CSE 341 - Back End Development Home Page designed and developed by Tim Wells">
-        <?php include $_SERVER['DOCUMENT_ROOT'].'common/head.php'; ?>
+        <?php include '/common/head.php'; ?>
     </head>
     <header>
         <h1>CSE 341 - Back End Web Development II</h1>
@@ -25,7 +25,7 @@
     </main>
 </div>
     <footer>
-        <?php include $_SERVER['DOCUMENT_ROOT'].'common/footer.php'; ?>
+        <?php include '/common/footer.php'; ?>
     </footer>
     <script src="js/main.js"></script>
 </html>
