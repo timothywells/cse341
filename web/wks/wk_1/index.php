@@ -24,5 +24,5 @@
     <footer>
         <?php include $_SERVER['DOCUMENT_ROOT'].'common/footer.php'; ?>
     </footer>
-    <script src="./js/main.js"></script>
+    <script src="js/main.js"></script>
 </html>
