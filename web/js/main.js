@@ -20,22 +20,22 @@ var wkllbls = [
 ];
 var wklnks = [
     "/index.php",
-    "wks/prjct_1/index.php",
-    "wks/prjct_2/index.php",
-    "wks/wk_1/index.php",
-    "wks/wk_2/index.php",
-    "wks/wk_3/index.php",
-    "wks/wk_4/index.php",
-    "wks/wk_5/index.php",
-    "wks/wk_6/index.php",
-    "wks/wk_7/index.php",
-    "wks/wk_8/index.php",
-    "wks/wk_9/index.php",
-    "wks/wk_10/index.php",
-    "wks/wk_11/index.php",
-    "wks/wk_12/index.php",
-    "wks/wk_13/index.php",
-    "wks/wk_14/index.php",
+    "/wks/prjct_1/index.php",
+    "/wks/prjct_2/index.php",
+    "/wks/wk_1/index.php",
+    "/wks/wk_2/index.php",
+    "/wks/wk_3/index.php",
+    "/wks/wk_4/index.php",
+    "/wks/wk_5/index.php",
+    "/wks/wk_6/index.php",
+    "/wks/wk_7/index.php",
+    "/wks/wk_8/index.php",
+    "/wks/wk_9/index.php",
+    "/wks/wk_10/index.php",
+    "/wks/wk_11/index.php",
+    "/wks/wk_12/index.php",
+    "/wks/wk_13/index.php",
+    "/wks/wk_14/index.php",
 ];
 for (i=0; i < wkllbls.length; i++) {
     var weekLine = document.createElement ("li");
@@ -50,9 +50,6 @@ for (i=0; i < wkllbls.length; i++) {
 }
 /*Copy Right Date*/
 //document.getElementById('year').appendChild(document.createTextNode(new Date().getFullYear()))
-
-
-
 
 /*document.getElementById("head") = headInfo;
 var headInfo = {
