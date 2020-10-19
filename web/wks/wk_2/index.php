@@ -18,7 +18,7 @@
             <p>Repository - <a href="https://github.com/Blake-Collin/cs313-php-Channel1/tree/master/02Teach">Here</a></p>
         <h2>Individual Assignment</h2>
             <p>The individual assignments included making a homepage, which you can find by hitting the Home button/link on the left side of this page. The other assignment is the Project 1 Proposal which can be found on the left in Project 1.</p>
-            <p>Personal Repository - <a href="https://github.com/timothywells/cse341">Here</a></p>
+            <p>Repository - <a href="https://github.com/timothywells/cse341">Here</a></p>
     </main>
 </div>
     <footer>
