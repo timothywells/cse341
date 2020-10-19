@@ -11,16 +11,14 @@
     <nav>
         <ul class="wk_nav"></ul>
     </nav> 
-
     <main>
-        <h2>Week 2 - Home Page Creation</h2>
-            <h3>Introduction</h3>
-                <p></p>
-            <h3>Team Assignment</h3>    
-                <p></p>
-            <h3>Personal Assignment</h3>
-                <p></p>
-
+        <h1>Week 2 - Home Page Creation</h1>
+        <h2>Team Assignment</h2>
+            <p>This week was the start of the semester, all that was done this week was getting into groups and meeting for the first time to set up the necessary repositories so that we had somewhere to push our code. In my case I am on Team 1 with a repository that Blake Collin created.</p>
+            <p>Repository - </p><a href="https://github.com/Blake-Collin/cs313-php-Channel1/tree/master/02Teach">Here</a>
+        <h2>Individual Assignment</h2>
+            <p>The individual assignments included making a homepage, which you can find by hitting the Home button/link on the left side of this page. The other assignment is the Project 1 Proposal which can be found on the left in Project 1.</p>
+            <p>Personal Repository - </p><a href="https://github.com/timothywells/cse341">Here</a>
     </main>
 </div>
     <footer>
