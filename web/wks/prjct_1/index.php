@@ -3,7 +3,7 @@
     <head>
         <title>Project 1 | CSE 341 - Back End Development II</title>
         <meta name="description" content="WDD 330 - Front End Development Home Page designed and developed by Tim Wells">
-        <?php include SERVER['DOCUMENT_ROOT'].'/common/head.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'].'common/head.php'; ?>
     </head>
     <header>
         <h1>CSE 341 - Back End Web Development II</h1>
