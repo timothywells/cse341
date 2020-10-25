@@ -33,7 +33,10 @@ switch ($action){
         include 'view/messages.php';
     break;
 
-    //case 'about':
+    case 'about':
+        //Add content variables here
+        include 'view/about.php';
+    break;
 
     default:
         include 'view/home.php';
