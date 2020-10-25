@@ -1,5 +1,5 @@
 <?php 
-    $pagetitle = 'Talon Air, Inc. | Home';
+    $pagetitle = 'Talon Air, Inc. | Messages';
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,9 +17,11 @@
 	
 	<body id="talon-air-home">
         <h1>View Messages</h1>
+        <!-- Div needed to format tables -->
         <?php
             echo $message_table;
         ?>
+
     </body>
 	<footer>
             <?php include 'common/footer.php'; ?>

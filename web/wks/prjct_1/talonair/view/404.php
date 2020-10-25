@@ -1,5 +1,5 @@
 <?php 
-    $pagetitle = 'Talon Air, Inc. | Confirmation';
+    $pagetitle = 'Talon Air, Inc. | 404 - NOT FOUND';
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,9 +16,11 @@
 	</nav>
 	
 	<body id="talon-air-home">
-        <h1>Thank You</h1>
-        <p>We have recieved your message and will get back to you as soon as possible</p>
-        <a href="index.php?action=view_messages">View Messages</a>
+        <!-- Div needed to format center and pic -->
+        <h1>404 - NOT FOUND</h1>
+            <p>Sorry this page does not exist, return to the previous page or go to the Homepage.</p>
+            <p>Thank You</p>
+            <a href="index.php">Talon Air Homepage</a>
 	</body>
 	<footer>
             <?php include 'common/footer.php'; ?>

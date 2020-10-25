@@ -36,8 +36,13 @@ CREATE TABLE send_message(
     form_phone VARCHAR(16) NOT NULL,
     form_email VARCHAR(128) NULL,
     form_subject VARCHAR(128) NOT NULL,
-    form_message TEXT NOT NULL
+    form_message TEXT NOT NULL,
+    message_ID SERIAL PRIMARY KEY
 );
+
+
+
+
 
 INSERT INTO send_message(
     fullname, form_phone, form_email, form_subject, form_message

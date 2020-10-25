@@ -1,5 +1,5 @@
 <?php 
-    $pagetitle = 'Talon Air, Inc. | Reviews';
+    $pagetitle = 'Talon Air, Inc. | Confirm Delete';
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,12 +16,12 @@
 	</nav>
 	
 	<body id="talon-air-home">
-        <h1>Reviews</h1>
-        <!-- Div needed to format table -->
-        <?php
-            echo $reviews_table;
-        ?>
-    </body>
+                <!-- Div needed to format center and pic -->
+
+                <h1>Confirm Delete</h1>
+                <button type='button' id=''>Yes</Button><button>No</button>
+
+	</body>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>

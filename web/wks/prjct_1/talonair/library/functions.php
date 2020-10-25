@@ -1,5 +1,5 @@
 <?php
-
+//Saving a Message from Home Page
 function form_record($fullname, $form_phone, $form_email, $form_subject, $form_message){
     $db = herokuConnect();
     $sql = "INSERT INTO send_message(
@@ -10,6 +10,7 @@ function form_record($fullname, $form_phone, $form_email, $form_subject, $form_m
     $stmt->closeCursor();
 }
 
+//Getting the array of the messages from DB
 function make_message_list(){
     $db = herokuConnect();
     $sql = "SELECT * FROM send_message";
@@ -20,14 +21,33 @@ function make_message_list(){
     return $response;
 }
 
+//Creates Table in HTML
 function message_table($messages_list){
     $html = '<table>';
     $html .= '<tr><th>Name</th><th>Phone</th><th>E-Mail</th><th>Subject</th><th>Message</th><th></th></tr>';
     foreach($messages_list as $line_item){
-        $html .= "<tr><td>" . $line_item['fullname'] . "</td><td>" . $line_item['form_phone'] . "</td><td>" . $line_item['form_email'] . "</td><td>" . $line_item['form_subject'] . "</td><td>" . $line_item['form_message'] . "</td><td>" . $line_item['form_id'] . "</td></tr>";
+        $html .= "<tr><td>" . $line_item['fullname'] . "</td><td>" . $line_item['form_phone'] . "</td><td>" . $line_item['form_email'] . "</td><td>" . $line_item['form_subject'] . "</td><td>" . $line_item['form_message'] . "</td><td><a href=inbox.php?action=delete_message&messageID=" . $line_item['message_id']. ">Delete Message</a></td></tr>";
     }
     $html .= '</table>';
     return $html;
+}
+
+//Delete from Messaeg Table
+function delete_message($messageID){
+    $db = herokuConnect();
+    $sql = "DELETE FROM send_message WHERE message_id = $messageID";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $response = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $response;
+}
+
+
+
+
+function register(){
+
 }
 
 ?>

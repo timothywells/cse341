@@ -4,7 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php include 'common/head.php'; ?>
+	<?php include 'common/head.php'; ?>
+	<meta name="description" content="A premium HVAC Company, providing the best commercial and residential Heating and Air Conditioning in the Valley of the Sun!">
 </head>
 <div class="wrapper">	
 	<header>
