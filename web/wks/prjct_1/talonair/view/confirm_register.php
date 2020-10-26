@@ -17,7 +17,7 @@
 	
 	<body id="talon-air-home">
         <!-- Div needed to format center and pic -->
-        <h1>Thank You for Registering</h1>
+        <h3 class="h3-center">Thank You for Registering</h3>
 	</body>
 	<footer>
             <?php include 'common/footer.php'; ?>

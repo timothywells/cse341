@@ -1,0 +1,3 @@
+Run this command before running SASS/CSS pre-processor
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+This command will temporarily allow anyth script to be run directly to the system w/o warnings or checks.

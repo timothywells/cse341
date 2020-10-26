@@ -16,7 +16,7 @@
 	</nav>
 	
 	<body id="talon-air-home">
-        <h1>Reviews</h1>
+        <h3 class="h3-center">Reviews</h3>
         <!-- Div needed to format table -->
         <?php
             echo $reviews_table;

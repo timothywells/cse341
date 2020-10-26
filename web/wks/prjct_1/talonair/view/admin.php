@@ -16,7 +16,7 @@
 	</nav>
 	
 	<body id="talon-air-home">
-        <h1>Admin Profile</h1>
+        <h3 class="h3-center">Admin Profile</h3>
         <!-- Div needed to format tables, possibly skip the profile here cause it is just Admin in general -->
         <?php
             echo $profle_table;

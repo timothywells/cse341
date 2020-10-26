@@ -18,7 +18,7 @@
 	<body id="talon-air-home">
                 <!-- Div needed to format center and pic -->
 
-                <h1>Thank You</h1>
+                <h3 class="h3-center">Thank You</h3>
                         <!-- Picture -->
                         <p>We have recieved your message and will get back to you as soon as possible</p>
                         <a href="index.php?action=view_messages">View Messages</a>

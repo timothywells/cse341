@@ -18,7 +18,7 @@
 	<body id="talon-air-home">
                 <!-- Div needed to format center and pic -->
 
-                <h1>Confirm Delete</h1>
+                <h3 class="h3-center">Confirm Delete</h3>
                 <button type='button' id=''>Yes</Button><button>No</button>
 
 	</body>
