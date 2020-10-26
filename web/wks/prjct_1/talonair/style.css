@@ -46,6 +46,7 @@ h3 {
 }
 h3 .center {
   text-align: center;
+  width: 100%;
 }
 @media screen and (max-width: 900px) {
   h3 {
