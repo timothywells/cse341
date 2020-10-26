@@ -81,7 +81,7 @@ body{
 	padding: 0;
 	width: 100%;
 	
-//All site banners
+	//All site banners
 	.banner{
 		align-content: center;
 		width: 100%;
@@ -90,20 +90,20 @@ body{
 		margin: 0;
 	}
 	
-//All Descriptions
+	//All Descriptions
 	.desc{
 		color: white;
 		padding: 3vw;
 	}
 	
-//All Image Classes
+	//All Image Classes
 	.image{
 		margin: 0;
 		padding: 0;
 		height: auto;
 		width: auto;
 	}
-//All First Block Divs
+	//All First Block Divs
 	.firstblock{
 		@include MQ(S){
 			flex-direction: column-reverse;
@@ -117,7 +117,7 @@ body{
 		background-color: slategray;
 		}
 	
-//Second Block Divs
+	//Second Block Divs
 	.secondblock{
 		@include MQ(S){
 			flex-direction: column;
@@ -130,8 +130,7 @@ body{
 		margin: 0;
 		background-color: royalblue;
 	}
-
-//Logo Banner
+	//Logo Banner
 	.logos{
 		width: auto;
 		height: 30vh;
@@ -139,7 +138,7 @@ body{
 		margin: 1vh 2vw;
 		background: url('scss/images/brands/logos.svg') no-repeat center center;
 		}
-//Table Format
+	//Table Format
 	table {
 		table-layout: fixed;
 		width: 100%;
