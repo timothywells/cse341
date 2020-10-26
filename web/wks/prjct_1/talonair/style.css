@@ -56,7 +56,7 @@ h3 {
     line-height: 4vw;
   }
 }
-h3 .messages-h {
+h3 .h3-center {
   text-align: center;
 }
 
@@ -281,8 +281,17 @@ body .logos {
 body table {
   table-layout: fixed;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 5% auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+}
+body table th, body table td {
+  text-align: left;
+  padding: 10px;
+}
+body table tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
 footer {
