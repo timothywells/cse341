@@ -56,6 +56,9 @@ h3 {
     line-height: 4vw;
   }
 }
+h3 .messages-h {
+  text-align: center;
+}
 
 h4 {
   font-family: "Open Sans";

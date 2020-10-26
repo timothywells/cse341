@@ -16,7 +16,7 @@
 	</nav>
 	
 	<body id="talon-air-home">
-        <h1>View Messages</h1>
+        <h3 class="messages-h">View Messages</h3>
         <!-- Div needed to format tables -->
         <?php
             echo $message_table;
