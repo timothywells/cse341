@@ -16,28 +16,26 @@
 	</nav>
 	
 	<body id="talon-air-home">
-        <h3 class="h3-center">Admin Profile</h3>
+        <h3 class="center">Admin Profile</h3>
         <!-- Div needed to format tables, possibly skip the profile here cause it is just Admin in general -->
         <?php
             echo $profle_table;
         ?>
 
-
-        <h1>Messages</h1>
+        <h3 class="center">Messages</h3>
         <!-- Div needed to format tables -->
         <?php
             echo $message_table;
         ?>
 
-
-        <h1>Reviews</h1>
+        <h3 class="center">Reviews</h3>
         <!-- Div needed to format tables -->
         <?php
             echo $customer_reviews;
         ?>
 
 
-        <h1>Customers</h1>
+        <h3 class="center">Customers</h3>
         <!-- Div needed to format tables -->
         <?php
             echo $customer_table;

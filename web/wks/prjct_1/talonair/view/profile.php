@@ -16,19 +16,19 @@
 	</nav>
 	
 	<body id="talon-air-home">
-        <h3 class="h3-center">Profile</h3>
+        <h3 class="center">Profile</h3>
         <!-- Div needed to format -->
         <?php
             echo $cust_profle;
         ?>
 
-        <h3 class="h3-center">Your Messages</h3>
+        <h3 class="center">Your Messages</h3>
         <!-- Div needed to format -->
         <?php
             echo $cust_message;
         ?>
 
-        <h3 class="h3-center">Your Reviews</h3>
+        <h3 class="center">Your Reviews</h3>
         <!-- Div needed to format -->
         <?php
             echo $cust_review;
