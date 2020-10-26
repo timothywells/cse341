@@ -57,7 +57,7 @@ nav{
 	}
 		li{
 			font-family: 'Arial', sans-serif;
-  			font-size: 2vw;
+  			font-size: 1.5vw;
 			font-weight: 600;
 			display: inline-block;
 			height: 10vh;
@@ -104,7 +104,6 @@ body{
 		width: auto;
 	}
 //All First Block Divs
-
 	.firstblock{
 		@include MQ(S){
 			flex-direction: column-reverse;
@@ -140,6 +139,14 @@ body{
 		margin: 1vh 2vw;
 		background: url('scss/images/brands/logos.svg') no-repeat center center;
 		}
+//Table Format
+	table {
+		table-layout: fixed;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
 }
 //All Footer information is the same
 footer{
