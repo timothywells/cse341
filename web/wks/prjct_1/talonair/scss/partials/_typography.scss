@@ -45,6 +45,9 @@ h3 {
 	color: black;
 	font-weight: extra-bold;
 	padding: 0;
+	.center {
+		text-align: center;
+	}
 	@include MQ(S) {
 		font-size: 6vw;
 		line-height: 6vw;
@@ -53,9 +56,7 @@ h3 {
 		font-size: 4vw;
 		line-height: 4vw;
 	}
-	.center {
-		text-align: center;
-	}
+
 }
 h4 {
 	font-family: $header-font;
