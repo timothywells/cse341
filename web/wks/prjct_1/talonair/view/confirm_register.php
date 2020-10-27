@@ -12,10 +12,10 @@
 	<nav>
         <?php include 'common/nav.php'; ?>
 	</nav>
-	<body>
+	<main>
         <!-- Div needed to format center and pic -->
         <h3 class="center">Thank You for Registering</h3>
-	</body>
+	</main>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>

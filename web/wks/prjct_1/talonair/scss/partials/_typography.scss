@@ -10,6 +10,9 @@ $body-font: 'Source Serif Pro';
 
 
 //------------------------------- Headers Typography -------------------------------
+h1, h2, h3, h4, h5 {
+	margin: .5em;
+}
 h1 {
 	font-family: $header-font;
 	color: white;

@@ -14,7 +14,7 @@
         <?php include 'common/nav.php'; ?>
 	</nav>
 	
-	<body>
+	<main>
 		<div class="register_container">
 			<div class="form_container">
 				<div class="form">
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		</div>
-    </body>
+    </main>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>

@@ -11,15 +11,15 @@
 	</header>
 	<nav>
         <?php include 'common/nav.php'; ?>
-	</nav>
-	<body id="messages_view">
+    </nav>
+    <main>
         <div class="messages_view">
             <h3 class="center">View Messages</h3>
             <?php
                 echo $message_table;
             ?>
         </div>
-    </body>
+    </main>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>

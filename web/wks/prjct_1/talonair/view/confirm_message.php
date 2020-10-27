@@ -12,14 +12,14 @@
 	<nav>
                 <?php include 'common/nav.php'; ?>
 	</nav>
-	<body>
+	<main>
                 <!-- Div needed to format center and pic -->
 
                 <h3 class="center">Thank You</h3>
                         <!-- Picture -->
                         <p>We have recieved your message and will get back to you as soon as possible</p>
                         <a href="index.php?action=view_messages">View Messages</a>
-	</body>
+	</main>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>

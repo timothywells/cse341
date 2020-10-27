@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro");
+h1, h2, h3, h4, h5 {
+  margin: 0.5em;
+}
+
 h1 {
   font-family: "Open Sans";
   color: white;
@@ -186,6 +190,9 @@ header .call {
   background-position: right center;
 }
 
+nav {
+  display: flex;
+}
 nav .active {
   background-color: #28698C;
   font-weight: 900;
@@ -197,8 +204,9 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
-nav li {
+nav ul li {
   font-family: "Arial", sans-serif;
   font-size: 1em;
   font-weight: 600;
@@ -209,12 +217,12 @@ nav li {
   margin: 0;
   padding: 0;
 }
-nav li a {
+nav ul li a {
   display: block;
   color: white;
   text-decoration: none;
 }
-nav li a:hover:not(.active) {
+nav ul li a:hover:not(.active) {
   background-color: #3498D8;
 }
 
@@ -297,17 +305,25 @@ body .messages_view {
   margin: 0 auto;
   width: 80%;
 }
+body main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
 
 footer {
   margin: 0;
   padding: 1em;
   height: auto;
-  width: 100%;
+  width: auto;
   text-align: center;
   background-color: #2C3E50;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 footer ul {
   list-style: none;

@@ -13,7 +13,7 @@
 	<nav>
         <?php include 'common/nav.php'; ?>
 	</nav>
-	<body>
+	<main>
 		<div class="banner" id="home_banner"></div>
 		<div class="firstblock">
 			<div class="desc" id="main_desc">
@@ -42,7 +42,7 @@
 			</div>			
 		</div>
 		<div class="logos" id="company_logos"></div>
-	</body>
+	</main>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>

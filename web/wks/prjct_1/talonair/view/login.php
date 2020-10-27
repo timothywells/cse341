@@ -12,7 +12,7 @@
 	<nav>
         <?php include 'common/nav.php'; ?>
 	</nav>
-	<body>
+	<main>
         <div class = "login_containter">
             <div class="form_container">
                 <div class="form">
@@ -26,7 +26,7 @@
             </div>
             <a href="index.php?action=register">Register</a>
         </div>
-    </body>
+    </main>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>

@@ -12,7 +12,7 @@
 	<nav>
         <?php include 'common/nav.php'; ?>
 	</nav>
-	<body id="talon-air-home">
+	<main>
     <div class="banner" id="services_banner"></div>
 		<div class="firstblock">
 			<div class="image" id="service_call_img"></div>
@@ -45,7 +45,7 @@
 				</div>
 				<div class="image" id="hourly_rate_img"></div>
 			</div>
-    </body>
+    </main>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>

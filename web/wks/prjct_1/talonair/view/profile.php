@@ -12,7 +12,7 @@
 	<nav>
         <?php include 'common/nav.php'; ?>
 	</nav>
-	<body>
+	<main>
         <h3 class="center">Profile</h3>
             <!-- Div needed to format -->
             <?php
@@ -28,7 +28,7 @@
             <?php
                 echo $cust_review;
             ?>
-    </body>
+    </main>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>

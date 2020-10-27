@@ -13,7 +13,7 @@
         <?php include 'common/nav.php'; ?>
 	</nav>
 	
-	<body>
+	<main>
         <h3 class="center">Admin Profile</h3>
         <!-- Div needed to format tables, possibly skip the profile here cause it is just Admin in general -->
         <?php
@@ -39,7 +39,7 @@
             echo $customer_table;
         ?>
 
-    </body>
+    </main>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>

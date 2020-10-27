@@ -12,7 +12,7 @@
 	<nav>
         <?php include 'common/nav.php'; ?>
 	</nav>
-	<body>
+	<main>
     <div class="banner" id="about_banner"></div>
 		<div class="about" id="about_intro">
 			<h3>Who is Talon Air</h3>
@@ -37,7 +37,7 @@
 					<p>Even with all that she does for so many people she is going to night school to get her teaching degree. She also is a semi-professional horseback rider frequently attending horse shows as well as participating. Though she is busy she always finds time to put the client first for Talon Air.</p>
 				</div>
 			</div>
-	</body>
+	</main>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>
