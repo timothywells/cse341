@@ -19,7 +19,7 @@
                 <!-- Div needed to format center and pic -->
 
                 <h3 class="center">Confirm Delete</h3>
-                <button type='button' id=''>Yes</Button><button>No</button>
+                <button type='button' id='yes'>Yes</Button><button type='button' id='no'>No</button>
 
 	</body>
 	<footer>

@@ -20,7 +20,7 @@
 			<div class="form_container">
 				<div class="form">
 					<form method="POST" action="index.php?action=register" id="register">
-						<h3 class="h3-center">Register</h3>
+						<h3 class="center">Register</h3>
 						<input type="text" name="first_name" id="first_name" required class="txtinput" placeholder="First Name">
 						<input type="text" name="last_name" id="last_name" required class="txtinput" placeholder="Last Name">
 						<input type="text" name="password" id="password" required class="txtinput" placeholder="Password">

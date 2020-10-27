@@ -44,9 +44,7 @@ h3 {
 	font-family: $header-font;
 	color: black;
 	padding: 0;
-.center_header {
-		text-align: center;
-	}
+	text-align: center;
 	@include MQ(S) {
 		font-size: 6vw;
 		line-height: 6vw;

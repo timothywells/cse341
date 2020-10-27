@@ -52,8 +52,8 @@ switch ($action){
         include 'view/login.php';
     break;
 
-    case 'signup':
-        include 'view/signup.php';
+    case 'register':
+        include 'view/register.php';
     break;
 
     case 'delete_message':

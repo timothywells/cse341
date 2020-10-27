@@ -27,6 +27,7 @@
                     </form>
                 </div>
             </div>
+            <a href="index.php?action=register">Register</a>
         </div>
     </body>
 	<footer>

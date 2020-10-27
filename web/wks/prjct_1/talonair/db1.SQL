@@ -1,29 +1,37 @@
-
+//SQL Server - DONE
 CREATE TABLE customer_info (
-    customerId SERIAL PRIMARY KEY,
+    customerId int PRIMARY KEY NOT NULL,
     fname VARCHAR(64) NOT NULL,
-    lname VARCHAR(64) NOT NULL,
-    c_address INT REFERENCES c_address (customer_address),
+    lname VARCHAR(64) NOT NULL
+);
+
+//SQL Server - DONE
+CREATE TABLE customer_login (
+    loginId int PRIMARY KEY NOT NULL,
+    customerId int REFERENCES customer_info(customerId),
     email VARCHAR(128) NOT NULL,
-    username VARCHAR(32) NOT NULL UNIQUE,
+    username VARCHAR(32) NOT NULL,
     password VARCHAR(64) NOT NULL
 );
 
+//SQL Server - DONE
 CREATE TABLE customer_address (
-    addressId SERIAL PRIMARY KEY,
-    customerId INT REFERENCES customer (customerId),
+    addressId int PRIMARY KEY NOT NULL,
+    customerId int REFERENCES customer_info(customerId),
     street_address VARCHAR(128) NOT NULL,
+    c_city VARCHAR(64) NOT NULL,
     c_state VARCHAR(32) NOT NULL,
-    zip VARCHAR(16) NOT NULL,
-    county VARCHAR(32) NOT NULL
+    zip VARCHAR(16) NOT NULL
 );
 
+//SQL Server - DONE
 CREATE TABLE customer_review (
-    reviewdId SERIAL PRIMARY KEY,
-    customerId INT REFERENCES customer (customerId),
+    reviewdId int PRIMARY KEY NOT NULL,
+    customerId INT REFERENCES customer_info(customerId),
     review VARCHAR(256) NOT NULL,
     review_date DATE NOT NULL
 );
+
 
 CREATE TABLE customer_photos (
     photoId SERIAL PRIMARY KEY,
@@ -31,6 +39,9 @@ CREATE TABLE customer_photos (
     photo VARCHAR(256) NULL
 );
 
+
+
+//worked
 CREATE TABLE send_message(
     fullname VARCHAR(64) NOT NULL,
     form_phone VARCHAR(16) NOT NULL,
