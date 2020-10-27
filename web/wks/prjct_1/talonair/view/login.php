@@ -13,7 +13,7 @@
         <?php include 'common/nav.php'; ?>
 	</nav>
 	<main>
-        <div class = "login_containter">
+        <div class = "login_container">
             <div class="form_container">
                 <div class="form">
                     <form method="POST" action="index.php?action=login" id="login">
