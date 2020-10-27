@@ -6,15 +6,12 @@
 <head>
     <?php include 'common/head.php'; ?>
 </head>
-<div class="wrapper">	
 	<header>
         <?php include 'common/header.php'; ?>
 	</header>
-	
 	<nav>
         <?php include 'common/nav.php'; ?>
 	</nav>
-	
 	<body id="talon-air-home">
     <div class="banner" id="services_banner"></div>
 		<div class="firstblock">
@@ -52,5 +49,4 @@
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>
-</div>
 </html>

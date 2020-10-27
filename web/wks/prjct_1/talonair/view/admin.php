@@ -3,19 +3,17 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <?php include 'common/head.php'; ?>
-</head>
-<div class="wrapper">	
+    <head>
+        <?php include 'common/head.php'; ?>
+    </head>
 	<header>
         <?php include 'common/header.php'; ?>
 	</header>
-	
 	<nav>
         <?php include 'common/nav.php'; ?>
 	</nav>
 	
-	<body id="talon-air-home">
+	<body>
         <h3 class="center">Admin Profile</h3>
         <!-- Div needed to format tables, possibly skip the profile here cause it is just Admin in general -->
         <?php
@@ -45,5 +43,4 @@
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>
-</div>
 </html>

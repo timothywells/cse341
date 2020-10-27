@@ -3,19 +3,16 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <?php include 'common/head.php'; ?>
-</head>
-<div class="wrapper">	
+    <head>
+        <?php include 'common/head.php'; ?>
+    </head>
 	<header>
         <?php include 'common/header.php'; ?>
 	</header>
-	
 	<nav>
         <?php include 'common/nav.php'; ?>
 	</nav>
-	
-	<body id="talon-air-home">
+	<body>
         <div class = "login_containter">
             <div class="form_container">
                 <div class="form">
@@ -33,5 +30,4 @@
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>
-</div>
 </html>

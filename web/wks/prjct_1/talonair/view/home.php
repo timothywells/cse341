@@ -3,20 +3,17 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<?php include 'common/head.php'; ?>
-	<meta name="description" content="A premium HVAC Company, providing the best commercial and residential Heating and Air Conditioning in the Valley of the Sun!">
-</head>
-<div class="wrapper">	
+	<head>
+		<?php include 'common/head.php'; ?>
+		<meta name="description" content="A premium HVAC Company, providing the best commercial and residential Heating and Air Conditioning in the Valley of the Sun!">
+	</head>
 	<header>
         <?php include 'common/header.php'; ?>
 	</header>
-	
 	<nav>
         <?php include 'common/nav.php'; ?>
 	</nav>
-	
-	<body id="talon-air-home">
+	<body>
 		<div class="banner" id="home_banner"></div>
 		<div class="firstblock">
 			<div class="desc" id="main_desc">
@@ -42,14 +39,11 @@
 						<input type="submit" id="submit" class="submit" value="Submit">
 					</form>
 				</div>
-			</div>
-
-			
+			</div>			
 		</div>
 		<div class="logos" id="company_logos"></div>
 	</body>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>
-</div>
 </html>

@@ -3,10 +3,9 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <?php include 'common/head.php'; ?>
-</head>
-<div class="wrapper">	
+    <head>
+        <?php include 'common/head.php'; ?>
+    </head>
 	<header>
         <?php include 'common/header.php'; ?>
 	</header>
@@ -25,5 +24,4 @@
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>
-</div>
 </html>

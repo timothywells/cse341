@@ -3,18 +3,15 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <?php include 'common/head.php'; ?>
-</head>
-<div class="wrapper">	
+    <head>
+        <?php include 'common/head.php'; ?>
+    </head>
 	<header>
         <?php include 'common/header.php'; ?>
 	</header>
-	
 	<nav>
         <?php include 'common/nav.php'; ?>
 	</nav>
-	
 	<body id="messages_view">
         <div class="messages_view">
             <h3 class="center">View Messages</h3>
@@ -26,5 +23,4 @@
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>
-</div>
 </html>

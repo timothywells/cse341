@@ -2,10 +2,10 @@
 
 
 html{
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
-	height: auto;
-	Width: auto;
+	height: 100%;
+	width: 100%;
 }
 
 //Header
@@ -15,7 +15,7 @@ header{
 	.header{
 		display: flex;
 		width: auto;
-		height: 25vh;
+		height: 20vh;
 	}
 	.talon_air_logo{
 		margin: 0;
@@ -77,9 +77,15 @@ nav{
 }
 
 body{
+	//margin: 0;
+	//padding: 0;
+	//width: 100%;
 	margin: 0;
 	padding: 0;
-	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	min-height: 100%;
 	
 	//All site banners
 	.banner{
@@ -162,19 +168,21 @@ body{
 //All Footer information is the same
 footer{
 	margin: 0;
-	padding: 2vw;
+	padding: 1em;
 	height: auto;
-	width: auto;
+	width: 100%;
 	text-align: center;
 	background-color: #2C3E50;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	ul{		
 		list-style: none;
 		margin: 0;
-		Padding: 0;
+		padding: 0;
 		li{
 			display: inline-block;
-			height: 20vh;
-			margin: 0 1vw;
+			margin: 0 1em;
 			padding: 0;
 			
 		}
