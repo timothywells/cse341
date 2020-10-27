@@ -13,7 +13,7 @@
         <?php include 'common/nav.php'; ?>
     </nav>
     <main>
-        <div class="messages_view">
+        <div class="formatted_view">
             <h3 class="center">View Messages</h3>
             <?php
                 echo $message_table;

@@ -14,6 +14,7 @@
 	</nav>
 	
 	<main>
+    <div class="formatted_view">
         <h3 class="center">Admin Profile</h3>
         <!-- Div needed to format tables, possibly skip the profile here cause it is just Admin in general -->
         <?php
@@ -38,7 +39,7 @@
         <?php
             echo $customer_table;
         ?>
-
+    </div>
     </main>
 	<footer>
             <?php include 'common/footer.php'; ?>

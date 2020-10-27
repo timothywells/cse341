@@ -14,10 +14,12 @@
 	</nav>
 	<main>
         <!-- Div needed to format center and pic -->
-        <h1>404 - NOT FOUND</h1>
-            <p>Sorry this page does not exist, return to the previous page or go to the Homepage.</p>
-            <p>Thank You</p>
-            <a href="index.php">Talon Air Homepage</a>
+        <div class="formatted_view">
+            <h3>404 - NOT FOUND</h3>
+                <p>Sorry this page does not exist, return to the previous page or go to the Homepage.</p>
+                <p>Thank You</p>
+                <a href="index.php">Talon Air Homepage</a>
+        </div>
 	</main>
 	<footer>
             <?php include 'common/footer.php'; ?>

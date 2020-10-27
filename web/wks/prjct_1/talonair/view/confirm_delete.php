@@ -14,10 +14,10 @@
 	</nav>
 	<main>
                 <!-- Div needed to format center and pic -->
-
-                <h3 class="center">Confirm Delete</h3>
+        <div class="formatted_view">
+            <h3 class="center">Confirm Delete</h3>
                 <button type='button' id='yes'>Yes</Button><button type='button' id='no'>No</button>
-
+        </div>
 	</main>
 	<footer>
             <?php include 'common/footer.php'; ?>

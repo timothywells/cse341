@@ -117,7 +117,7 @@ body{
 			flex-direction: column-reverse;
 		}
 		display: flex;
-		width: auto;
+		width: 100%;
 		height: auto;
 		min-height: 50vh;
 		padding: 0;
@@ -131,7 +131,7 @@ body{
 			flex-direction: column;
 		}
 		display: flex;
-		width: auto;
+		width: 100%;
 		height: auto;
 		min-height: 50vh;
 		padding: 0;
@@ -162,7 +162,7 @@ body{
 			background-color: #f2f2f2;
 		}
 	}
-	.messages_view{
+	.formatted_view{
 		margin: 0 auto;
 		width: 80%;
 	}
@@ -172,6 +172,7 @@ body{
 		margin: 0;
 		padding: 0;
 		flex-grow: 1;
+		flex-direction: column;
 	}
 }
 //All Footer information is the same

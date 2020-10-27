@@ -253,7 +253,7 @@ body .image {
 }
 body .firstblock {
   display: flex;
-  width: auto;
+  width: 100%;
   height: auto;
   min-height: 50vh;
   padding: 0;
@@ -267,7 +267,7 @@ body .firstblock {
 }
 body .secondblock {
   display: flex;
-  width: auto;
+  width: 100%;
   height: auto;
   min-height: 50vh;
   padding: 0;
@@ -301,7 +301,7 @@ body table th, body table td {
 body table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-body .messages_view {
+body .formatted_view {
   margin: 0 auto;
   width: 80%;
 }
@@ -311,6 +311,7 @@ body main {
   margin: 0;
   padding: 0;
   flex-grow: 1;
+  flex-direction: column;
 }
 
 footer {

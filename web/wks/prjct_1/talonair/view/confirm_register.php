@@ -13,8 +13,10 @@
         <?php include 'common/nav.php'; ?>
 	</nav>
 	<main>
+	<div class="formatted_view">
         <!-- Div needed to format center and pic -->
-        <h3 class="center">Thank You for Registering</h3>
+		<h3>Thank You for Registering</h3>
+	</div>
 	</main>
 	<footer>
             <?php include 'common/footer.php'; ?>

@@ -15,11 +15,13 @@
 	</nav>
 	
 	<main>
-        <h3 class="center">Reviews</h3>
-        <!-- Div needed to format table -->
-        <?php
-            echo $reviews_table;
-        ?>
+        <div class="formatted_view">
+            <h3 class="center">Reviews</h3>
+            <!-- Div needed to format table -->
+            <?php
+                echo $reviews_table;
+            ?>
+        </div>
     </main>
 	<footer>
             <?php include 'common/footer.php'; ?>
