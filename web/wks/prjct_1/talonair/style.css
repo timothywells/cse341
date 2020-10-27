@@ -41,10 +41,9 @@ h2 {
 h3 {
   font-family: "Open Sans";
   color: black;
-  font-weight: extra-bold;
   padding: 0;
 }
-h3 .center {
+h3 .center_header {
   text-align: center;
 }
 @media screen and (max-width: 900px) {

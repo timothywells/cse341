@@ -17,7 +17,7 @@
 	
 	<body id="messages_view">
         <div class="messages_view">
-            <h3 class="center">View Messages</h3>
+            <h3 class="center_header">View Messages</h3>
             <?php
                 echo $message_table;
             ?>
