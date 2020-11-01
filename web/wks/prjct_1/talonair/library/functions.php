@@ -42,13 +42,16 @@ function delete_message($messageID){
     $stmt->closeCursor();
     return $response;
 }
-
-
-
-
+//Register for website
 function register(){
 
 }
+//Login
+function login(){
+
+}
+//
 
 ?>
+
 

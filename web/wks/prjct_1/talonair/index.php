@@ -12,11 +12,20 @@ $action = filter_input(INPUT_POST, 'action');
   }
  }
 
+//Actions
 switch ($action){
     case 'home':
         include 'view/home.php';
     break;
+//Success Messages
+    case 'delete_message':
+        //Add content variables here
+        $messageID = $_GET['messageID'];
+        delete_message($messageID);
+        include 'view/confirm_delete.php';
+    break;
 
+//Forms and such
     case 'send_message':
         $fullname=$_POST['fullname'];
         $form_phone=$_POST['form_phone'];
@@ -24,15 +33,35 @@ switch ($action){
         $form_subject=$_POST['form_subject'];
         $form_message=$_POST['form_message'];
         form_record($fullname, $form_phone, $form_email, $form_subject, $form_message);
-        include 'view/confirm_message.php';
+        include 'view/confirm_message_sent.php';
     break;
 
+    case 'register':
+        //Add content variables here
+        $username=$_POST['username'];
+        $email=$_POST['email'];
+        $password=$_POST['password'];
+        include 'view/confirm_register.php';
+    break;
+
+    case 'login':
+        //Add content variables here
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+        include 'view/login.php';
+    break;
+
+//views Returned    
     case 'view_messages':
+        //Add content variables here
         $messages_list = make_message_list();
-        //$_SESSION['testvar1'] = $messages_list;
         $message_table = message_table($messages_list);
-        //$_SESSION['testvar2'] = $message_table;
         include 'view/messages.php';
+    break;
+
+    case '404.php':
+        //Add content variables here
+        include '404.php';
     break;
 
     case 'about':
@@ -40,27 +69,39 @@ switch ($action){
         include 'view/about.php';
     break;
 
+    case 'admin':
+        //Add content variables here
+        include 'view/admin.php';
+    break;
+    
+    case 'change_profile':
+        //Add content variables here
+        include 'change_profile.php';
+    break;
+
+    case 'confirm_delete':
+        //Add content variables here
+        include 'confirm_delete.php';
+    break;
+
+
+
     case 'services':
+        //Add content variables here
         include 'view/services.php';
     break;
 
     case 'reviews':
+        //Add content variables here
         include 'view/reviews.php';
     break;
 
     case 'login':
+        //Add content variables here
         include 'view/login.php';
     break;
 
-    case 'register':
-        include 'view/register.php';
-    break;
 
-    case 'delete_message':
-        $messageID = $_GET['messageID'];
-        delete_message($messageID);
-        include 'view/confirm_delete.php';
-    break;
 
     default:
         include 'view/home.php';

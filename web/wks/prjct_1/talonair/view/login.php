@@ -18,8 +18,8 @@
                 <div class="form">
                     <form method="POST" action="index.php?action=login" id="login">
                         <h3 class="center">Login</h3>
-                        <input type="text" name="login_email" id="login_email" required class="txtinput" placeholder="E-mail">
-                        <input type="text" name="login_password" id="login_password" required class="txtinput" placeholder="Password">
+                        <input type="text" name="email" id="email" required class="txtinput" placeholder="E-mail">
+                        <input type="text" name="password" id="password" required class="txtinput" placeholder="Password">
                         <input type="submit" id="submit" class="submit" value="Submit">
                     </form>
                 </div>

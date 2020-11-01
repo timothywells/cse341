@@ -1,30 +1,19 @@
 //SQL Server - DONE
 CREATE TABLE customer_info (
-    customerId int PRIMARY KEY NOT NULL,
-    fname VARCHAR(64) NOT NULL,
-    lname VARCHAR(64) NOT NULL
-);
-
-//SQL Server - DONE
-CREATE TABLE customer_login (
-    loginId int PRIMARY KEY NOT NULL,
-    customerId int REFERENCES customer_info(customerId),
+    customerId SERIAL PRIMARY KEY NOT NULL,
     email VARCHAR(128) NOT NULL,
     username VARCHAR(32) NOT NULL,
-    password VARCHAR(64) NOT NULL
+    password VARCHAR(64) NOT NULL,
+    fname VARCHAR(64) NULL,
+    lname VARCHAR(64) NULL,
+    street_address VARCHAR(128) NULL,
+    c_city VARCHAR(64) NULL,
+    c_state VARCHAR(32) NULL,
+    zip VARCHAR(16) NULL,
+    phone VARCHAR(16) NULL
 );
 
-//SQL Server - DONE
-CREATE TABLE customer_address (
-    addressId int PRIMARY KEY NOT NULL,
-    customerId int REFERENCES customer_info(customerId),
-    street_address VARCHAR(128) NOT NULL,
-    c_city VARCHAR(64) NOT NULL,
-    c_state VARCHAR(32) NOT NULL,
-    zip VARCHAR(16) NOT NULL
-);
-
-//SQL Server - DONE
+//SQL Server
 CREATE TABLE customer_review (
     reviewdId int PRIMARY KEY NOT NULL,
     customerId INT REFERENCES customer_info(customerId),
@@ -32,7 +21,7 @@ CREATE TABLE customer_review (
     review_date DATE NOT NULL
 );
 
-
+//SQL Server
 CREATE TABLE customer_photos (
     photoId SERIAL PRIMARY KEY,
     customerId INT REFERENCES customer (customerId),

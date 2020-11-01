@@ -21,4 +21,7 @@ function herokuConnect() {
     die();
     }
 }
+
+//insert into statements for db such as user register and profile update
 ?>
+
