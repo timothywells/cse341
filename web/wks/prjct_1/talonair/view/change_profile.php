@@ -27,12 +27,6 @@
 						<input type="submit" id="submit" class="submit" value="Submit">
 						<button type="button" id="submit" class="button">Submit</button>
 					</form>
-					<form method="post" action="index.php?action=credentials_update" id="credentials_update">
-						<input type="email" name="email" id="email" class="txtinput" placeholder="E-mail">
-						<input type="text" name="password" id="password" class="txtinput" placeholder="Password">
-						<input type="text" name="password" id="password" class="txtinput" placeholder="Password">
-						<button type="button" id="submit" class="button">Submit</button>
-					</form>
 				</div>
 			</div>
 		</div>

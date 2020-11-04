@@ -21,10 +21,16 @@
                 ?>
 
             <h3 class="center review">Your Reviews</h3>
-                <!-- Div needed to format -->
                 <?php
                     echo $cust_review;
                 ?>
+            <h3 class="center password">Change Password</h3>
+                <form method="post" action="index.php?action=credentials_update" id="credentials_update">
+					<input type="email" name="email" id="email" class="txtinput" placeholder="E-mail">
+					<input type="text" name="password" id="password" class="txtinput" placeholder="Password">
+					<input type="text" name="password" id="password" class="txtinput" placeholder="Password">
+                    <button type="button" id="submit" class="button">Submit</button>
+				</form>
         </div>
     </main>
 	<footer>

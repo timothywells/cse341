@@ -51,6 +51,11 @@ switch ($action){
         include 'view/login.php';
     break;
 
+    case 'change_profile':
+        
+    break;
+
+
 //views Returned    
     case 'view_messages':
         //Add content variables here
