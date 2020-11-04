@@ -18,7 +18,7 @@
         <h3 class="center">Admin Profile</h3>
         <!-- Div needed to format tables, possibly skip the profile here cause it is just Admin in general -->
         <?php
-            echo $profle_table;
+            echo $profile_table;
         ?>
 
         <h3 class="center">Messages</h3>

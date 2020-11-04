@@ -85,7 +85,6 @@ switch ($action){
     break;
 
 
-
     case 'services':
         //Add content variables here
         include 'view/services.php';
@@ -95,13 +94,6 @@ switch ($action){
         //Add content variables here
         include 'view/reviews.php';
     break;
-
-    case 'login':
-        //Add content variables here
-        include 'view/login.php';
-    break;
-
-
 
     default:
         include 'view/home.php';

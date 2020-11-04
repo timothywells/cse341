@@ -10,12 +10,13 @@ CREATE TABLE customer_info (
     c_city VARCHAR(64) NULL,
     c_state VARCHAR(32) NULL,
     zip VARCHAR(16) NULL,
-    phone VARCHAR(16) NULL
+    phone VARCHAR(16) NULL,
+    clearance VARCHAR(16) NULL
 );
 
 //SQL Server
 CREATE TABLE customer_review (
-    reviewdId int PRIMARY KEY NOT NULL,
+    reviewdId SERIAL PRIMARY KEY NOT NULL,
     customerId INT REFERENCES customer_info(customerId),
     review VARCHAR(256) NOT NULL,
     review_date DATE NOT NULL

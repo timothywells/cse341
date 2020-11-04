@@ -1,4 +1,5 @@
 <?php
+//MESAGES
 //Saving a Message from Home Page
 function form_record($fullname, $form_phone, $form_email, $form_subject, $form_message){
     $db = herokuConnect();
@@ -9,7 +10,6 @@ function form_record($fullname, $form_phone, $form_email, $form_subject, $form_m
     $stmt->execute();
     $stmt->closeCursor();
 }
-
 //Getting the array of the messages from DB
 function make_message_list(){
     $db = herokuConnect();
@@ -20,9 +20,8 @@ function make_message_list(){
     $stmt->closeCursor();
     return $response;
 }
-
 //Creates Table in HTML
-function message_table($messages_list){
+function message_table($make_messages_list){
     $html = '<table>';
     $html .= '<tr><th>Name</th><th>Phone</th><th>E-Mail</th><th>Subject</th><th>Message</th><th></th></tr>';
     foreach($messages_list as $line_item){
@@ -31,7 +30,6 @@ function message_table($messages_list){
     $html .= '</table>';
     return $html;
 }
-
 //Delete from Messaeg Table
 function delete_message($messageID){
     $db = herokuConnect();
@@ -42,16 +40,68 @@ function delete_message($messageID){
     $stmt->closeCursor();
     return $response;
 }
-//Register for website
-function register(){
 
+//REGISTER, PROFILE AND LOGIN
+//Register for website
+function register($email,$username,$password,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone){
+    $db = herokuConnect();
+    $sql = "INSERT INTO customer_info(
+        email, username. password, fname, fname, lname, street_address, c_city, c_state, zip, phone
+    ) VALUES ('$email','$username','$password','$fname','$lname','$street_address','$c_city','$c_state','$zip','$phone')";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $stmt->closeCursor();
 }
-//Login
+//Login abd hash password
 function login(){
 
 }
-//
+//Check Login information
+function check_cedentials(){
+
+}
+//Change Password
+function change_password(){
+
+}
+
+//RPOFILES
+//Get Profile information
+function get_profile(){
+
+}
+//Write Profile to profile page
+function write_profile(){
+
+}
+
+//REVIEWS
+//Record the Review
+function review_record(){
+
+}
+//Get Review Table information
+function get_reviews(){
+
+}
+
+//Build Review Table
+function review_table(){
+
+}
+
+//Delete Review
+function delete_review(){
+
+}
+
+
+
+
+
+
+
+
+
 
 ?>
-
-
