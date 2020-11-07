@@ -47,7 +47,8 @@ switch ($action){
 case 'confirm_register':
         //Add content variables here
         echo "We are here";
-        $username=$_POST['username'];
+        $username=filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+        //$_POST['username'];
         $email=$_POST['email'];
         $password=$_POST['password'];
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
