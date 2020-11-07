@@ -1,5 +1,5 @@
 <?php 
-    $pagetitle = 'Talon Air, Inc. | Register';
+    $pagetitle = 'Talon Air, Inc. | Change Profile';
 ?>
 <!DOCTYPE html>
 <html>

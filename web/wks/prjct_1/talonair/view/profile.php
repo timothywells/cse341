@@ -30,6 +30,7 @@
 					<input type="text" name="password" id="password" class="txtinput" placeholder="Password">
 					<input type="text" name="password" id="password" class="txtinput" placeholder="Password">
                     <button type="button" id="submit" class="button">Submit</button>
+                    <!--alert password changed-->
 				</form>
         </div>
     </main>

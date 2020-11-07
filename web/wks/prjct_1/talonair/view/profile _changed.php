@@ -1,5 +1,5 @@
 <?php 
-    $pagetitle = 'Talon Air, Inc. | 404 - NOT FOUND';
+    $pagetitle = 'Talon Air, Inc. | Confirm Profile Change';
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,14 +13,12 @@
         <?php include 'common/nav.php'; ?>
 	</nav>
 	<main>
-        <!-- Div needed to format center and pic -->
         <div class="formatted_view">
-            <h3>404 - NOT FOUND</h3>
-                <p>Sorry this page does not exist, return to the previous page or go to the Homepage.</p>
-                <p>Thank You</p>
-                <a href="index.php">Talon Air Home</a>
+            <h3 class="center profile">Thank You</h3>
+            <p>Your Profile has changed</p>
+            <a href="index.php?action=profile">RETURN TO PROFILE</a>
         </div>
-	</main>
+    </main>
 	<footer>
             <?php include 'common/footer.php'; ?>
 	</footer>

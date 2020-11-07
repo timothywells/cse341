@@ -1,5 +1,5 @@
 <?php 
-    $pagetitle = 'Talon Air, Inc. | Confirm Message';
+    $pagetitle = 'Talon Air, Inc. | Confirm Message Sent';
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@
                 <h3 class="center">Thank You</h3>
                         <!-- Picture -->
                         <p>We have recieved your message and will get back to you as soon as possible</p>
-                        <a href="index.php?action=view_messages">View Messages</a>
+                        <a href="index.php">RETURN TO TALON AIR HOME</a>
                 </div>
         </main>
 	<footer>

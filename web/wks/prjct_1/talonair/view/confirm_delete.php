@@ -1,5 +1,5 @@
 <?php 
-    $pagetitle = 'Talon Air, Inc. | Confirm Delete';
+    $pagetitle = 'Talon Air, Inc. | Confirm Message Deleted';
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,8 +15,9 @@
 	<main>
                 <!-- Div needed to format center and pic -->
         <div class="formatted_view">
-            <h3 class="center">Confirm Delete</h3>
-                <button type='button' id='yes'>Yes</Button><button type='button' id='no'>No</button>
+            <h3 class="center">Message Deleted</h3>
+                <a href="index.php?=messages">RETURN TO ADMIN PROFILE</a>
+                <!-- <button type='button' id='yes'>Yes</Button><button type='button' id='no'>No</button> -->
         </div>
 	</main>
 	<footer>

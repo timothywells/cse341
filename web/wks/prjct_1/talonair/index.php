@@ -51,8 +51,13 @@ switch ($action){
         include 'view/login.php';
     break;
 
+    case 'profile':
+
+        include 'view/profile.php';
+    break;
+
     case 'change_profile':
-        
+
     break;
 
 
@@ -84,11 +89,20 @@ switch ($action){
         include 'change_profile.php';
     break;
 
+    case 'profile_changed':
+
+        include 'profile_changed.php';
+    break;
+
     case 'confirm_delete':
         //Add content variables here
         include 'confirm_delete.php';
     break;
 
+    case 'write_review':
+
+        include 'write_review.php';
+    break;
 
     case 'services':
         //Add content variables here
