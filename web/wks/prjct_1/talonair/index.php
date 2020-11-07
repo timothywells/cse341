@@ -58,17 +58,15 @@ case 'confirm_register':
         echo $email . "<br>";
         echo $password . "<br>";
         echo $hased_password . "<br>";
-        $confirm_register = register($email,$username,$hased_password);
-        if($confirm_register){
-            $reg_message = "Registration Successful";
-            include 'view/confirm_register.php';
-        } else {
-            $reg_message = "Registration was NOT Successful";
-            include 'view/register.php';
-        }
-
-        //confirm passwrod
-        
+        // $confirm_register = register($email,$username,$hased_password);
+        // if($confirm_register){
+        //     $reg_message = "Registration Successful";
+        //     include 'view/confirm_register.php';
+        // } else {
+        //     $reg_message = "Registration was NOT Successful";
+        //     include 'view/register.php';
+        // }
+        include 'view/confirm_register.php';        
     break;
 //Login    
     case 'login':
