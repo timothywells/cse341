@@ -43,15 +43,25 @@ function delete_message($messageID){
 
 //REGISTER, PROFILE AND LOGIN
 //Register for website
-function register($email,$username,$password,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone){
+function register($email,$username,$password){
+    //check that passwords match and has passwords
     $db = herokuConnect();
     $sql = "INSERT INTO customer_info(
-        email, username. password, fname, fname, lname, street_address, c_city, c_state, zip, phone
-    ) VALUES ('$email','$username','$password','$fname','$lname','$street_address','$c_city','$c_state','$zip','$phone')";
+        email, username. password
+    ) VALUES ('$email','$username','$password')";
     $stmt = $db->prepare($sql);
     $stmt->execute();
+    $row_count = $stmt->rowCount();
     $stmt->closeCursor();
+    return $row_count;
 }
+
+
+//get login information
+function get_login_info(){
+
+}
+
 //Login abd hash password
 function login(){
 
@@ -76,10 +86,41 @@ function get_profile(){
     $stmt->closeCursor();
     return $response;
 }
+
+
+
 //Write Profile to profile page usung Legends and fieldset
 function cust_profile(){
 
 }
+
+//Update Customer Profile
+function update_cust_profile ($customerid,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone) {  
+        $db = herokuConnect();
+        $sql = "INSERT INTO customer_info(
+            fname, fname, lname, street_address, c_city, c_state, zip, phone
+        ) VALUES ('$fname','$lname','$street_address','$c_city','$c_state','$zip','$phone')
+        WHERE customerid = $customerid";
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+        $stmt->closeCursor();
+    }
+
+
+//Get Custromer Review
+function get_cust_review(){
+
+}
+
+//Customer review
+ function cust_review() {
+
+ }
+
+ //Customer
+ function delete_review() {
+
+ }
 
 //ADMIN PROFILE SECTIONS
 //Get profiles for admin

@@ -40,12 +40,28 @@ switch ($action){
 //Register account
     case 'register':
         //Add content variables here
-        $username=$_POST['username'];
-        $email=$_POST['email'];
-        $password=$_POST['password'];
         include 'view/register.php';
     break;
 
+//confirm Registration
+case 'confirm_register':
+        //Add content variables here
+        $username=$_POST['username'];
+        $email=$_POST['email'];
+        $password=$_POST['password'];
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $confirm_register = register($email,$username,$hased_password);
+        if($confirm_register){
+            $reg_message = "Registration Successful";
+            include 'view/confirm_register.php';
+        } else {
+            $reg_message = "Registration was NOT Successful";
+            include 'view/register.php';
+        }
+
+        //confirm passwrod
+        
+    break;
 //Login    
     case 'login':
         //Add content variables here
@@ -55,7 +71,11 @@ switch ($action){
     break;
 
     case 'profile':
-
+        $cust_profle = cust_profile();
+        $cust_review = cust_review();
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+        $passwordConfirm=$_POST['passwordConfirm'];
         include 'view/profile.php';
     break;
 
@@ -109,7 +129,12 @@ switch ($action){
     break;
 
     case 'write_review':
-
+        $fullname=$_POST['fullname'];
+        $form_phone=$_POST['phone'];
+        $form_email=$_POST['email'];
+        $form_subject=$_POST['subject'];
+        $form_message=$_POST['message'];
+        review_record($fullname, $phone, $email, $subject, $message);
         include 'write_review.php';
     break;
 

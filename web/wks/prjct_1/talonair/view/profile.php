@@ -19,7 +19,7 @@
                 <?php
                     echo $cust_profle;
                 ?>
-                <a href="index.php?action=change_profile"></a>
+                <a href="index.php?action=change_profile">Update Profile</a>
 
             <h3 class="center review">Your Reviews</h3>
                 <?php
@@ -29,7 +29,7 @@
                 <form method="post" action="index.php?action=credentials_update" id="credentials_update">
 					<input type="email" name="email" id="email" class="txtinput" placeholder="E-mail">
 					<input type="text" name="password" id="password" class="txtinput" placeholder="Password">
-					<input type="text" name="password" id="password" class="txtinput" placeholder="Password">
+					<input type="text" name="passwordConfirm" id="passwordConfirm" class="txtinput" placeholder="Confirm Password">
                     <button type="button" id="submit" class="button">Submit</button>
                     <!--alert password changed-->
 				</form>

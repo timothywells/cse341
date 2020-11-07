@@ -13,8 +13,11 @@
 	<nav>
         <?php include 'common/nav.php'; ?>
 	</nav>
-	
+
 	<main>
+	<?php
+		if(isset($reg_meesage)){echo $reg_message;};
+	?>
 		<div class="register_container">
 			<div class="form_container">
 				<div class="form">
