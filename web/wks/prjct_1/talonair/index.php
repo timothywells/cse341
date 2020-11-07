@@ -51,6 +51,7 @@ case 'confirm_register':
         $password=$_POST['password'];
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $confirm_register = register($email,$username,$hased_password);
+        echo $username, $email, $password, $hased_password;
         if($confirm_register){
             $reg_message = "Registration Successful";
             include 'view/confirm_register.php';
