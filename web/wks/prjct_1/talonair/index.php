@@ -75,7 +75,7 @@ case 'confirm_register':
         //Add content variables here
         $username=$_POST['username'];
         $password=$_POST['password'];
-        include 'view/profile.php';
+        include 'view/login.php';
     break;
 
     case 'profile':
