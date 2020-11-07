@@ -46,6 +46,7 @@ switch ($action){
 //confirm Registration
 case 'confirm_register':
         //Add content variables here
+        echo "We are here";
         $username=$_POST['username'];
         $email=$_POST['email'];
         $password=$_POST['password'];
