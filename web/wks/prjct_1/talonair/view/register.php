@@ -21,7 +21,7 @@
 		<div class="register_container">
 			<div class="form_container">
 				<div class="form">
-					<form method="POST" action="index.php" id="confirm_register">
+					<form method="POST" action="index.php" enctype="multipart/form-data">
 						<h3 class="center">Register</h3>
 						<input type="text" name="username" id="username" required class="txtinput" placeholder="Username">
 						<input type="email" name="email" id="email" required class="txtinput" placeholder="E-mail">
