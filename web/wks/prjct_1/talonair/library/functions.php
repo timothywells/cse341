@@ -44,16 +44,10 @@ function delete_message($messageID){
 //REGISTER, PROFILE AND LOGIN
 //Register for website
 function register($email,$username,$hashed_password){
-    echo "We are in the function";
-    echo $email . "<br>" . $username . "<br>" . $hashed_password ."<br>";
-
     //check that passwords match and has passwords
     $db = herokuConnect();
     $sql = "INSERT INTO customer_info(email, username, password)
     VALUES ('$email', '$username', '$hashed_password')";
-    // $sql = "INSERT INTO customer_info(
-    //     email, username. password
-    // ) VALUES ('$email','$username','$password')";
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $row_count = $stmt->rowCount();

@@ -18,7 +18,7 @@
 		<h3>Thank You for Registering</h3>
 		<p>
 			<?php
-			if(isset($reg_meesage)){echo $reg_message;};
+			if(isset($reg_message)){echo $reg_message;};
 			?>
 		</p>
 		<div class="confirm_links">
