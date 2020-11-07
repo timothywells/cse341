@@ -54,11 +54,11 @@ case 'confirm_register':
         $password=filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
         //$_POST['password'];
         $hashed_password = password_hash('123456', PASSWORD_DEFAULT);
-        echo $username . "<br>";
-        echo $email . "<br>";
-        echo $password . "<br>";
-        echo $hashed_password . "<br>";
-        $confirm_register = register($email,$username,$hased_password);
+        // echo $username . "<br>";
+        // echo $email . "<br>";
+        // echo $password . "<br>";
+        // echo $hashed_password . "<br>";
+        $confirm_register = register($email,$username,$hashed_password);
         if($confirm_register){
             $reg_message = "Registration Successful";
             include 'view/confirm_register.php';
