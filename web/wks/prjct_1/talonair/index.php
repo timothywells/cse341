@@ -53,7 +53,7 @@ case 'confirm_register':
         //$_POST['email'];
         $password=filter_input(INPUT_POST, 'pasword', FILTER_SANITIZE_STRING);
         //$_POST['password'];
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $hashed_password = password_hash('123456', PASSWORD_DEFAULT);
         echo $username . "<br>";
         echo $email . "<br>";
         echo $password . "<br>";
