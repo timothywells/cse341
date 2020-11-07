@@ -17,7 +17,8 @@ switch ($action){
     case 'home':
         include 'view/home.php';
     break;
-//Success Messages
+
+//Success Delete Messages
     case 'delete_message':
         //Add content variables here
         $messageID = $_GET['messageID'];
@@ -25,7 +26,7 @@ switch ($action){
         include 'view/confirm_delete.php';
     break;
 
-//Forms and such
+//Send Message
     case 'send_message':
         $fullname=$_POST['fullname'];
         $form_phone=$_POST['form_phone'];
@@ -36,6 +37,7 @@ switch ($action){
         include 'view/confirm_message_sent.php';
     break;
 
+//Register account
     case 'register':
         //Add content variables here
         $username=$_POST['username'];
@@ -44,6 +46,7 @@ switch ($action){
         include 'view/register.php';
     break;
 
+//Login    
     case 'login':
         //Add content variables here
         $username=$_POST['username'];
@@ -59,9 +62,15 @@ switch ($action){
     case 'change_profile':
 
     break;
+//Admin Delete Profile
+    case 'delete_profile':
+        //Add content variables here
+        $customerID = $_GET['customerID'];
+        delete_message($customerID);
+        include 'view/confirm_profile_delete.php';
+    break;  
 
-
-//views Returned    
+//Views Returned    
     case 'view_messages':
         //Add content variables here
         $messages_list = make_message_list();

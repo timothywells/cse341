@@ -66,13 +66,47 @@ function change_password(){
 }
 
 //RPOFILES
-//Get Profile information
+//Get Profile information for customers
 function get_profile(){
+    $db = herokuConnect();
+    $sql = "SELECT * FROM customer_profile";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $response;
+}
+//Write Profile to profile page usung Legends and fieldset
+function cust_profile(){
 
 }
-//Write Profile to profile page
-function write_profile(){
 
+//ADMIN PROFILE SECTIONS
+//Get profiles for admin
+function get_profiles_admin() {
+
+}
+
+//User Profiles for Admin as table
+function profile_table_admin($get_profile) {
+    $html = '<table>';
+    $html .= '<tr><th>Name</th><th>Phone</th><th>E-Mail</th><th>Subject</th><th>Message</th><th></th></tr>';
+    foreach($get_profile as $line_item){
+        $html .= "<tr><td>" . $line_item['fname'] . "</td><td>" . $line_item['lname'] . "</td><td>" . $line_item['street_address'] . "</td><td>" . $line_item['c_city'] . "</td><td>" . $line_item['c_state'] . "</td><td>" . $line_item['zip'] . "</td><td>" . $line_item['phone'] . "</td><td>" . $line_item['email'] . "</td><td><a href=index.php?action=delete_profile&customerID=" . $line_item['customerID']. ">Delete Message</a></td></tr>";
+    }
+    $html .= '</table>';
+    return $html;
+}
+
+//Delete Customer Profile
+function delete_cust_profile($customerID){
+    $db = herokuConnect();
+    $sql = "DELETE FROM customer_info WHERE customerid = $customerID";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $response = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $response;
 }
 
 //REVIEWS
@@ -90,10 +124,7 @@ function review_table(){
 
 }
 
-//Delete Review
-function delete_review(){
 
-}
 
 
 
