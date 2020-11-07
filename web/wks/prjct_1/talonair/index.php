@@ -41,7 +41,7 @@ switch ($action){
         $username=$_POST['username'];
         $email=$_POST['email'];
         $password=$_POST['password'];
-        include 'view/confirm_register.php';
+        include 'view/register.php';
     break;
 
     case 'login':

@@ -16,9 +16,13 @@
 	<div class="formatted_view">
         <!-- Div needed to format center and pic -->
 		<h3>Thank You for Registering</h3>
-		<a href="index.php">RETURN TO TALON AIR HOME</a>
-		<a href="index.php?action=profile">GO TO PROFILE</a>
-		<a href="index.php?action=write_review"></a>
+		<div class="confirm_links">
+			<a href="index.php">Return to Talon Air Home</a>
+			<br>
+			<a href="index.php?action=profile">Go to Profile</a>
+			<br>
+			<a href="index.php?action=write_review">Write a Review</a>
+		</div>
 	</div>
 	</main>
 	<footer>
