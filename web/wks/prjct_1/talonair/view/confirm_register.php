@@ -17,9 +17,9 @@
         <!-- Div needed to format center and pic -->
 		<h3>Thank You for Registering</h3>
 
-		<!-- <?php
+		<?php
 		if(isset($reg_meesage)){echo $reg_message;};
-		?> -->
+		?>
 
 		<div class="confirm_links">
 			<a href="index.php">Return to Talon Air Home</a>
