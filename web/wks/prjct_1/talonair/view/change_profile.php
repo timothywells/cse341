@@ -20,9 +20,12 @@
 				<div class="form">
 					<form method="POST" action="index.php?action=profile_update" id="profile_update">
 						<h3 class="center">Profile Update</h3>
-						<input type="text" name="first_name" id="first_name" class="txtinput" placeholder="First Name">
-						<input type="text" name="last_name" id="last_name" class="txtinput" placeholder="Last Name">
-						<input type="text" name="address" id="address" class="txtinput" placeholder="address">
+						<input type="text" name="fname" id="fname" class="txtinput" placeholder="First Name">
+						<input type="text" name="lname" id="lname" class="txtinput" placeholder="Last Name">
+						<input type="text" name="street_address" id="street_address" class="txtinput" placeholder="address">
+						<input type="text" name="c_city" id="c_city" class="txtinput" placeholder="City">
+						<input type="text" name="c_state" id="c_state" class="txtinput" placeholder="State">
+						<input type="text" name="zip" id="zip" class="txtinput" placeholder="Zip">
 						<input type="text" name="phone" id="phone" class="txtinput" placeholder="Phone Number">
 						<input type="submit" id="submit" class="submit" value="Submit">
 						<button type="button" id="submit" class="button">Submit</button>

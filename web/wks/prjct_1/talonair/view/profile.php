@@ -19,6 +19,7 @@
                 <?php
                     echo $cust_profle;
                 ?>
+                <a href="index.php?action=change_profile"></a>
 
             <h3 class="center review">Your Reviews</h3>
                 <?php
