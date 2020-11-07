@@ -57,7 +57,7 @@ case 'confirm_register':
         echo $username . "<br>";
         echo $email . "<br>";
         echo $password . "<br>";
-        echo $hased_password . "<br>";
+        echo $hashed_password . "<br>";
         $confirm_register = register($email,$username,$hased_password);
         if($confirm_register){
             $reg_message = "Registration Successful";
