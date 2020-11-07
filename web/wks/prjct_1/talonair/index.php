@@ -46,13 +46,18 @@ switch ($action){
 //confirm Registration
 case 'confirm_register':
         //Add content variables here
-        echo "We are here";
+        echo "We are here" . "<br>";
         $username=filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
         //$_POST['username'];
-        $email=$_POST['email'];
-        $password=$_POST['password'];
+        $email=filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+        //$_POST['email'];
+        $password=filter_input(INPUT_POST, 'pasword', FILTER_SANITIZE_STRING);
+        //$_POST['password'];
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        echo $username, $email, $password, $hased_password;
+        echo $username . "<br>";
+        echo $email . "<br>";
+        echo $password . "<br>";
+        echo $hased_password . "<br>";
         $confirm_register = register($email,$username,$hased_password);
         if($confirm_register){
             $reg_message = "Registration Successful";
@@ -70,7 +75,7 @@ case 'confirm_register':
         //Add content variables here
         $username=$_POST['username'];
         $password=$_POST['password'];
-        include 'view/login.php';
+        include 'view/profile.php';
     break;
 
     case 'profile':
