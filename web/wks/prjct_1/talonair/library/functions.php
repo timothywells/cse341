@@ -44,6 +44,7 @@ function delete_message($messageID){
 //REGISTER, PROFILE AND LOGIN
 //Register for website
 function register($email,$username,$password){
+    echo "We are in the function";
     //check that passwords match and has passwords
     $db = herokuConnect();
     $sql = "INSERT INTO customer_info(
