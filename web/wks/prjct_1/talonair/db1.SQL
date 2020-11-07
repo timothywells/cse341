@@ -29,6 +29,10 @@ CREATE TABLE customer_photos (
     photo VARCHAR(256) NULL
 );
 
+//INSERT
+INSERT INTO customer_info(email, username, password)
+VALUES ('test@email.com', 'tester', 'password');
+
 
 
 //worked
