@@ -21,7 +21,7 @@ function make_message_list(){
     return $response;
 }
 //Creates Table in HTML
-function message_table($make_messages_list){
+function message_table($make_message_list){
     $html = '<table>';
     $html .= '<tr><th>Name</th><th>Phone</th><th>E-Mail</th><th>Subject</th><th>Message</th><th></th></tr>';
     foreach($messages_list as $line_item){
