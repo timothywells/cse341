@@ -19,7 +19,7 @@
             <h3 class="center">Write a Review</h3>
             <div class="write_review_container">
 				<div class="form">
-					<form method="POST" action="index.php?action=send_message" id="form">
+					<form method="POST" action="index.php?action=write_review" id="form">
 						<h4>Contact</h4>
 						<input type="text" name="fullname" id="name" required class="txtinput" placeholder="Full Name">
 						<input type="text" name="phone" id="phone" required class="txtinput" placeholder="Phone Number">

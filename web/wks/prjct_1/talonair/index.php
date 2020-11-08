@@ -96,6 +96,17 @@ switch ($action){
             }
     break;
 
+//Write a review
+    case 'write_review':
+        $fullname=$_POST['fullname'];
+        $form_phone=$_POST['phone'];
+        $form_email=$_POST['email'];
+        $form_subject=$_POST['subject'];
+        $form_message=$_POST['message'];
+        review_record($fullname, $phone, $email, $subject, $message);
+        include 'view/profile.php';
+    break;
+
  //Delete Review
     case 'cust_delete_review':
         
@@ -118,8 +129,8 @@ switch ($action){
         $message_table = message_table($messages_list);
         // $reviews_list = get_reviews();
         // $reviews_table = reviews_table($get_reviews);
-        // $get_profiles = get_profile();
-        // $profiles_table = profiles_table($get_profile);
+        $get_profiles = get_profile();
+        $profiles_table = profiles_table($get_profile);
 
         include 'view/admin.php';
     break;
@@ -173,15 +184,7 @@ break;
     break;
 
 
-    case 'write_review':
-        $fullname=$_POST['fullname'];
-        $form_phone=$_POST['phone'];
-        $form_email=$_POST['email'];
-        $form_subject=$_POST['subject'];
-        $form_message=$_POST['message'];
-        review_record($fullname, $phone, $email, $subject, $message);
-        include 'write_review.php';
-    break;
+
 
     case 'services':
         //Add content variables here
