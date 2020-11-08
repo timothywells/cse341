@@ -30,7 +30,9 @@
     function signInUser($email, $password){
         echo "We are in the signed in user function";
         $data = getHashed($email);
+        var_dump($data);
         $hashedPassword = $data['password'];
+        echo $hashedPassword;
         $passwordCheck = password_verify($password, $hashedPassword);
         if ($passwordCheck == true) {
         return $data['customerid'];
@@ -46,6 +48,7 @@ function getHashed($email) {
     echo "We are in the get hashed function";
     $dbConn = getConnection();
     $result = $dbConn->query("SELECT * FROM customer_info WHERE email = '$email';");
+    var_dump($result);
     return ($result->fetch());
 }
 
