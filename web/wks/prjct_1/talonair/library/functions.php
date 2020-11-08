@@ -45,11 +45,16 @@
 
 //Get hashed password by email
 function getHashed($email) {
-    echo "We are in the get hashed function";
-    $dbConn = getConnection();
-    $result = $dbConn->query("SELECT * FROM customer_info WHERE email = '$email';");
-    var_dump($result);
-    return ($result->fetch());
+    echo "We are in the get hashed function" . '<br>';
+    echo $email . '<br>';
+    $db = herokuConnect();
+    $sql = "SELECT * FROM customer_info WHERE email = '$email'";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();    
+    var_dump($response);
+    return $response;
 }
 
 
