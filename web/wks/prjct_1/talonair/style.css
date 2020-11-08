@@ -107,15 +107,6 @@ p {
   }
 }
 
-.about p, .about h {
-  color: black;
-}
-
-.profile p {
-  color: black;
-  text-align: center;
-}
-
 footer li {
   font-family: "Source Serif Pro";
   color: white;
@@ -314,18 +305,18 @@ body .formatted_view {
   width: 80%;
 }
 body .confirm_links {
-  display: flex;
+  display: inline;
 }
 body .confirm_links a {
   text-decoration: none;
   text-align: center;
   line-height: 1em;
-  padding: 0.5em 2em;
-  margin: 0 1em;
+  padding: 1em;
+  margin: 1em 0;
   background-color: #45a049;
   color: white;
-  font-size: 1em;
-  font-weight: 300;
+  font-size: 1.25em;
+  font-weight: 600;
 }
 body .confirm_links a:hover {
   background-color: #4CAF50;
@@ -381,6 +372,13 @@ body .login_container a, body .register_container a {
   text-decoration: none;
   font-weight: 300;
   text-transform: uppercase;
+}
+body .about p, body .about h {
+  color: black;
+}
+body .profile p, body .formatted_view p {
+  color: black;
+  text-align: center;
 }
 
 footer {

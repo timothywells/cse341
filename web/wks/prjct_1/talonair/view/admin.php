@@ -19,30 +19,30 @@
         <!-- Div needed to format tables, possibly skip the profile here cause it is just Admin in general -->
 
 
-        <h3 class="center messages">Messages</h3>
+        <h3 class="center">Messages</h3>
         <!-- LEGEND BOX -->
         <!-- Div needed to format tables -->
-        <?php
-            echo $message_table;
-        ?>
- 
+        <div class="messages">
+            <?php
+                echo $message_table;
+            ?>
+        </div>
+
         <h3 class="center reviews">Reviews</h3>
         <!-- Div needed to format tables -->
-        <?php
-            echo $customer_reviews;
-        ?>
-
-        <h3 class="center customers">Customers</h3>
+        <div class="reviews">
+            <?php
+                echo $customer_reviews;
+            ?>
+        </div>
+        <h3 class="center">Customers</h3>
         <!-- Div needed to format tables -->
-        <p>
-			<?php
-			if(isset($profile_del_message)){echo $profile_del_message;};
-			?>
-		</p>
-        <?php
-            echo $profiles_table;
-        ?>
-   
+        <div class="customers">
+            <p><?php if(isset($profile_del_message)){echo $profile_del_message;};?></p>
+            <?php
+                echo $profiles_table;
+            ?>
+        </div>
     </div>
     </main>
 	<footer>

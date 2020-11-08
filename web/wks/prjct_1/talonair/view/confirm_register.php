@@ -23,9 +23,7 @@
 		</p>
 		<div class="confirm_links">
 			<a href="index.php">Return to Talon Air Home</a>
-			<br>
 			<a href="index.php?action=profile">Go to Profile</a>
-			<br>
 			<a href="index.php?action=write_review">Write a Review</a>
 		</div>
 	</div>
