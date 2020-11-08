@@ -28,12 +28,14 @@
 /******************** LOGGING IN INFORMATION ********************/
 //get login information
     function signInUser($email, $password){
-        echo "We are in the signed in user function";
+        echo "We are in the signed in user function" . '<br>';
         $data = getHashed($email);
         var_dump($data);
-        $hashedPassword = $data['password'];
-        echo $hashedPassword;
+        echo '<br>';
+        $hashedPassword = $data[0]['password'];
+        echo $hashedPassword . '<br>';
         $passwordCheck = password_verify($password, $hashedPassword);
+        echo $passwordCheck . '<br>';
         if ($passwordCheck == true) {
         return $data['customerid'];
         }
@@ -52,7 +54,7 @@ function getHashed($email) {
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $stmt->closeCursor();    
+    $stmt->closeCursor();
     var_dump($response);
     return $response;
 }
