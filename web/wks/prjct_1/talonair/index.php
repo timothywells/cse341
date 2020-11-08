@@ -140,15 +140,16 @@ switch ($action){
         //Add content variables here
         $customerID = $_GET['get_customer_id'];
         delete_cust_profile($customerID);
+        include 'view/admin.php';
         //Change to just being a notice at the top of the page
-        $confirm_delete = delete_cust_profile($customerID);
-        if($confirm_delete){
-            $profile_del_message = "Profile Deleted";
-            include 'view/admin.php';
-        } else {
-            $profile_del_message = "Profile NOT Successful";
-            include 'view/admin.php';
-         }
+        // $confirm_delete = delete_cust_profile($customerID);
+        // if($confirm_delete){
+        //     $profile_del_message = "Profile Deleted";
+        //     include 'view/admin.php';
+        // } else {
+        //     $profile_del_message = "Profile NOT Successful";
+        //     include 'view/admin.php';
+        //  }
     break;  
 
 //Delete Messages
