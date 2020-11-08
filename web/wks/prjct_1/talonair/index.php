@@ -147,7 +147,7 @@ switch ($action){
         //Add content variables here
         $customerID = $_GET['get_customer_id'];
         delete_cust_profile($customerID);
-        include 'view/admin.php';
+        include 'view/confirm_delete_profile.php';
         //Change to just being a notice at the top of the page
         // $confirm_delete = delete_cust_profile($customerID);
         // if($confirm_delete){
