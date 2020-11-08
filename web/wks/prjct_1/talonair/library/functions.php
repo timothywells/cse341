@@ -28,6 +28,7 @@
 /******************** LOGGING IN INFORMATION ********************/
 //get login information
     function signInUser($email, $password){
+        echo "We are in the signed in user function";
         $data = getHashed($email);
         $hashedPassword = $data['password'];
         $passwordCheck = password_verify($password, $hashedPassword);
@@ -42,6 +43,7 @@
 
 //Get hashed password by email
 function getHashed($email) {
+    echo "We are in the get hashed function";
     $dbConn = getConnection();
     $result = $dbConn->query("SELECT * FROM customer_info WHERE email = '$email';");
     return ($result->fetch());

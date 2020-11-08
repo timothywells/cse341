@@ -64,8 +64,11 @@ switch ($action){
 //Goinng to Profile AFTER logging in
     case 'profile':
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+        echo $email . '<br>';
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        echo $password . '<br>';
         $userId = signInUser($email, $password);
+        echo $userId . '<br>';
         if ($userId == false) {
             $message = "Sign In Failed";
             include $_SERVER['DOCUMENT_ROOT'] . "view/login.php";
