@@ -136,7 +136,7 @@ switch ($action){
         $messages_list = get_message_list();
         $message_table = message_table($messages_list);
         $admin_get_reviews = get_reviews();
-        $admin_reviews = reviews_table($admin_get_reviews);
+        $admin_reviews_table = reviews_table($admin_get_reviews);
         $get_profiles = get_profile();
         $profiles_table = profiles_table($get_profiles);
         include 'view/admin.php';
