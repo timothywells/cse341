@@ -69,7 +69,7 @@ switch ($action){
         echo $password . '<br>';
         $userId = signInUser($email, $password);
         echo $userId . '<br>';
-        if ($userId == false) {
+        if ($userId == false || isset($userId) == false) {
             echo 'we are in the index';
             $message = "Sign In Failed";
             include $_SERVER['DOCUMENT_ROOT'] . "view/login.php";
