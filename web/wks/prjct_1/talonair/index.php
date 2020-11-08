@@ -63,9 +63,20 @@ switch ($action){
 
 //Goinng to Profile AFTER logging in
     case 'profile':
-        // $get_cust_profile = get_cust_profile();
-        // $customer_profle = cust_profile_table($get_cust_profile);
-        
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        $userId = signInUser($email, $password);
+        if ($userId == false) {
+            $message = "Sign In Failed";
+            include $_SERVER['DOCUMENT_ROOT'] . "view/login.php";
+            exit;
+        }
+        $customerData = get_cust_profile($userId);
+        $_SESSION['customerSessionData'] = $customerData;
+        $_SESSION['username'] = $customerData['username'];
+        $_SESSION['email'] = $email;
+        $_SESSION['userId'] = $userId;
+        $_SESSION['loggedIn'] = true;
         include 'view/profile.php';
     break;
 
@@ -82,6 +93,7 @@ switch ($action){
 
         //Chagning profile information look at confirm register for example
         $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+        $password=filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
             
 
@@ -125,8 +137,8 @@ switch ($action){
     break;
 
     case 'change_password':
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+        $password=filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
     break;
 
 /******************** ADMINISTRATION INFORMATION ********************/

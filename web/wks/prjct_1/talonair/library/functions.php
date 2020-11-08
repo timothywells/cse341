@@ -27,9 +27,26 @@
 
 /******************** LOGGING IN INFORMATION ********************/
 //get login information
-    function get_login_info(){
-
+    function signInUser($email, $password){
+        $data = getHashed($email);
+        $hashedPassword = $data['password'];
+        $passwordCheck = password_verify($password, $hashedPassword);
+        if ($passwordCheck == true) {
+        return $data['customerid'];
+        }
+        else {
+            return false;
+        }
     }
+
+
+//Get hashed password by email
+function getHashed($email) {
+    $dbConn = getConnection();
+    $result = $dbConn->query("SELECT * FROM customer_info WHERE email = '$email';");
+    return ($result->fetch());
+}
+
 
 //Login abd hash password
     function login(){
@@ -57,9 +74,9 @@
 /******************** CUSTOMER INFORMATION ********************/
 //Write Profile to profile page usung Legends and fieldset
 //Need to fet only the customer profile of the customer logged in
-    function get_cust_profile(){
+    function get_cust_profile($userId){
         $db = herokuConnect();
-        $sql = "SELECT * FROM customer_info WHERE customerid = $sessionID";
+        $sql = "SELECT * FROM customer_info WHERE customerid = $userId";
         $stmt = $db->prepare($sql);
         $stmt->execute();
         $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -109,13 +126,6 @@
 
     }
 
-/******************** Write a review ********************/
-//Record the Review
-    function review_record(){
-
-    }
-
-
 /******************** CUSTOMER REVIEWS PAGE ********************/
 //Get the reviews for the reviews page
     function get_reviews(){
@@ -127,6 +137,17 @@
         $stmt->closeCursor();
         return $response;
     }
+//Write review to DB
+    function review_record($customerid, $review, $review_date){
+        $db = herokuConnect();
+        $sql = "INSERT INTO review_record(
+            customerid, review, review_date
+        ) VALUES ('$customerid', '$review', '$review_date')";
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+        $stmt->closeCursor();
+    }
+
 
 //Customer review Table
     function reviews_table($get_reviews) {
@@ -138,6 +159,8 @@
         $html .= '</table>';
         return $html;
     }
+
+///How to add stuff from session $_SESSION['customerSessionData']['fname'];
 
 
 /******************** ADMIN PROFILE ********************/

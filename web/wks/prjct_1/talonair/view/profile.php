@@ -1,5 +1,15 @@
 <?php 
+    if(isset($_SERVER['loggedIn'])){
+        if($_SERVER['loggedIn'] == false){
+            include 'view/login.php';
+        exit;
+        }
+    } else {
+        include 'view/login.php';
+        exit;
+    }
     $pagetitle = 'Talon Air, Inc. | Profile';
+    $_SESSION['customerSessionData']['fname'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,6 +33,7 @@
                     <a href="index.php?action=change_profile">Update Profile</a>
                 </div>
             <h3 class="center review">Your Reviews</h3>
+                <p> <?php  echo $_SESSION['customerSessionData']['username']; ?></p>
                 <p>
                     <?php
                     if(isset($reg_message)){echo $reg_message;};
