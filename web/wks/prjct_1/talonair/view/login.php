@@ -17,7 +17,7 @@
             <div class="form_container">
                 <div class="form">
                 <?php if(isset($message)){echo $message;};?>
-                    <form method="POST" action="index.php?action=profile" id="login">
+                    <form method="POST" action="index.php?action=login_user" id="login">
                         <h3 class="center">Login</h3>
                         <input type="email" name="email" id="email" required class="txtinput" placeholder="E-mail">
                         <input type="password" name="password" id="password" required class="txtinput" placeholder="Password">

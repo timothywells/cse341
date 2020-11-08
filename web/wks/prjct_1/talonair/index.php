@@ -62,7 +62,8 @@ switch ($action){
     break;
 
 //Goinng to Profile AFTER logging in
-    case 'profile':
+    case 'login_user':
+        $userId = '';
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
         echo $email . '<br>';
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
@@ -84,6 +85,12 @@ switch ($action){
         echo $_SESSION['loggedIn'];
         include 'view/profile.php';
     break;
+
+//Profile
+    case 'profile':
+        include 'view/profile.php';
+    break;
+
 //Log out
     case 'log_out':
         $_SESSION['loggedIn'] = false;
