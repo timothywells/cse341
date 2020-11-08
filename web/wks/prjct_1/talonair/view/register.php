@@ -25,8 +25,8 @@
 						<h3 class="center">Register</h3>
 						<input type="text" name="username" id="username" required class="txtinput" placeholder="Username">
 						<input type="email" name="email" id="email" required class="txtinput" placeholder="E-mail">
-						<input type="text" name="password" id="password" required class="txtinput" placeholder="Password">
-						<input type="text" name="passwordConfirm" id="passwordConfirm" required class="txtinput" placeholder="Confirm Password">
+						<input type="password" name="password" id="password" required class="txtinput" placeholder="Password">
+						<input type="password" name="passwordConfirm" id="passwordConfirm" required class="txtinput" placeholder="Confirm Password">
 						<!-- <input type="hidden" name="action" value="confirm_register"> -->
                         <input type="submit" id="submit" class="submit" value="Submit">
 					</form>
