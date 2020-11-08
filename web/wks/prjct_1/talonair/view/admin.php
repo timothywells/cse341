@@ -34,9 +34,15 @@
 
         <h3 class="center">Customers</h3>
         <!-- Div needed to format tables -->
+        <p>
+			<?php
+			if(isset($profile_del_message)){echo $profile_del_message;};
+			?>
+		</p>
         <?php
             echo $profiles_table;
         ?>
+   
     </div>
     </main>
 	<footer>

@@ -164,9 +164,9 @@
 //User Profiles for Admin as table
     function profiles_table($get_profile) {
         $html = '<table>';
-        $html .= '<tr><th>Nirst Name</th><th>Last Name</th><th>Stree Address</th><th>City</th><th>State</th><th>Zip</th><th>Phone</th><th></th>Email<th>Delete Profiles</th></tr>';
+        $html .= '<tr><th>Nirst Name</th><th>Last Name</th><th>Stree Address</th><th>City</th><th>State</th><th>Zip</th><th>Phone</th><th></th>Email</th><th>Delete Profiles</th></tr>';
         foreach($get_profile as $line_item){
-            $html .= "<tr><td>" . $line_item['fname'] . "</td><td>" . $line_item['lname'] . "</td><td>" . $line_item['street_address'] . "</td><td>" . $line_item['c_city'] . "</td><td>" . $line_item['c_state'] . "</td><td>" . $line_item['zip'] . "</td><td>" . $line_item['phone'] . "</td><td>" . $line_item['email'] . "</td><td><a href=index.php?action=delete_profile&get_customer_id=" . $line_item['customer_id']. ">Delete Rpofile</a></td></tr>";
+            $html .= "<tr><td>" . $line_item['fname'] . "</td><td>" . $line_item['lname'] . "</td><td>" . $line_item['street_address'] . "</td><td>" . $line_item['c_city'] . "</td><td>" . $line_item['c_state'] . "</td><td>" . $line_item['zip'] . "</td><td>" . $line_item['phone'] . "</td><td>" . $line_item['email'] . "</td><td><a href=index.php?action=delete_profile&get_customer_id=" . $line_item['customer_id']. ">Delete Profile</a></td></tr>";
         }
         $html .= '</table>';
         return $html;
@@ -175,7 +175,7 @@
 //Delete Customer Profile
     function delete_cust_profile($customerID){
         $db = herokuConnect();
-        $sql = "DELETE FROM customer_info WHERE customerid = $customerID";
+        $sql = "DELETE FROM customer_info WHERE customer_id = $customerID";
         $stmt = $db->prepare($sql);
         $stmt->execute();
         $response = $stmt->rowCount();
