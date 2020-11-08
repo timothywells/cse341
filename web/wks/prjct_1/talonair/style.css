@@ -327,14 +327,14 @@ body .confirm_links a {
 body .confirm_links a:hover {
   background-color: #4CAF50;
 }
-body .login_container, body .register_container {
+body .login_container, body .register_container, body .write_review_container {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
   margin: 2em auto;
   text-align: center;
 }
-body .login_container input[type=text], body .register_container input[type=text] {
+body .login_container input[type=text], body .register_container input[type=text], body .write_review_container input[type=text] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -343,7 +343,7 @@ body .login_container input[type=text], body .register_container input[type=text
   border-radius: 4px;
   box-sizing: border-box;
 }
-body .login_container input[type=email], body .register_container input[type=email] {
+body .login_container input[type=email], body .register_container input[type=email], body .write_review_container input[type=email] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -352,7 +352,7 @@ body .login_container input[type=email], body .register_container input[type=ema
   border-radius: 4px;
   box-sizing: border-box;
 }
-body .login_container input[type=submit], body .register_container input[type=submit] {
+body .login_container input[type=submit], body .register_container input[type=submit], body .write_review_container input[type=submit] {
   width: 100%;
   background-color: #4CAF50;
   color: white;
@@ -362,7 +362,7 @@ body .login_container input[type=submit], body .register_container input[type=su
   border-radius: 4px;
   cursor: pointer;
 }
-body .login_container input[type=password], body .register_container input[type=password] {
+body .login_container input[type=password], body .register_container input[type=password], body .write_review_container input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -371,10 +371,10 @@ body .login_container input[type=password], body .register_container input[type=
   border-radius: 4px;
   box-sizing: border-box;
 }
-body .login_container input[type=submit]:hover, body .register_container input[type=submit]:hover {
+body .login_container input[type=submit]:hover, body .register_container input[type=submit]:hover, body .write_review_container input[type=submit]:hover {
   background-color: #45a049;
 }
-body .login_container a, body .register_container a {
+body .login_container a, body .register_container a, body .write_review_container a {
   text-decoration: none;
   font-weight: 300;
   text-transform: uppercase;

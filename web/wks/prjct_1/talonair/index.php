@@ -63,8 +63,7 @@ switch ($action){
 
 //Goinng to Profile AFTER logging in
     case 'profile':
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+
         $cust_profle = cust_profile();
         $cust_review = cust_review();
         include 'view/profile.php';
@@ -124,6 +123,11 @@ switch ($action){
         }
     break;
 
+    case 'change_password':
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+    break;
+
 /******************** ADMINISTRATION INFORMATION ********************/
 //Admin Profile
     case 'admin':
@@ -143,16 +147,17 @@ switch ($action){
         //Add content variables here
         $customerID = $_GET['get_customer_id'];
         delete_cust_profile($customerID);
-        //include 'view/admin.php';
+        include 'view/admin.php';
         //Change to just being a notice at the top of the page
-        $confirm_delete = delete_cust_profile($customerID);
-        if($confirm_delete){
-            $profile_del_message = "Profile Deleted";
-            include 'view/admin.php';
-        } else {
-            $profile_del_message = "Profile Delete FAIL!";
-            include 'view/admin.php';
-         }
+        // $confirm_delete = delete_cust_profile($customerID);
+        // if($confirm_delete){
+        //     $profile_del_message = "Profile Deleted";
+        //     include 'view/admin.php';
+        // } else {
+        //     $profile_del_message = "Profile Delete FAIL!";
+        //     include 'view/admin.php';
+        //  }
+
     break;  
 
 //Delete Messages

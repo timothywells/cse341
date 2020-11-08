@@ -15,12 +15,8 @@
 	<main>
 	<div class="formatted_view">
         <!-- Div needed to format center and pic -->
-		<h3>Thank You for Registering</h3>
-		<p>
-			<?php
-			if(isset($reg_message)){echo $reg_message;};
-			?>
-		</p>
+		<h3><?php if(isset($reg_message)){echo $reg_message;};?></h3>
+
 		<div class="confirm_links">
 			<a href="index.php">Return to Talon Air Home</a>
 			<a href="index.php?action=profile">Go to Profile</a>
