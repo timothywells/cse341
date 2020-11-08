@@ -63,8 +63,8 @@ switch ($action){
 
 //Goinng to Profile AFTER logging in
     case 'profile':
-        $get_cust_profile = get_cust_profile();
-        $customer_profle = cust_profile_table($get_cust_profile);
+        // $get_cust_profile = get_cust_profile();
+        // $customer_profle = cust_profile_table($get_cust_profile);
         
         include 'view/profile.php';
     break;
