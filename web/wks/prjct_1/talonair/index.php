@@ -87,7 +87,7 @@ switch ($action){
 //Log out
     case 'log_out':
         $_SESSION['loggedIn'] = false;
-        include 'index.php';
+        include 'view/home.php';
     break;
 
 /******************** CUSTOMER INFORMATION ********************/
