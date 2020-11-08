@@ -17,11 +17,10 @@
     <div class="formatted_view">
         <h3 class="center">Admin Profile</h3>
         <!-- Div needed to format tables, possibly skip the profile here cause it is just Admin in general -->
-        <?php
-            echo $profile_table_admin;
-        ?>
+
 
         <h3 class="center">Messages</h3>
+        <!-- LEGEND BOX -->
         <!-- Div needed to format tables -->
         <?php
             echo $message_table;
@@ -36,7 +35,7 @@
         <h3 class="center">Customers</h3>
         <!-- Div needed to format tables -->
         <?php
-            echo $profile_table;
+            echo $profiles_table;
         ?>
     </div>
     </main>
