@@ -212,6 +212,11 @@ nav ul li {
   margin: 0;
   padding: 0;
 }
+@media screen and (max-width: 900px) {
+  nav ul li {
+    display: inline;
+  }
+}
 nav ul li a {
   display: block;
   color: white;
@@ -309,10 +314,10 @@ body .formatted_view {
   width: 80%;
 }
 body .confirm_links {
-  display: flexbox;
-  text-decoration: none;
+  display: flex;
 }
 body .confirm_links a {
+  text-decoration: none;
   text-align: center;
   line-height: 1em;
   padding: 0.5em 2em;
@@ -322,7 +327,7 @@ body .confirm_links a {
   font-size: 1em;
   font-weight: 300;
 }
-body .confirm_links a :hover {
+body .confirm_links a:hover {
   background-color: #4CAF50;
 }
 body .login_container, body .register_container {
