@@ -37,7 +37,7 @@
         $passwordCheck = password_verify($password, $hashedPassword);
         echo $passwordCheck . '<br>';
         if ($passwordCheck == true) {
-        return $data['customerid'];
+        return $data[0]['customerid'];
         }
         else {
             return false;
