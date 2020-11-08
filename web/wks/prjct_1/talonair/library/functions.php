@@ -28,14 +28,14 @@
 /******************** LOGGING IN INFORMATION ********************/
 //get login information
     function signInUser($email, $password){
-        echo "We are in the signed in user function" . '<br>';
+        //echo "We are in the signed in user function" . '<br>';
         $data = getHashed($email);
-        var_dump($data);
-        echo '<br>';
+        //var_dump($data);
+        //echo '<br>';
         $hashedPassword = $data[0]['password'];
-        echo $hashedPassword . '<br>';
+        //echo $hashedPassword . '<br>';
         $passwordCheck = password_verify($password, $hashedPassword);
-        echo $passwordCheck . '<br>';
+        //echo $passwordCheck . '<br>';
         if ($passwordCheck == true) {
         return $data[0]['customerid'];
         }
@@ -47,15 +47,15 @@
 
 //Get hashed password by email
 function getHashed($email) {
-    echo "We are in the get hashed function" . '<br>';
-    echo $email . '<br>';
+    //echo "We are in the get hashed function" . '<br>';
+    //echo $email . '<br>';
     $db = herokuConnect();
     $sql = "SELECT * FROM customer_info WHERE email = '$email'";
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
-    var_dump($response);
+    //var_dump($response);
     return $response;
 }
 

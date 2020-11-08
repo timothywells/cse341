@@ -1,10 +1,12 @@
 <?php 
     if(isset($_SERVER['loggedIn'])){
         if($_SERVER['loggedIn'] == false){
+            echo 'we are in the profile 1';
             include 'view/login.php';
         exit;
         }
     } else {
+        echo 'we are in the profile 2';
         include 'view/login.php';
         exit;
     }
