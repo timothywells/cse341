@@ -175,7 +175,7 @@
 //Admin Reviews Table
     function admin_reviews_table($get_reviews) {
         $html = '<table>';
-        $html .= "<tr><th>First Name</th><th>Last Name</th><th>Review Date</th><th>Review</th><th>Delete Review</th></tr>";
+        $html .= '<tr><th>First Name</th><th>Last Name</th><th>Review Date</th><th>Review</th><th>Delete Review</th></tr>';
         foreach($get_reviews as $line_item){
             $html .= "<tr><td>" . $line_item['fname'] . "</td><td>" . $line_item['lname'] . "</td><td>" . $line_item['review_date'] . "</td><td>" . $line_item['review'] . "</td><td><a href=index.php?action=admin_delete_review&get_review_by_id=" . $line_item['reviewid'] . ">Delete Review</a></td></tr>";
         }
