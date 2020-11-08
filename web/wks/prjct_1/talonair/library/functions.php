@@ -67,7 +67,7 @@ function getHashed($email) {
 
 //Check Login information
     function check_cedentials(){
-
+        
     }
 
 /******************** GET PROFILE INFORMATION ********************/

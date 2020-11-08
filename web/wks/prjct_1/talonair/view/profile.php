@@ -7,11 +7,11 @@
         }
     }
 
-    if(!(isset($_SERVER['loggedIn']))){
-        echo 'we are in the profile 2';
-        include 'view/login.php';
-        exit;
-    }
+    // if(!(isset($_SERVER['loggedIn']))){
+    //     echo 'we are in the profile 2';
+    //     include 'view/login.php';
+    //     exit;
+    // }
 
     $pagetitle = 'Talon Air, Inc. | Profile';
     $_SESSION['customerSessionData']['fname'];
