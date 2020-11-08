@@ -33,11 +33,10 @@
             echo $customer_reviews;
         ?>
 
-
         <h3 class="center">Customers</h3>
         <!-- Div needed to format tables -->
         <?php
-            echo $customer_table;
+            echo $profile_table;
         ?>
     </div>
     </main>

@@ -12,92 +12,137 @@ $action = filter_input(INPUT_POST, 'action');
   }
  }
 
-//Actions
+/******************** INDEX SWITCHING INFORMATION ********************/
 switch ($action){
-    case 'home':
-        include 'view/home.php';
+        case 'home':
+            include 'view/home.php';
     break;
 
-//Success Delete Messages
-    case 'delete_message':
-        //Add content variables here
-        $messageID = $_GET['messageID'];
-        delete_message($messageID);
-        include 'view/confirm_delete.php';
-    break;
-
+/******************** SEND MESSAGE FROM HOME SCREEN INFORMATION ********************/
 //Send Message
     case 'send_message':
-        $fullname=$_POST['fullname'];
-        $form_phone=$_POST['form_phone'];
-        $form_email=$_POST['form_email'];
-        $form_subject=$_POST['form_subject'];
-        $form_message=$_POST['form_message'];
-        form_record($fullname, $form_phone, $form_email, $form_subject, $form_message);
-        include 'view/confirm_message_sent.php';
+            $fullname=$_POST['fullname'];
+            $form_phone=$_POST['form_phone'];
+            $form_email=$_POST['form_email'];
+            $form_subject=$_POST['form_subject'];
+            $form_message=$_POST['form_message'];
+            message_record($fullname, $form_phone, $form_email, $form_subject, $form_message);
+            include 'view/confirm_message_sent.php';
     break;
 
-//Register account
+
+/******************** REGISTRATION INFORMATION ********************/
+//Register for an account goes to register view
     case 'register':
-        //Add content variables here
         include 'view/register.php';
     break;
 
-//confirm Registration
-case 'confirm_register':
+//Confirms Registration sends information to server
+    case 'confirm_register':
         //Add content variables here
         $username=filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
         $email=filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
         $password=filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
         $confirm_register = register($email,$username,$hashed_password);
         if($confirm_register){
             $reg_message = "Registration Successful";
-            //echo $reg_message;
             include 'view/confirm_register.php';
         } else {
             $reg_message = "Registration was NOT Successful";
             include 'view/register.php';
         }
-        //include 'view/confirm_register.php';        
     break;
-//Login    
+
+/******************** LOGGING IN INFORMATION ********************/
+//Login view
     case 'login':
         //Add content variables here
-        $username=$_POST['username'];
-        $password=$_POST['password'];
         include 'view/login.php';
     break;
 
+//Goinng to Profile AFTER logging in
     case 'profile':
+        $username = $_POST['username'];
+        $password = $_POST['password'];
         $cust_profle = cust_profile();
         $cust_review = cust_review();
-        $username=$_POST['username'];
-        $password=$_POST['password'];
-        $passwordConfirm=$_POST['passwordConfirm'];
         include 'view/profile.php';
     break;
 
+/******************** CUSTOMER INFORMATION ********************/
+//Change Profile VIew
     case 'change_profile':
-
+        include 'views/change_profile.php';
     break;
-//Admin Delete Profile
+
+//Confirm the profile changed
+    case 'confirm_profile_change':
+        //Goes back to profile with confirm change, 
+        //Clear out information if different
+
+        //Chagning profile information look at confirm register for example
+        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+
+            
+
+        $confirm_change = register($email,$username,$hashed_password);
+            if($confirm_change){
+                $confirm_message = "Profile Update Successful";
+                include 'view/profile.php';
+            } else {
+                $confirm_message = "Profile Update NOT Successful";
+                include 'view/change_profile.php';
+            }
+    break;
+
+ //Delete Review
+    case 'cust_delete_review':
+        
+
+        //$confirm_review_delete = ;
+        if($confirm_review_delete){
+            $confirm_review_deleted = "Review was Deleted Successfully";
+            include 'view/profile.php';
+        } else {
+            $confirm_review_deleted = "Review was NOT Deleted";
+            include 'view/change_profile.php';
+        }
+    break;
+
+/******************** ADMINISTRATION INFORMATION ********************/
+//Admin Profile
+    case 'admin':
+        //Add content variables here
+        $messages_list = get_message_list();
+        $message_table = message_table($messages_list);
+        $reviews_list = get_reviews();
+        $reviews_table = reviews_table($get_reviews);
+        $get_profiles = get_profile();
+        $profiles_table = profiles_table($get_profile);
+
+        include 'view/admin.php';
+    break;
+
+//Delete profile from customer list
     case 'delete_profile':
         //Add content variables here
-        $customerID = $_GET['customerID'];
-        delete_message($customerID);
+        $customerID = $_GET['get_customer_id'];
+        delete_cust_profile($customerID);
+        //Change to just being a notice at the top of the page
         include 'view/confirm_profile_delete.php';
     break;  
 
-//Views Returned    
-    case 'view_messages':
-        //Add content variables here
-        $messages_list = make_message_list();
-        $message_table = message_table($messages_list);
-        include 'view/messages.php';
-    break;
+//Delete Messages
+case 'delete_message':
+    //Add content variables here
+    $messageID = $_GET['get_message_by_id'];
+    delete_message($messageID);
+    include 'view/confirm_message_delete.php';
+break;
 
+/******************** TEXT ********************/
+//OTHER VIEWS    
     case '404.php':
         //Add content variables here
         include '404.php';
@@ -108,10 +153,14 @@ case 'confirm_register':
         include 'view/about.php';
     break;
 
-    case 'admin':
+    //Views Returned    
+    case 'view_messages':
         //Add content variables here
-        include 'view/admin.php';
+        $messages_list = get_message_list();
+        $message_table = message_table($messages_list);
+        include 'view/messages.php';
     break;
+
     
     case 'change_profile':
         //Add content variables here
@@ -123,10 +172,6 @@ case 'confirm_register':
         include 'profile_changed.php';
     break;
 
-    case 'confirm_delete':
-        //Add content variables here
-        include 'confirm_delete.php';
-    break;
 
     case 'write_review':
         $fullname=$_POST['fullname'];
