@@ -77,6 +77,7 @@ switch ($action){
         $_SESSION['email'] = $email;
         $_SESSION['userId'] = $userId;
         $_SESSION['loggedIn'] = true;
+        echo $_SESSION['loggedIn'];
         include 'view/profile.php';
     break;
 
