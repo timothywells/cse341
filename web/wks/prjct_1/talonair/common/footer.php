@@ -1,5 +1,5 @@
-<h2>Talon Air, Inc. &copy 2018</h2>
-		<h4>All Rights Reserved</h4>
+<h4>Talon Air, Inc. &copy 2018</h4>
+		<h5>All Rights Reserved</h5>
 		<h5>AZ-ROC: #180679, #180680</h5>
 		<ul>
 			<li>Paypal</li>

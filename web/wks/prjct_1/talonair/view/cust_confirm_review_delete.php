@@ -1,0 +1,28 @@
+<?php 
+    $pagetitle = 'Talon Air, Inc. | Confirm Message Deleted';
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <?php include 'common/head.php'; ?>
+    </head>
+	<header>
+        <?php include 'common/header.php'; ?>
+	</header>
+	<nav>
+        <?php include 'common/nav.php'; ?>
+	</nav>
+	<main>
+                <!-- Div needed to format center and pic -->
+        <div class="formatted_view">
+            <h3 class="center">Review Deleted</h3>
+            <div class="confirm_links">
+                <a href="index.php?action=profile">RETURN TO PROFILE</a>
+                <!-- <button type='button' id='yes'>Yes</Button><button type='button' id='no'>No</button> -->
+            </div>
+        </div>
+	</main>
+	<footer>
+            <?php include 'common/footer.php'; ?>
+	</footer>
+</html>

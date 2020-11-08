@@ -63,8 +63,9 @@ switch ($action){
 
 //Goinng to Profile AFTER logging in
     case 'profile':
-        $cust_profle = cust_profile();
-        $cust_review = cust_review();
+        $get_cust_profile = get_cust_profile();
+        $customer_profle = cust_profile_table($get_cust_profile);
+        
         include 'view/profile.php';
     break;
 
@@ -106,6 +107,7 @@ switch ($action){
         $form_subject=$_POST['subject'];
         $form_message=$_POST['review'];
         review_record($fullname, $phone, $email, $subject, $message);
+        include 'view/confirm_write_review.php';
     break;
 
  //Delete Review

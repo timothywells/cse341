@@ -68,7 +68,7 @@
     }
 
 //Customer Profile Information
-    function cust_profile ($get_cust_profile){
+    function cust_profile_table ($get_cust_profile){
 
     }
 
