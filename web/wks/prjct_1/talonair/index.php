@@ -130,7 +130,7 @@ switch ($action){
         // $reviews_list = get_reviews();
         // $reviews_table = reviews_table($get_reviews);
         $get_profiles = get_profile();
-        $profiles_table = profiles_table($get_profile);
+        $profiles_table = profiles_table($get_profiles);
 
         include 'view/admin.php';
     break;
