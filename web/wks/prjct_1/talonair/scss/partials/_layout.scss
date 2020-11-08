@@ -160,7 +160,7 @@ body{
 	}
 	
 	//Customer and Messages Table Format
-	.customers, .messages {
+	.customers, .messages, .reviews {
 		table {
 			table-layout: auto;
 			width: 100%;
@@ -208,7 +208,7 @@ body{
 		}
 
 	}
-	//Log In and Registration Forms
+//Log In and Registration Forms
 	.login_container, .register_container, .write_review_container {
 	border-radius: 5px;
 	background-color: #f2f2f2;

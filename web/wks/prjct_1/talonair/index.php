@@ -14,8 +14,8 @@ $action = filter_input(INPUT_POST, 'action');
 
 /******************** INDEX SWITCHING INFORMATION ********************/
 switch ($action){
-        case 'home':
-            include 'view/home.php';
+    case 'home':
+        include 'view/home.php';
     break;
 
 /******************** SEND MESSAGE FROM HOME SCREEN INFORMATION ********************/
@@ -63,7 +63,6 @@ switch ($action){
 
 //Goinng to Profile AFTER logging in
     case 'profile':
-
         $cust_profle = cust_profile();
         $cust_review = cust_review();
         include 'view/profile.php';
@@ -85,14 +84,14 @@ switch ($action){
 
             
 
-        $confirm_change = register($email,$username,$hashed_password);
-            if($confirm_change){
-                $confirm_message = "Profile Update Successful";
-                include 'view/profile.php';
-            } else {
-                $confirm_message = "Profile Update NOT Successful";
-                include 'view/change_profile.php';
-            }
+        // $confirm_change = register($email,$username,$hashed_password);
+        //     if($confirm_change){
+        //         $confirm_message = "Profile Update Successful";
+        //         include 'view/profile.php';
+        //     } else {
+        //         $confirm_message = "Profile Update NOT Successful";
+        //         include 'view/change_profile.php';
+        //     }
     break;
 
 //Write a review
@@ -114,13 +113,13 @@ switch ($action){
         
 
         //$confirm_review_delete = ;
-        if($confirm_review_delete){
-            $confirm_review_deleted = "Review was Deleted Successfully";
-            include 'view/profile.php';
-        } else {
-            $confirm_review_deleted = "Review was NOT Deleted";
-            include 'view/change_profile.php';
-        }
+        // if($confirm_review_delete){
+        //     $confirm_review_deleted = "Review was Deleted Successfully";
+        //     include 'view/profile.php';
+        // } else {
+        //     $confirm_review_deleted = "Review was NOT Deleted";
+        //     include 'view/change_profile.php';
+        // }
     break;
 
     case 'change_password':
@@ -134,11 +133,10 @@ switch ($action){
         //Add content variables here
         $messages_list = get_message_list();
         $message_table = message_table($messages_list);
-        // $reviews_list = get_reviews();
-        // $reviews_table = reviews_table($get_reviews);
+        $admin_get_reviews = get_reviews();
+        $admin_reviews = reviews_table($admin_get_reviews);
         $get_profiles = get_profile();
         $profiles_table = profiles_table($get_profiles);
-
         include 'view/admin.php';
     break;
 
@@ -157,18 +155,37 @@ switch ($action){
         //     $profile_del_message = "Profile Delete FAIL!";
         //     include 'view/admin.php';
         //  }
-
     break;  
 
 //Delete Messages
-case 'delete_message':
-    //Add content variables here
-    $messageID = $_GET['get_message_by_id'];
-    delete_message($messageID);
-    include 'view/confirm_message_delete.php';
-break;
+    case 'delete_message':
+        //Add content variables here
+        $messageID = $_GET['get_message_by_id'];
+        delete_message($messageID);
+        include 'view/confirm_message_delete.php';
+    break;
 
-/******************** TEXT ********************/
+//Admin Delete Review    
+    case 'admin_delete_review':
+        $reviewID = $_GET['get_review_by_id'];
+        admin_delete_review($reviewID);
+        include 'view/admin_confirm_review_delete.php';
+    break;
+
+
+/******************** REVIEWS ********************/
+//Reviews Page
+    case 'reviews':
+        //Add content variables here
+        $get_reviews = get_reviews();
+        $admin_reviews = reviews_table($get_reviews);
+        include 'view/reviews.php';
+    break;
+
+
+
+
+
 //OTHER VIEWS    
     case '404.php':
         //Add content variables here
@@ -180,42 +197,28 @@ break;
         include 'view/about.php';
     break;
 
-    //Views Returned    
-    case 'view_messages':
-        //Add content variables here
-        $messages_list = get_message_list();
-        $message_table = message_table($messages_list);
-        include 'view/messages.php';
-    break;
-
-    
-    case 'change_profile':
-        //Add content variables here
-        include 'change_profile.php';
-    break;
-
-    case 'profile_changed':
-
-        include 'profile_changed.php';
-    break;
-
-
-
-
     case 'services':
         //Add content variables here
         include 'view/services.php';
     break;
 
-    case 'reviews':
-        //Add content variables here
-        include 'view/reviews.php';
-    break;
 
+
+//Default Home
     default:
         include 'view/home.php';
     break;
+
+/******************** DEPRECIATED ********************/
+//View Messages
+    // case 'view_messages':
+    //     //Add content variables here
+    //     $messages_list = get_message_list();
+    //     $message_table = message_table($messages_list);
+    //     include 'view/messages.php';
+    // break;
+
+    
+
 }
-
-
 ?>

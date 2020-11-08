@@ -10,36 +10,6 @@
         $stmt->execute();
         $stmt->closeCursor();
     }
-//Getting the array of the messages from DB
-    function get_message_list(){
-        $db = herokuConnect();
-        $sql = "SELECT * FROM send_message";
-        $stmt = $db->prepare($sql);
-        $stmt->execute();
-        $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $stmt->closeCursor();
-        return $response;
-    }
-//Creates Table in HTML
-    function message_table($get_message_list){
-        $html = '<table>';
-        $html .= '<tr><th>Name</th><th>Phone</th><th>E-Mail</th><th>Subject</th><th>Message</th><th></th></tr>';
-        foreach($get_message_list as $line_item){
-            $html .= "<tr><td>" . $line_item['fullname'] . "</td><td>" . $line_item['form_phone'] . "</td><td>" . $line_item['form_email'] . "</td><td>" . $line_item['form_subject'] . "</td><td>" . $line_item['form_message'] . "</td><td><a href=index.php?action=delete_message&get_message_by_id=" . $line_item['message_id']. ">Delete Message</a></td></tr>";
-        }
-        $html .= '</table>';
-        return $html;
-    }
-//Delete from Messaeg Table
-    function delete_message($messageID){
-        $db = herokuConnect();
-        $sql = "DELETE FROM send_message WHERE message_id = $messageID";
-        $stmt = $db->prepare($sql);
-        $stmt->execute();
-        $response = $stmt->rowCount();
-        $stmt->closeCursor();
-        return $response;
-    }
 
 /******************** REGISTRATION INFORMATION ********************/
 //Register for website
@@ -125,7 +95,12 @@
         $stmt->closeCursor();
         return $response;
     }
-    //Customer deletes review
+//Show customer's review on profile
+    function show_cust_review($get_cust_review){
+
+    }    
+    
+//Customer deletes review
     function customer_delete_review() {
         
     }
@@ -165,8 +140,60 @@
     }
 
 
-
 /******************** ADMIN PROFILE ********************/
+//Getting the array of the messages from DB
+    function get_message_list(){
+        $db = herokuConnect();
+        $sql = "SELECT * FROM send_message";
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+        $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+        return $response;
+    }
+//Creates Table in HTML
+    function message_table($get_message_list){
+        $html = '<table>';
+        $html .= '<tr><th>Name</th><th>Phone</th><th>E-Mail</th><th>Subject</th><th>Message</th><th>Delete Message</th></tr>';
+        foreach($get_message_list as $line_item){
+            $html .= "<tr><td>" . $line_item['fullname'] . "</td><td>" . $line_item['form_phone'] . "</td><td>" . $line_item['form_email'] . "</td><td>" . $line_item['form_subject'] . "</td><td>" . $line_item['form_message'] . "</td><td><a href=index.php?action=delete_message&get_message_by_id=" . $line_item['message_id']. ">Delete Message</a></td></tr>";
+        }
+        $html .= '</table>';
+        return $html;
+    }
+//Delete from Messaeg Table
+    function delete_message($messageID){
+        $db = herokuConnect();
+        $sql = "DELETE FROM send_message WHERE message_id = $messageID";
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+        $response = $stmt->rowCount();
+        $stmt->closeCursor();
+        return $response;
+    }
+
+//Admin Reviews Table
+    function admin_reviews_table($get_reviews) {
+        $html = '<table>';
+        $html .= "<tr><th>First Name</th><th>Last Name</th><th>Review Date</th><th>Review</th><th>Delete Review</th></tr>";
+        foreach($get_reviews as $line_item){
+            $html .= "<tr><td>" . $line_item['fname'] . "</td><td>" . $line_item['lname'] . "</td><td>" . $line_item['review_date'] . "</td><td>" . $line_item['review'] . "</td><td><a href=index.php?action=admin_delete_review&get_review_by_id=" . $line_item['reviewid'] . ">Delete Review</a></td></tr>";
+        }
+        $html .= '</table>';
+        return $html;
+    }
+
+//Admin deletes review
+    function admin_delete_review() {
+        $db = herokuConnect();
+        $sql = "DELETE FROM customer_review WHERE reviewid = $reviewID";
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+        $response = $stmt->rowCount();
+        $stmt->closeCursor();
+        return $response;
+
+    }
 //User Profiles for Admin as table
     function profiles_table($get_profile) {
         $html = '<table>';
@@ -177,7 +204,6 @@
         $html .= '</table>';
         return $html;
     }
-
 //Delete Customer Profile
     function delete_cust_profile($customerID){
         $db = herokuConnect();
@@ -188,10 +214,7 @@
         $stmt->closeCursor();
         return $response;
     }
-//Admin deletes review
-    function admin_delete_review() {
 
-    }
 
 
 

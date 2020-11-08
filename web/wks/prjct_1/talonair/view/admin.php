@@ -32,7 +32,7 @@
         <!-- Div needed to format tables -->
         <div class="reviews">
             <?php
-                echo $customer_reviews;
+                echo $admin_reviews_table;
             ?>
         </div>
         <h3 class="center">Customers</h3>
