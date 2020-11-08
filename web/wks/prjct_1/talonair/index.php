@@ -98,13 +98,16 @@ switch ($action){
 
 //Write a review
     case 'write_review':
-        $fullname=$_POST['fullname'];
-        $form_phone=$_POST['phone'];
-        $form_email=$_POST['email'];
+        include 'view/write_review.php';
+    break;
+
+//Confirm Review
+    case 'confirm_review':
+        $fullName=['fname' . 'lname'];
+        $reviewDate=['date'];
         $form_subject=$_POST['subject'];
-        $form_message=$_POST['message'];
+        $form_message=$_POST['review'];
         review_record($fullname, $phone, $email, $subject, $message);
-        include 'view/profile.php';
     break;
 
  //Delete Review
@@ -140,16 +143,16 @@ switch ($action){
         //Add content variables here
         $customerID = $_GET['get_customer_id'];
         delete_cust_profile($customerID);
-        include 'view/admin.php';
+        //include 'view/admin.php';
         //Change to just being a notice at the top of the page
-        // $confirm_delete = delete_cust_profile($customerID);
-        // if($confirm_delete){
-        //     $profile_del_message = "Profile Deleted";
-        //     include 'view/admin.php';
-        // } else {
-        //     $profile_del_message = "Profile NOT Successful";
-        //     include 'view/admin.php';
-        //  }
+        $confirm_delete = delete_cust_profile($customerID);
+        if($confirm_delete){
+            $profile_del_message = "Profile Deleted";
+            include 'view/admin.php';
+        } else {
+            $profile_del_message = "Profile Delete FAIL!";
+            include 'view/admin.php';
+         }
     break;  
 
 //Delete Messages

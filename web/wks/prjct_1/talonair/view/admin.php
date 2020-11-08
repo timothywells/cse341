@@ -19,20 +19,20 @@
         <!-- Div needed to format tables, possibly skip the profile here cause it is just Admin in general -->
 
 
-        <h3 class="center">Messages</h3>
+        <h3 class="center messages">Messages</h3>
         <!-- LEGEND BOX -->
         <!-- Div needed to format tables -->
         <?php
             echo $message_table;
         ?>
-
-        <h3 class="center">Reviews</h3>
+ 
+        <h3 class="center reviews">Reviews</h3>
         <!-- Div needed to format tables -->
         <?php
             echo $customer_reviews;
         ?>
 
-        <h3 class="center">Customers</h3>
+        <h3 class="center customers">Customers</h3>
         <!-- Div needed to format tables -->
         <p>
 			<?php

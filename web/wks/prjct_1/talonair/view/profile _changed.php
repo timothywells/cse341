@@ -13,10 +13,12 @@
         <?php include 'common/nav.php'; ?>
 	</nav>
 	<main>
-        <div class="formatted_view">
+        <div class="formatted_view confirm">
             <h3 class="center profile">Thank You</h3>
-            <p>Your Profile has changed</p>
-            <a href="index.php?action=profile">RETURN TO PROFILE</a>
+                <p>Your Profile has changed</p>
+            <div class="confirm_links">
+                <a href="index.php?action=profile">RETURN TO PROFILE</a>
+            </div>
         </div>
     </main>
 	<footer>

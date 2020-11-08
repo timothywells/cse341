@@ -77,11 +77,8 @@ nav{
 		}
 	}
 }
-
+//Body Formatting
 body{
-	//margin: 0;
-	//padding: 0;
-	//width: 100%;
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -89,6 +86,16 @@ body{
 	align-items: stretch;
 	min-height: 100%;
 	
+	//Main section of site between nav and footer
+	main{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+		flex-grow: 1;
+		flex-direction: column;
+	}
+
 	//All site banners
 	.banner{
 		align-content: center;
@@ -111,6 +118,7 @@ body{
 		height: auto;
 		width: auto;
 	}
+
 	//All First Block Divs
 	.firstblock{
 		@include MQ(S){
@@ -138,6 +146,7 @@ body{
 		margin: 0;
 		background-color: royalblue;
 	}
+
 	//Logo Banner
 	.logos{
 		width: auto;
@@ -145,39 +154,53 @@ body{
 		padding: 0;
 		margin: 1vh 2vw;
 		background: url('scss/images/brands/logos.svg') no-repeat center center;
-		}
-	//Table Format
-	table {
-		table-layout: fixed;
-		width: 100%;
-		margin: 0 auto 5% auto;
-		border-collapse: collapse;
-		border-spacing: 0;
-		border: 1px solid #ddd;
-		th, td {
-			text-align: left;
-			padding: 10px;
-		}
-		tr:nth-child(even) {
-			background-color: #f2f2f2;
+	}
+	
+	//Customer and Messages Table Format
+	.customers, .messages {
+		table {
+			table-layout: auto;
+			width: 100%;
+			margin: 0 auto 5% auto;
+			border-collapse: collapse;
+			border-spacing: 0;
+			border: 1px solid #ddd;
+			th, td {
+				text-align: left;
+				padding: 10px;
+			}
+			tr:nth-child(even) {
+				background-color: #f2f2f2;
+			}
 		}
 	}
+
+	//Formatted view if the site
 	.formatted_view{
 		margin: 0 auto;
 		width: 80%;
 	}
-	//Main section of site between nav and footer
-	main{
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0;
-		padding: 0;
-		flex-grow: 1;
-		flex-direction: column;
-	}
+	//Confirm Links
+	.confirm_links {
+		display: flexbox;
+		text-decoration: none;
+		a {
+			text-align: center;
+			line-height: 1em;
+			padding:0.5em 2em;
+			margin: 0 1em;
+			background-color: #45a049;
+			color: white;
+			font-size: 1em;
+			font-weight: 300;
+			:hover {
+				background-color: #4CAF50;
+			}
+		}
 
-	//Log In Form
-	.login_container {
+	}
+	//Log In and Registration Forms
+	.login_container, .register_container {
 	border-radius: 5px;
 	background-color: #f2f2f2;
 	padding: 20px;
@@ -211,7 +234,9 @@ body{
 		text-transform: uppercase;
 		}
 	}
+//Body End
 }
+
 //All Footer information is the same
 footer{
 	margin: 0;

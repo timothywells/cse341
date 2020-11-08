@@ -19,12 +19,10 @@ h1 {
 	font-weight: heavy;
 	padding: 0;
 	@include MQ(S) {
-		font-size: 8vw;
-		line-height: 8vw;
+		font-size: 5em;
 	}
 	@include MQ(M) {
-		font-size: 4vw;
-		line-height: 4vw;
+		font-size: 4em;
 	}
 }
 
@@ -34,12 +32,10 @@ h2 {
 	font-weight: extra-bold;
 	padding: 0;
 	@include MQ(S) {
-		font-size: 6vw;
-		line-height: 6vw;
+		font-size: 4em;
 	}
 	@include MQ(M) {
-		font-size: 3vw;
-		line-height: 3vw;
+		font-size: 3em;
 	}
 }
 //Used for Black Headers
@@ -49,12 +45,10 @@ h3 {
 	padding: 0;
 	text-align: center;
 	@include MQ(S) {
-		font-size: 6vw;
-		line-height: 6vw;
+		font-size: 3em;
 	}
 	@include MQ(M) {
-		font-size: 4vw;
-		line-height: 4vw;
+		font-size: 2em;
 	}
 
 }
@@ -65,12 +59,10 @@ h4 {
 	text-transform: uppercase;
 	padding: 0;
 	@include MQ(S) {
-		font-size: 3vw;
-		line-height: 3vw;
+		font-size: 2em;
 	}
 	@include MQ(M) {
-		font-size: 2vw;
-		line-height: 2vw;
+		font-size: 1.5em;
 	}
 }
 h5 {
@@ -80,12 +72,10 @@ h5 {
 	text-transform: uppercase;
 	padding: 0;
 	@include MQ(S) {
-		font-size: 2vw;
-		line-height: 1vw;
+		font-size: 1em;
 	}
 	@include MQ(M) {
-		font-size: 1vw;
-		line-height: 1vw;
+		font-size: 1em;
 	}
 }
 
@@ -94,24 +84,32 @@ h5 {
 //------------------------------ Body Typography ------------------------------
 p {
 	@include MQ(S) {
-			font-size: 3vw;
+			font-size: 2em;
 		}
 		@include MQ(M) {
-			font-size: 1.5vw;
+			font-size: 1.5em;
 		}
 	font-family: $body-font;
 	padding: 0 25px;
 	color: white;
 }
-.about p, h{
-	color: black;
+.about{
+	p, h{
+		color: black;
+	}
+}
+.profile{
+	p {
+		color: black;
+		text-align: center;
+	}
 }
 footer{
 	li {
 		font-family: $body-font;
 		color: white;
 		@include MQ(S) {
-			font-size: 2vw;
+			font-size: 2em;
 		}
 		@include MQ(M) {
 			font-size: 1.5em;
@@ -123,9 +121,9 @@ li {
 	font-family: $body-font;
 	color: white;
 	@include MQ(S) {
-		font-size: 2vw;
+		font-size: 2em;
 	}
 	@include MQ(M) {
-		font-size: 1vw;
+		font-size: 1em;
 	}
 }

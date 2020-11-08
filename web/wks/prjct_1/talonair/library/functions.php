@@ -87,9 +87,9 @@
 /******************** CUSTOMER INFORMATION ********************/
 //Write Profile to profile page usung Legends and fieldset
 //Need to fet only the customer profile of the customer logged in
-    function cust_profile(){
+    function get_cust_profile(){
         $db = herokuConnect();
-        $sql = "SELECT customerid FROM customer_info";
+        $sql = "SELECT * FROM customer_info WHERE customerid = $sessionID";
         $stmt = $db->prepare($sql);
         $stmt->execute();
         $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -97,10 +97,16 @@
         return $response;
     }
 
+//Customer Profile Information
+    function cust_profile ($get_cust_profile){
+
+    }
+
+
 //Update Customer Profile
     function update_cust_profile ($customerid,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone) {  
         $db = herokuConnect();
-        $sql = "INSERT INTO customer_info(
+        $sql = "INSERT INTO customer_info WHERE customerid = $sessionID (
             fname, fname, lname, street_address, c_city, c_state, zip, phone
         ) VALUES ('$fname','$lname','$street_address','$c_city','$c_state','$zip','$phone')
         WHERE customerid = $customerid";
@@ -112,7 +118,7 @@
 //Get Custromer Review by customer's id
     function get_cust_review(){
         $db = herokuConnect();
-        $sql = "SELECT customerid FROM customer_review WHERE customerid = $customerID";
+        $sql = "SELECT * FROM customer_review WHERE customerid = $sessionID";
         $stmt = $db->prepare($sql);
         $stmt->execute();
         $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -131,7 +137,7 @@
 /******************** Write a review ********************/
 //Record the Review
     function review_record(){
-
+        
     }
 
 

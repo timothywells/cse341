@@ -18,7 +18,9 @@
                 <h3 class="center">Thank You</h3>
                         <!-- Picture -->
                         <p>We have recieved your message and will get back to you as soon as possible</p>
-                        <a href="index.php">RETURN TO TALON AIR HOME</a>
+                        <div class="confirm_links">
+                                <a href="index.php">RETURN TO TALON AIR HOME</a>
+                        </div>
                 </div>
         </main>
 	<footer>

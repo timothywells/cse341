@@ -13,18 +13,27 @@
         <?php include 'common/nav.php'; ?>
 	</nav>
 	<main>
-        <div class="formatted_view">
+        <div class="formatted_view profile">
             <h3 class="center profile">Profile</h3>
                 <!-- Div needed to format -->
                 <?php
-                    echo $cust_profle;
+                    echo $customer_profle;
                 ?>
-                <a href="index.php?action=change_profile">Update Profile</a>
-
+                <div class="confirm_links">
+                    <a href="index.php?action=change_profile">Update Profile</a>
+                </div>
             <h3 class="center review">Your Reviews</h3>
+                <p>
+                    <?php
+                    if(isset($reg_message)){echo $reg_message;};
+                    ?>
+                </p>
                 <?php
                     echo $cust_review;
                 ?>
+                <div class="confirm_links">
+                    <a href="index.php?action=write_review">Write a Review</a>
+                </div>
             <h3 class="center password">Change Password</h3>
                 <form method="post" action="index.php?action=credentials_update" id="credentials_update">
 					<input type="email" name="email" id="email" class="txtinput" placeholder="E-mail">
