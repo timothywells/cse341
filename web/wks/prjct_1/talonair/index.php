@@ -84,6 +84,11 @@ switch ($action){
         echo $_SESSION['loggedIn'];
         include 'view/profile.php';
     break;
+//Log out
+    case 'log_out':
+        $_SESSION['loggedIn'] = false;
+        include 'index.php';
+    break;
 
 /******************** CUSTOMER INFORMATION ********************/
 //Change Profile VIew

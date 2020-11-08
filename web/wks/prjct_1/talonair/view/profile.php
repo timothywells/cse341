@@ -58,6 +58,7 @@
                     <!--alert password changed-->
 				</form>
         </div>
+        <a href="index.php?=action=log_out">Log Out</a>
     </main>
 	<footer>
             <?php include 'common/footer.php'; ?>
