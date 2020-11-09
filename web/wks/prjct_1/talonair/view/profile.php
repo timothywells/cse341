@@ -9,7 +9,7 @@
         }
     }
     if(!(isset($_SESSION['loggedIn']))){
-        echo 'we are in the profile 2';
+        //echo 'we are in the profile 2';
         include 'view/login.php';
         exit;
     }
@@ -29,8 +29,8 @@
         <?php include 'common/nav.php'; ?>
 	</nav>
 	<main>
-        <div class="formatted_view profile">
-            <h3 class="center profile">Profile</h3>
+        <div class="formatted_view">
+            <h3 class="center">Profile</h3>
                 <!-- Div needed to format -->
                 <table class="profile">
                     <tr><td>Username:</td><td></td></tr>
@@ -65,9 +65,9 @@
                     <button type="button" id="submit" class="button">Submit</button>
                     <!--alert password changed-->
                 </form>
-                <div class="confirm_links log_out">
+                <!-- <div class="confirm_links log_out">
                     <a href="index.php?action=log_out">Log Out</a>
-                </div>
+                </div> -->
         </div>
         
     </main>

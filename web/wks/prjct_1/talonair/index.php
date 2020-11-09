@@ -85,7 +85,7 @@ switch ($action){
                 $_SESSION['customerSessionData'] = $customerData;
                 $_SESSION['username'] = $customerData['username'];
                 $_SESSION['email'] = $email;
-                $_SESSION['customerid'] = $customerId; //what does this refer to
+                $_SESSION['userId'] = $customerId; //what does this refer to
                 $_SESSION['loggedIn'] = true;
                 include 'view/profile.php';
             break;

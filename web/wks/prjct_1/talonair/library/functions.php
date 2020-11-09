@@ -54,19 +54,19 @@
     //
     
     //Check to see if user is logged in
-        function login_check(){
-            if(isset($_SESSION['loggedIn'])){
-                if($_SESSION['loggedIn'] == false){
-                    echo 'we are in the profile 1';
-                    include 'view/login.php';
-                exit;
-                }
-            }
-            if(!(isset($_SESSION['loggedIn']))){
-                include 'view/login.php';
-                exit;
-            }
-        }
+        // function login_check(){
+        //     if(isset($_SESSION['loggedIn'])){
+        //         if($_SESSION['loggedIn'] == false){
+        //             echo 'we are in the profile 1';
+        //             include 'view/login.php';
+        //         exit;
+        //         }
+        //     }
+        //     if(!(isset($_SESSION['loggedIn']))){
+        //         include 'view/login.php';
+        //         exit;
+        //     }
+        // }
 /******************** CUSTOMER INFORMATION ********************/
     //Get profile by customer_info/customerid and set to $customerId
         function get_cust_profile($customerId){
@@ -87,16 +87,16 @@
 
 
     //Update Customer Profile
-        function update_cust_profile ($email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone) {  
-            $db = herokuConnect();
-            $sql = "UPDATE customer_info WHERE customerid = $customerId (
-                username, fname, lname, street_address, c_city, c_state, zip, phone
-            ) VALUES ('$username','$fname','$lname','$street_address','$c_city','$c_state','$zip','$phone')
-            WHERE customerid = $customerid";
-            $stmt = $db->prepare($sql);
-            $stmt->execute();
-            $stmt->closeCursor();
-        }
+        // function update_cust_profile ($email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone) {  
+        //     $db = herokuConnect();
+        //     $sql = "UPDATE customer_info WHERE customerid = $customerId (
+        //         username, fname, lname, street_address, c_city, c_state, zip, phone
+        //     ) VALUES ('$username','$fname','$lname','$street_address','$c_city','$c_state','$zip','$phone')
+        //     WHERE customerid = $customerid";
+        //     $stmt = $db->prepare($sql);
+        //     $stmt->execute();
+        //     $stmt->closeCursor();
+        // }
     //
 
     /******************** UNFINISHED PROFILE STUFF ********************/
