@@ -29,7 +29,7 @@
         <?php include 'common/nav.php'; ?>
 	</nav>
 	<main>
-        <div class="formatted_view">
+        <div class="formatted_view profile">
             <h3 class="center">Profile</h3>
             <p><?php if(isset($review_message)){echo $review_message;}; ?></p>
             <p><?php if(isset($profile_change_message)){echo $profile_change_message;};?></p>
