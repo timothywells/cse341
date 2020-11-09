@@ -127,12 +127,12 @@ switch ($action){
         //
 
     //Update Password
-        case 'update_password':
-            $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        // case 'update_password':
+        //     $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
 
-            include 'view/profile.php';
-        break;
+        //     include 'view/profile.php';
+        // break;
     //
 
     //Write a review view
