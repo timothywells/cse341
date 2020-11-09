@@ -29,7 +29,6 @@
 						<input type="text" name="zip" id="zip" class="txtinput" placeholder="Zip">
 						<input type="text" name="phone" id="phone" class="txtinput" placeholder="Phone Number">
 						<input type="submit" id="submit" class="submit" value="Submit">
-						<button type="button" id="submit" class="button">Submit</button>
 					</form>
 				</div>
 			</div>

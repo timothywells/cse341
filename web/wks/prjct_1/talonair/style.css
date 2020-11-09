@@ -285,7 +285,7 @@ body .logos {
   margin: 1vh 2vw;
   background: url("scss/images/brands/logos.svg") no-repeat center center;
 }
-body .customers table, body .messages table, body .reviews table {
+body .customers table, body .messages table, body .reviews table, body .password table {
   table-layout: auto;
   width: 100%;
   margin: 0 auto 5% auto;
@@ -293,11 +293,11 @@ body .customers table, body .messages table, body .reviews table {
   border-spacing: 0;
   border: 1px solid #ddd;
 }
-body .customers table th, body .customers table td, body .messages table th, body .messages table td, body .reviews table th, body .reviews table td {
+body .customers table th, body .customers table td, body .messages table th, body .messages table td, body .reviews table th, body .reviews table td, body .password table th, body .password table td {
   text-align: left;
   padding: 10px;
 }
-body .customers table tr:nth-child(even), body .messages table tr:nth-child(even), body .reviews table tr:nth-child(even) {
+body .customers table tr:nth-child(even), body .messages table tr:nth-child(even), body .reviews table tr:nth-child(even), body .password table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 body .formatted_view {
