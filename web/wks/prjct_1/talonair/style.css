@@ -322,17 +322,15 @@ body .confirm_links a {
   color: white;
   font-size: 1.25em;
   font-weight: 600;
-}
-body .confirm_links a .links {
   background-color: #005096;
 }
-body .confirm_links a .links:hover {
+body .confirm_links a:hover {
   background-color: #006496;
 }
-body .confirm_links a .log_out {
+body .confirm_links a.log_out {
   background-color: rgba(255, 0, 0, 0.75);
 }
-body .confirm_links a .log_out:hover {
+body .confirm_links a.log_out:hover {
   background-color: red;
 }
 body .login_container, body .register_container, body .write_review_container {
