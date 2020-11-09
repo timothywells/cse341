@@ -72,11 +72,11 @@ switch ($action){
 
         //Goinng to Profile AFTER logging in and creates a SESSION
             case 'login_user':
-                $userId = '';
+                $customerId = '';
                 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
                 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-                $userId = signInUser($email, $password); //Refers to signInUser in functions.php
-                if ($userId == false || isset($userId) == false) {
+                $customerId = signInUser($email, $password); //Refers to signInUser in functions.php
+                if ($customerId == false || isset($customerId) == false) {
                     $sign_fail_message = "Sign In Failed";
                     include $_SERVER['DOCUMENT_ROOT'] . "view/login.php";
                     exit;

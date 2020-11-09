@@ -68,7 +68,7 @@
             }
         }
 /******************** CUSTOMER INFORMATION ********************/
-    //Get profile by customer_info/customerid and set to $userId
+    //Get profile by customer_info/customerid and set to $customerId
         function get_cust_profile($customerId){
             $db = herokuConnect();
             $sql = "SELECT * FROM customer_info WHERE customerid = $customerId";
@@ -89,7 +89,7 @@
     //Update Customer Profile
         function update_cust_profile ($email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone) {  
             $db = herokuConnect();
-            $sql = "UPDATE customer_info WHERE customerid = $userId (
+            $sql = "UPDATE customer_info WHERE customerid = $customerId (
                 username, fname, lname, street_address, c_city, c_state, zip, phone
             ) VALUES ('$username','$fname','$lname','$street_address','$c_city','$c_state','$zip','$phone')
             WHERE customerid = $customerid";
