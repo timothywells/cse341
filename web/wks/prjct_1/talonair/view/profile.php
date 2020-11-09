@@ -31,6 +31,10 @@
 	<main>
         <div class="formatted_view">
             <h3 class="center">Profile</h3>
+            <p><?php if(isset($review_message)){echo $review_message;}; ?></p>
+            <p><?php if(isset($profile_change_message)){echo $profile_change_message;};?></p>
+            <p><?php if(isset($password_change_message)){echo $password_change_message;};?></p>
+
                 <!-- Div needed to format -->
                 <table class="profile">
                     <tr><td>Username:</td><td></td></tr>
@@ -44,27 +48,18 @@
                     <tr><td>Phone:</td><td></td></tr>
                 </table>
 
-                <?php
-                    echo $customer_profle;
-                ?>
-                <div class="confirm_links">
-                    <a href="index.php?action=change_profile">Update Profile</a>
-                </div>
+
             <h3 class="center review">Your Reviews</h3>
-                <p><?php if(isset($review_message)){echo $review_message;}; ?></p>
                 <?php echo $cust_review; ?>
 
                 <div class="confirm_links">
-                    <a href="index.php?action=write_review">Write a Review</a>
+                    <a class="links" href="index.php?action=change_profile">Update Profile</a>
+                    <a class="links" href="index.php?action=write_review">Write a Review</a>
+                    <a class="links" href="index.php?action=change_password">Change Password</a>
+                    <a class="log_out" href="index.php?action=log_out">Log Out</a>
                 </div>
-            <h3 class="center password">Change Password</h3>
-                <form method="post" action="index.php?action=credentials_update" id="credentials_update">
-					<input type="email" name="email" id="email" class="txtinput" placeholder="E-mail">
-					<input type="text" name="password" id="password" class="txtinput" placeholder="Password">
-					<input type="text" name="passwordConfirm" id="passwordConfirm" class="txtinput" placeholder="Confirm Password">
-                    <button type="button" id="submit" class="button">Submit</button>
-                    <!--alert password changed-->
-                </form>
+
+
                 <!-- <div class="confirm_links log_out">
                     <a href="index.php?action=log_out">Log Out</a>
                 </div> -->

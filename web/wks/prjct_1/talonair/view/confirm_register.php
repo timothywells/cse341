@@ -18,9 +18,9 @@
 		<h3><?php if(isset($reg_message)){echo $reg_message;};?></h3>
 
 		<div class="confirm_links">
-			<a href="index.php">Return to Talon Air Home</a>
-			<a href="index.php?action=profile">Go to Profile</a>
-			<a href="index.php?action=write_review">Write a Review</a>
+			<a class="links" href="index.php">Return to Talon Air Home</a>
+			<a class="links" href="index.php?action=profile">Go to Profile</a>
+			<a class="links" href="index.php?action=write_review">Write a Review</a>
 		</div>
 	</div>
 	</main>

@@ -106,7 +106,7 @@ switch ($action){
     /******************** CUSTOMER PROFILE ********************/
     //Change Profile VIew
         case 'change_profile':
-            include 'views/change_profile.php';
+            include 'view/change_profile.php';
         break;
     //
 
@@ -126,13 +126,16 @@ switch ($action){
             break;
         //
 
+    //Change Password View
+        case 'change_password':
+            include 'view/change_password.php';
+        break;
+    
     //Update Password
-        // case 'update_password':
-        //     $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        case 'password_update':
 
-
-        //     include 'view/profile.php';
-        // break;
+            include 'view/profile.php';
+        break;
     //
 
     //Write a review view
