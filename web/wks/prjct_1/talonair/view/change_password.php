@@ -1,4 +1,5 @@
 <?php 
+    login_check();
     $pagetitle = 'Talon Air, Inc. | Confirm Registration';
 ?>
 <!DOCTYPE html>

@@ -57,7 +57,6 @@
         function login_check(){
             if(isset($_SESSION['loggedIn'])){
                 if($_SESSION['loggedIn'] == false){
-                    echo 'we are in the profile 1';
                     include 'view/login.php';
                 exit;
                 }

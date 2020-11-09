@@ -1,4 +1,5 @@
 <?php 
+    login_check();
     $pagetitle = 'Talon Air, Inc. | Confirm Profile Change';
 ?>
 <!DOCTYPE html>

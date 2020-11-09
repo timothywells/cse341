@@ -1,6 +1,6 @@
 <?php 
 	
-	
+	//somethhing to prevent multiple entries by entering in the action
 	
 	$pagetitle = 'Talon Air, Inc. | Confirm Registration';
 ?>
