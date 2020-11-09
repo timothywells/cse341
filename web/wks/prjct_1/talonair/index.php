@@ -37,9 +37,8 @@ switch ($action){
         include 'view/register.php';
     break;
 
-//Confirms Registration sends information to server
-    case 'confirm_register':
-        //Add content variables here
+//Sends Registered information to server
+    case 'registered':
         $username=filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
         $email=filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
         $password=filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
@@ -53,7 +52,10 @@ switch ($action){
             include 'view/register.php';
         }
     break;
-
+//Confirm Registreation
+    case 'confirm_register':
+        include 'view/confirm_register.php';
+    break;
 /******************** LOGGING IN INFORMATION ********************/
 //Login view
     case 'login':
@@ -65,13 +67,9 @@ switch ($action){
     case 'login_user':
         $userId = '';
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-        echo $email . '<br>';
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-        echo $password . '<br>';
         $userId = signInUser($email, $password);
-        echo $userId . '<br>';
         if ($userId == false || isset($userId) == false) {
-            echo 'we are in the index';
             $message = "Sign In Failed";
             include $_SERVER['DOCUMENT_ROOT'] . "view/login.php";
             exit;
@@ -82,7 +80,6 @@ switch ($action){
         $_SESSION['email'] = $email;
         $_SESSION['userId'] = $userId;
         $_SESSION['loggedIn'] = true;
-        echo $_SESSION['loggedIn'];
         include 'view/profile.php';
     break;
 
@@ -138,8 +135,9 @@ switch ($action){
         review_record($fullname, $phone, $email, $subject, $message);
         include 'view/confirm_write_review.php';
     break;
+//
 
- //Delete Review
+//Delete Review
     case 'cust_delete_review':
         
 

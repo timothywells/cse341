@@ -28,14 +28,9 @@
 /******************** LOGGING IN INFORMATION ********************/
 //get login information
     function signInUser($email, $password){
-        //echo "We are in the signed in user function" . '<br>';
         $data = getHashed($email);
-        //var_dump($data);
-        //echo '<br>';
         $hashedPassword = $data[0]['password'];
-        //echo $hashedPassword . '<br>';
         $passwordCheck = password_verify($password, $hashedPassword);
-        //echo $passwordCheck . '<br>';
         if ($passwordCheck == true) {
         return $data[0]['customerid'];
         }
@@ -44,44 +39,16 @@
         }
     }
 
-
 //Get hashed password by email
-function getHashed($email) {
-    //echo "We are in the get hashed function" . '<br>';
-    //echo $email . '<br>';
-    $db = herokuConnect();
-    $sql = "SELECT * FROM customer_info WHERE email = '$email'";
-    $stmt = $db->prepare($sql);
-    $stmt->execute();
-    $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $stmt->closeCursor();
-    //var_dump($response);
-    return $response;
-}
-
-
-//Login abd hash password
-    function login(){
-
-    }
-
-//Check Login information
-    function check_cedentials(){
-        
-    }
-
-/******************** GET PROFILE INFORMATION ********************/
-//Get Profile information for customers
-    function get_profile(){
+    function getHashed($email) {
         $db = herokuConnect();
-        $sql = "SELECT * FROM customer_info";
+        $sql = "SELECT * FROM customer_info WHERE email = '$email'";
         $stmt = $db->prepare($sql);
         $stmt->execute();
         $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
         return $response;
     }
-
 
 /******************** CUSTOMER INFORMATION ********************/
 //Write Profile to profile page usung Legends and fieldset
@@ -105,7 +72,7 @@ function getHashed($email) {
 //Update Customer Profile
     function update_cust_profile ($customerid,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone) {  
         $db = herokuConnect();
-        $sql = "INSERT INTO customer_info WHERE customerid = $sessionID (
+        $sql = "INSERT INTO customer_info WHERE customerid = $userId (
             fname, fname, lname, street_address, c_city, c_state, zip, phone
         ) VALUES ('$fname','$lname','$street_address','$c_city','$c_state','$zip','$phone')
         WHERE customerid = $customerid";
@@ -172,10 +139,18 @@ function getHashed($email) {
         return $html;
     }
 
-///How to add stuff from session $_SESSION['customerSessionData']['fname'];
-
-
 /******************** ADMIN PROFILE ********************/
+//Get Profile information for Admin
+function get_profile(){
+    $db = herokuConnect();
+    $sql = "SELECT * FROM customer_info";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $response;
+}
+
 //Getting the array of the messages from DB
     function get_message_list(){
         $db = herokuConnect();
@@ -186,7 +161,8 @@ function getHashed($email) {
         $stmt->closeCursor();
         return $response;
     }
-//Creates Table in HTML
+
+//Creates Message Table in HTML
     function message_table($get_message_list){
         $html = '<table>';
         $html .= '<tr><th>Name</th><th>Phone</th><th>E-Mail</th><th>Subject</th><th>Message</th><th>Delete Message</th></tr>';
@@ -196,6 +172,7 @@ function getHashed($email) {
         $html .= '</table>';
         return $html;
     }
+
 //Delete from Messaeg Table
     function delete_message($messageID){
         $db = herokuConnect();
@@ -227,9 +204,9 @@ function getHashed($email) {
         $response = $stmt->rowCount();
         $stmt->closeCursor();
         return $response;
-
     }
-//User Profiles for Admin as table
+
+//User Profile Table for Admin as table
     function profiles_table($get_profile) {
         $html = '<table>';
         $html .= '<tr><th>First Name</th><th>Last Name</th><th>Stree Address</th><th>City</th><th>State</th><th>Zip</th><th>Phone</th><th>Email</th><th>Delete Profiles</th></tr>';
@@ -249,17 +226,5 @@ function getHashed($email) {
         $stmt->closeCursor();
         return $response;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
