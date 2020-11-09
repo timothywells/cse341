@@ -54,19 +54,19 @@
     //
     
     //Check to see if user is logged in
-        // function login_check(){
-        //     if(isset($_SESSION['loggedIn'])){
-        //         if($_SESSION['loggedIn'] == false){
-        //             echo 'we are in the profile 1';
-        //             include 'view/login.php';
-        //         exit;
-        //         }
-        //     }
-        //     if(!(isset($_SESSION['loggedIn']))){
-        //         include 'view/login.php';
-        //         exit;
-        //     }
-        // }
+        function login_check(){
+            if(isset($_SESSION['loggedIn'])){
+                if($_SESSION['loggedIn'] == false){
+                    echo 'we are in the profile 1';
+                    include 'view/login.php';
+                exit;
+                }
+            }
+            if(!(isset($_SESSION['loggedIn']))){
+                include 'view/login.php';
+                exit;
+            }
+        }
 /******************** CUSTOMER INFORMATION ********************/
     //Get profile by customer_info/customerid and set to $customerId
         function get_cust_profile($customerId){

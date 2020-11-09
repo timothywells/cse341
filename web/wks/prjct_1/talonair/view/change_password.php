@@ -14,7 +14,7 @@
 	</nav>
 	<main>
 	<div class="formatted_view">
-		<div class="password">
+		<div class="password_container">
 			<h3 class="center">Change Password</h3>
                 <form method="post" action="index.php?action=password_update" id="credentials_update">
 					<input type="email" name="email" id="email" class="txtinput" placeholder="E-mail">
