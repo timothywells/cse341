@@ -311,6 +311,7 @@ body .formatted_view p {
 body .confirm_links {
   display: inline;
   margin: 1em 0;
+  width: 50%;
 }
 body .confirm_links a {
   text-decoration: none;
@@ -326,6 +327,12 @@ body .confirm_links a {
 }
 body .confirm_links a:hover {
   background-color: #4CAF50;
+}
+body .confirm_links a .log_out {
+  background-color: rgba(255, 0, 0, 0.75);
+}
+body .confirm_links a .log_out:hover {
+  background-color: red;
 }
 body .login_container, body .register_container, body .write_review_container {
   border-radius: 5px;

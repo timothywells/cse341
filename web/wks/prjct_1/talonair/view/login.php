@@ -16,7 +16,7 @@
         <div class = "login_container">
             <div class="form_container">
                 <div class="form">
-                <?php if(isset($message)){echo $message;};?>
+                <p><?php if(isset($login_fail_message)){echo $login_fail_message;};?></p>
                     <form method="POST" action="index.php?action=login_user" id="login">
                         <h3 class="center">Login</h3>
                         <input type="email" name="email" id="email" required class="txtinput" placeholder="E-mail">

@@ -22,6 +22,10 @@ function herokuConnect() {
     }
 }
 
-//insert into statements for db such as user register and profile update
+/********************  ********************/
+
+
+
+
 ?>
 
