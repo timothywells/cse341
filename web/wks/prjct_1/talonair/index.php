@@ -113,13 +113,21 @@ switch ($action){
     //Update the profile information based on customerid
         case 'udpate_profile';
             $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+            echo $email . '<br>';
             $fname = filter_input(INPUT_POST, 'fname', FILTER_SANITIZE_STRING);
+            echo $fname . '<br>';
             $lname = filter_input(INPUT_POST, 'lname', FILTER_SANITIZE_STRING);
+            echo $lname . '<br>';
             $street_address = filter_input(INPUT_POST, 'street_address', FILTER_SANITIZE_STRING);
+            echo $street_address . '<br>';
             $c_city = filter_input(INPUT_POST, 'c_city', FILTER_SANITIZE_STRING);
+            echo $c_city . '<br>';
             $c_state = filter_input(INPUT_POST, 'c_state', FILTER_SANITIZE_STRING);
+            echo $c_state . '<br>';
             $zip = filter_input(INPUT_POST, 'zip', FILTER_SANITIZE_STRING);
+            echo $zip . '<br>';
             $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
+            echo $phone . '<br>';
             update_cust_profile ($email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone);
             include 'view/profile.php';
             break;
