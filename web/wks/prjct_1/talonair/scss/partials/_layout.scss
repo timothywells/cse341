@@ -190,17 +190,22 @@ body{
 
 	//Confirm Links
 	.confirm_links {
+		@include MQ(S){
+			display: inline;
+		}
 		display: inline-flex;
-		margin: 1em 0;
+		margin: 1em;
 		width: 100%;
 		a {
+			display: block;
+			width: 8em;
 			text-decoration: none;
 			text-align: center;
 			line-height: 1em;
 			padding: 1em;
-			margin: auto;
+			margin: 1em auto;
 			color: white;
-			font-size: 1.25em;
+			font-size: 1em;
 			font-weight: 600;
 			background-color: rgb(0, 80, 150);
 			&:hover {

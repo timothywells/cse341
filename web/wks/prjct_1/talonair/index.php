@@ -112,7 +112,6 @@ switch ($action){
 
     //Update the profile information based on customerid
         case 'udpate_profile';
-            $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
             $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
             $fname = filter_input(INPUT_POST, 'fname', FILTER_SANITIZE_STRING);
             $lname = filter_input(INPUT_POST, 'lname', FILTER_SANITIZE_STRING);
@@ -120,7 +119,7 @@ switch ($action){
             $c_city = filter_input(INPUT_POST, 'c_city', FILTER_SANITIZE_STRING);
             $c_state = filter_input(INPUT_POST, 'c_state', FILTER_SANITIZE_STRING);
             $zip = filter_input(INPUT_POST, 'zip', FILTER_SANITIZE_STRING);
-            $phone = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+            $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
             update_cust_profile ($email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone);
             include 'view/profile.php';
             break;
