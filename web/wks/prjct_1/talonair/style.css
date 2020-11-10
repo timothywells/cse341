@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-family: "Open Sans";
   color: white;
-  font-weight: heavy;
+  font-weight: 600;
   padding: 0;
 }
 @media screen and (max-width: 900px) {
@@ -24,7 +24,7 @@ h1 {
 h2 {
   font-family: "Open Sans";
   color: white;
-  font-weight: extra-bold;
+  font-weight: 600;
   padding: 0;
 }
 @media screen and (max-width: 900px) {
@@ -58,7 +58,7 @@ h3 {
 h4 {
   font-family: "Open Sans";
   color: white;
-  font-weight: extra-bold;
+  font-weight: 600;
   text-transform: uppercase;
   padding: 0;
 }
@@ -76,7 +76,7 @@ h4 {
 h5 {
   font-family: "Open Sans";
   color: white;
-  font-weight: extra-bold;
+  font-weight: 600;
   text-transform: uppercase;
   padding: 0;
 }
@@ -410,6 +410,9 @@ body .login_container a, body .register_container a, body .write_review_containe
   text-decoration: none;
   font-weight: 300;
   text-transform: uppercase;
+}
+body .login_container h5, body .register_container h5, body .write_review_container h5, body .password_container h5 {
+  color: red;
 }
 body .about p, body .about h {
   color: black;

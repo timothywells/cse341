@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5 {
 h1 {
 	font-family: $header-font;
 	color: white;
-	font-weight: heavy;
+	font-weight: 600;
 	padding: 0;
 	@include MQ(S) {
 		font-size: 5em;
@@ -29,7 +29,7 @@ h1 {
 h2 {
 	font-family: $header-font;
 	color: white;
-	font-weight: extra-bold;
+	font-weight: 600;
 	padding: 0;
 	@include MQ(S) {
 		font-size: 4em;
@@ -55,7 +55,7 @@ h3 {
 h4 {
 	font-family: $header-font;
 	color: white;
-	font-weight: extra-bold;
+	font-weight: 600;
 	text-transform: uppercase;
 	padding: 0;
 	@include MQ(S) {
@@ -68,7 +68,7 @@ h4 {
 h5 {
 	font-family: $header-font;
 	color: white;
-	font-weight: extra-bold;
+	font-weight: 600;
 	text-transform: uppercase;
 	padding: 0;
 	@include MQ(S) {

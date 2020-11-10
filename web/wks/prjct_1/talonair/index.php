@@ -77,7 +77,7 @@ switch ($action){
                 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
                 $customerId = signInUser($email, $password); //Refers to signInUser in functions.php
                 if ($customerId == false || isset($customerId) == false) {
-                    $sign_fail_message = "Sign In Failed";
+                    $login_fail_message = "Sign In Failed";
                     include 'view/login.php';
                     exit;
                 }
