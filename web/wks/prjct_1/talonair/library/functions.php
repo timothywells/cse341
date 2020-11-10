@@ -5,15 +5,13 @@
         function login_check(){
             if(isset($_SESSION['loggedIn'])){
                 if($_SESSION['loggedIn'] == false){
+                    echo 'we are in the profile 1';
                     include 'view/login.php';
                 exit;
                 }
-                // if(isset())[
-                //     include 'view/admin.php'
-                //     exit;
-                // ]
             }
             if(!(isset($_SESSION['loggedIn']))){
+                //echo 'we are in the profile 2';
                 include 'view/login.php';
                 exit;
             }

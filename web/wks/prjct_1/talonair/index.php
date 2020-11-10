@@ -78,7 +78,7 @@ switch ($action){
                 $customerId = signInUser($email, $password); //Refers to signInUser in functions.php
                 if ($customerId == false || isset($customerId) == false) {
                     $sign_fail_message = "Sign In Failed";
-                    include $_SERVER['DOCUMENT_ROOT'] . "view/login.php";
+                    include $_SERVER['DOCUMENT_ROOT'] . 'view/login.php';
                     exit;
                 }
                 $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
