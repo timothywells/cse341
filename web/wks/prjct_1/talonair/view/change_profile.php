@@ -19,7 +19,7 @@
 		<div class="register_container">
 			<div class="form_container">
 				<div class="form">
-					<form method="POST" action="index.php?action=udpate_profile" id="profile_update">
+					<form method="POST" action="index.php?action=update_profile" id="profile_update">
 						<h3 class="center">Profile Update</h3>
 						<input type="text" name="email" id="email" class="txtinput" placeholder="E-mail" require>
 						<input type="text" name="fname" id="fname" class="txtinput" placeholder="First Name" require>

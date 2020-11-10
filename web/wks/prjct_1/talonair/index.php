@@ -111,7 +111,7 @@ switch ($action){
     //
 
     //Update the profile information based on customerid
-        case 'udpate_profile';
+        case 'update_profile';
             $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
             echo $email . '<br>';
             $fname = filter_input(INPUT_POST, 'fname', FILTER_SANITIZE_STRING);

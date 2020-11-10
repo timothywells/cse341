@@ -75,6 +75,8 @@
             $stmt->execute();
             $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
             $stmt->closeCursor();
+            echo $customerId . '</br>';
+            echo $response . '</br>';
             return $response;
         }
     //
