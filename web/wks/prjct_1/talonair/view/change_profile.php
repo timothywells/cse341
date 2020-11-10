@@ -21,14 +21,14 @@
 				<div class="form">
 					<form method="POST" action="index.php?action=update_profile" id="profile_update">
 						<h3 class="center">Profile Update</h3>
-						<input type="text" name="email" id="email" class="txtinput" placeholder="E-mail" require>
-						<input type="text" name="fname" id="fname" class="txtinput" placeholder="First Name" require>
-						<input type="text" name="lname" id="lname" class="txtinput" placeholder="Last Name" require>
-						<input type="text" name="street_address" id="street_address" class="txtinput" placeholder="address" require>
-						<input type="text" name="c_city" id="c_city" class="txtinput" placeholder="City" require>
-						<input type="text" name="c_state" id="c_state" class="txtinput" placeholder="State" require>
-						<input type="text" name="zip" id="zip" class="txtinput" placeholder="Zip" require>
-						<input type="text" name="phone" id="phone" class="txtinput" placeholder="Phone Number" require>
+						<input type="text" name="email" value="email" id="email" class="txtinput" placeholder="E-mail"> <!-- set value to echo current email -->
+						<input type="text" name="fname" id="fname" class="txtinput" placeholder="First Name">
+						<input type="text" name="lname" id="lname" class="txtinput" placeholder="Last Name">
+						<input type="text" name="street_address" id="street_address" class="txtinput" placeholder="address">
+						<input type="text" name="c_city" id="c_city" class="txtinput" placeholder="City">
+						<input type="text" name="c_state" id="c_state" class="txtinput" placeholder="State">
+						<input type="text" name="zip" id="zip" class="txtinput" placeholder="Zip">
+						<input type="text" name="phone" id="phone" class="txtinput" placeholder="Phone Number">
 						<input type="submit" id="submit" class="submit" value="Submit">
 					</form>
 				</div>

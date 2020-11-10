@@ -33,7 +33,7 @@
             $hashedPassword = $data[0]['password'];
             $passwordCheck = password_verify($password, $hashedPassword);
             if ($passwordCheck == true) {
-            return $data[0]['customerid'];
+            return $data['customerid'];
             }
             else {
                 return false;
@@ -47,7 +47,7 @@
             $sql = "SELECT * FROM customer_info WHERE email = '$email'";
             $stmt = $db->prepare($sql);
             $stmt->execute();
-            $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $response = $stmt->fetch(PDO::FETCH_ASSOC);
             $stmt->closeCursor();
             return $response;
         }
@@ -68,9 +68,9 @@
         }
 /******************** CUSTOMER INFORMATION ********************/
     //Get profile by customer_info/customerid and set to $customerId
-        function get_cust_profile($customerId){
+        function get_cust_profile($userInfo){
             $db = herokuConnect();
-            $sql = "SELECT * FROM customer_info WHERE customerid = $customerId";
+            $sql = "SELECT * FROM customer_info WHERE customerid = $userInfo";
             $stmt = $db->prepare($sql);
             $stmt->execute();
             $response = $stmt->fetch(PDO::FETCH_ASSOC);

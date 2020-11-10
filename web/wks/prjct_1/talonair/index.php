@@ -81,7 +81,7 @@ switch ($action){
                     include $_SERVER['DOCUMENT_ROOT'] . "view/login.php";
                     exit;
                 }
-                $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
+                $customerData = get_cust_profile($userInfo); //Refers to get_cust_profile in functions.php
                 //var_dump($customerData);
                 $_SESSION['customerSessionData'] = $customerData;
                 $_SESSION['username'] = $customerData['username'];
@@ -129,7 +129,7 @@ switch ($action){
             echo $zip . '<br>';
             $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
             echo $phone . '<br>';
-            $customerId = $_SESSION['customerid'];
+            $customerId = $_SESSION['customerid']; //Add to customerSession(); function
             update_cust_profile ($customerId,$email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone);
             include 'view/profile.php';
             break;
