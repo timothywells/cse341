@@ -73,11 +73,11 @@
             $sql = "SELECT * FROM customer_info WHERE customerid = $customerId";
             $stmt = $db->prepare($sql);
             $stmt->execute();
-            $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $response = $stmt->fetch(PDO::FETCH_ASSOC);
             $stmt->closeCursor();
             echo $customerId . '</br>';
-            echo $response[0] . '</br>';
-            return $response[0];
+            echo $response . '</br>';
+            return $response;
         }
     //
 
