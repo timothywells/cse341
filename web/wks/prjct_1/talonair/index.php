@@ -83,17 +83,17 @@ switch ($action){
                 $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
                 //var_dump($customerData);
                 $_SESSION['customerSessionData'] = $customerData;
-                $_SESSION['customerSessionData']['customerid'] = $customerid;
-                $_SESSION['customerSessionData']['username'] = $username;
-                $_SESSION['customerSessionData']['email'] = $email;
-                $_SESSION['customerSessionData']['fname'] = $fname;
-                $_SESSION['customerSessionData']['lname'] = $lname;
-                $_SESSION['customerSessionData']['street_address'] = $street_address;
-                $_SESSION['customerSessionData']['c_city'] = $c_city;
-                $_SESSION['customerSessionData']['c_state'] = $c_state;
-                $_SESSION['customerSessionData']['zip'] = $zip;
-                $_SESSION['customerSessionData']['phone'] = $phone;
-                $_SESSION['customerSessionData']['clearance'] = $clearance;
+                // $_SESSION['customerSessionData']['customerid'] = $customerid;
+                // $_SESSION['customerSessionData']['username'] = $username;
+                // $_SESSION['customerSessionData']['email'] = $email;
+                // $_SESSION['customerSessionData']['fname'] = $fname;
+                // $_SESSION['customerSessionData']['lname'] = $lname;
+                // $_SESSION['customerSessionData']['street_address'] = $street_address;
+                // $_SESSION['customerSessionData']['c_city'] = $c_city;
+                // $_SESSION['customerSessionData']['c_state'] = $c_state;
+                // $_SESSION['customerSessionData']['zip'] = $zip;
+                // $_SESSION['customerSessionData']['phone'] = $phone;
+                // $_SESSION['customerSessionData']['clearance'] = $clearance;
 
                 // $_SESSION['username'] = $customerData['username'];
                 // $_SESSION['customerid'] = $customerId; //what does this refer to
