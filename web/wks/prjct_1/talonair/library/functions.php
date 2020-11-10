@@ -43,7 +43,7 @@
             $c_state = $_SESSION['customerSessionData']['c_state'];
             $zip = $_SESSION['customerSessionData']['zip'];
             $phone = $_SESSION['customerSessionData']['phone'];
-            $clearance = _SESSION['customerSessionData']['clearance'];
+            $clearance = $_SESSION['customerSessionData']['clearance'];
         }
 
 
