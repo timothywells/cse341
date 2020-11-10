@@ -1,5 +1,5 @@
 <?php
-
+    storedSession();
     login_check();
     // if(isset($_SESSION['loggedIn'])){
     //     if($_SESSION['loggedIn'] == false){
@@ -13,8 +13,8 @@
     //     include 'view/login.php';
     //     exit;
     // }
-    $fname = $_SESSION['customerSessionData']['fname'];
-    var_dump($_SESSION['customerSessionData']['fname']);
+    // $fname = $_SESSION['customerSessionData']['fname'];
+    // var_dump($_SESSION['customerSessionData']['fname']);
 
     $pagetitle = 'Talon Air, Inc. | Profile';
 ?>
@@ -38,15 +38,15 @@
 
                 <!-- Div needed to format -->
                 <table class="profile">
-                    <tr><td>Username:</td><td></td></tr>
-                    <tr><td>E-mail:</td><td></td></tr>
+                    <tr><td>Username:</td><td><?php echo $username; ?></td></tr>
+                    <tr><td>E-mail:</td><td><?php echo $email; ?></td></tr>
                     <tr><td>First Name:</td><td><?php echo $fname; ?></td></tr>
-                    <tr><td>Last Name:</td><td></td></tr>
-                    <tr><td>Street</td><td></td></tr>
-                    <tr><td>City:</td><td></td></tr>
-                    <tr><td>State:</td><td></td></tr>
-                    <tr><td>Zip:</td><td></td></tr>
-                    <tr><td>Phone:</td><td></td></tr>
+                    <tr><td>Last Name:</td><td><?php echo $lname; ?></td></tr>
+                    <tr><td>Street</td><td><?php echo $street_address; ?></td></tr>
+                    <tr><td>City:</td><td><?php echo $c_city; ?></td></tr>
+                    <tr><td>State:</td><td><?php echo $c_state; ?></td></tr>
+                    <tr><td>Zip:</td><td><?php echo $zip; ?></td></tr>
+                    <tr><td>Phone:</td><td><?php echo $phone; ?></td></tr>
                 </table>
 
 

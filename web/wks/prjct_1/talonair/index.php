@@ -81,7 +81,7 @@ switch ($action){
                     include $_SERVER['DOCUMENT_ROOT'] . "view/login.php";
                     exit;
                 }
-                $customerData = get_cust_profile($userInfo); //Refers to get_cust_profile in functions.php
+                $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
                 //var_dump($customerData);
                 $_SESSION['customerSessionData'] = $customerData;
                 $_SESSION['username'] = $customerData['username'];
@@ -114,21 +114,24 @@ switch ($action){
     //Update the profile information based on customerid
         case 'update_profile';
             $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-            echo $email . '<br>';
             $fname = filter_input(INPUT_POST, 'fname', FILTER_SANITIZE_STRING);
-            echo $fname . '<br>';
             $lname = filter_input(INPUT_POST, 'lname', FILTER_SANITIZE_STRING);
-            echo $lname . '<br>';
             $street_address = filter_input(INPUT_POST, 'street_address', FILTER_SANITIZE_STRING);
-            echo $street_address . '<br>';
             $c_city = filter_input(INPUT_POST, 'c_city', FILTER_SANITIZE_STRING);
-            echo $c_city . '<br>';
             $c_state = filter_input(INPUT_POST, 'c_state', FILTER_SANITIZE_STRING);
-            echo $c_state . '<br>';
             $zip = filter_input(INPUT_POST, 'zip', FILTER_SANITIZE_STRING);
-            echo $zip . '<br>';
             $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
+
+            echo $email . '<br>';
+            echo $fname . '<br>';
+            echo $lname . '<br>';
+            echo $street_address . '<br>';
+            echo $c_city . '<br>';
+            echo $c_state . '<br>';
+            echo $zip . '<br>';
             echo $phone . '<br>';
+
+
             $customerId = $_SESSION['customerid']; //Add to customerSession(); function
             update_cust_profile ($customerId,$email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone);
             include 'view/profile.php';
