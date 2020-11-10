@@ -14,6 +14,7 @@
     //     exit;
     // }
     $fname = $_SESSION['customerSessionData']['fname'];
+    var_dump($_SESSION['customerSessionData']);
 
     $pagetitle = 'Talon Air, Inc. | Profile';
 ?>
