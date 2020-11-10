@@ -19,17 +19,17 @@
 
     //Session information Stored
         function storedSession(){
-                $customerid = $_SESSION['customerSessionData']['customerid'];
-                $username = $_SESSION['customerSessionData']['username'];
-                $email = $_SESSION['customerSessionData']['email'];
-                $fname = $_SESSION['customerSessionData']['fname'];
-                $lname = $_SESSION['customerSessionData']['lname'];
-                $street_address = $_SESSION['customerSessionData']['street_address'];
-                $c_city = $_SESSION['customerSessionData']['c_city'];
-                $c_state = $_SESSION['customerSessionData']['c_state'];
-                $zip = $_SESSION['customerSessionData']['zip'];
-                $phone = $_SESSION['customerSessionData']['phone'];
-                $clearance = $_SESSION['customerSessionData']['clearance'];
+                $_SESSION['customerSessionData']['customerid'] = $customerid;
+                $_SESSION['customerSessionData']['username'] = $username;
+                $_SESSION['customerSessionData']['email'] = $email;
+                $_SESSION['customerSessionData']['fname'] = $fname;
+                $_SESSION['customerSessionData']['lname'] = $lname;
+                $_SESSION['customerSessionData']['street_address'] = $street_address;
+                $_SESSION['customerSessionData']['c_city'] = $c_city;
+                $_SESSION['customerSessionData']['c_state'] = $c_state;
+                $_SESSION['customerSessionData']['zip'] = $zip;
+                $_SESSION['customerSessionData']['phone'] = $phone;
+                $_SESSION['customerSessionData']['clearance'] = $clearance;
         }
     
         // function storedSession(){
@@ -110,7 +110,7 @@
             $sql = "SELECT * FROM customer_info WHERE customerid = $customerId";
             $stmt = $db->prepare($sql);
             $stmt->execute();
-            $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $response = $stmt->fetch(PDO::FETCH_ASSOC);
             $stmt->closeCursor();
             echo $customerId . '</br>';
             echo $response . '</br>';
