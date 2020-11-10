@@ -81,7 +81,7 @@ switch ($action){
                     exit;
                 }
                 $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
-                var_dump($customerData);
+                //var_dump($customerData);
                 $_SESSION['customerSessionData'] = $customerData;
                 $_SESSION['customerSessionData']['customerid'] = $customerid;
                 $_SESSION['customerSessionData']['username'] = $username;
