@@ -83,7 +83,7 @@
             $sql = "SELECT * FROM customer_info WHERE email = '$email'";
             $stmt = $db->prepare($sql);
             $stmt->execute();
-            $response = $stmt->fetch/*All*/(PDO::FETCH_ASSOC);
+            $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
             $stmt->closeCursor();
             return $response;
         }
