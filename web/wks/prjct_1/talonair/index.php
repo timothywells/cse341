@@ -82,7 +82,23 @@ switch ($action){
                 }
                 $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
                 //var_dump($customerData);
-                $_SESSION['customerSessionData'] = $customerData;
+                //$_SESSION['customerSessionData'] = $customerData;
+                $_SESSION['username'] = $customerData['username'];
+                $_SESSION['customerid'] = $customerData['customerid']; //what does this refer to
+                $_SESSION['username'] = $customerData['username'];
+                $_SESSION['email'] = $customerData['email'];
+                $_SESSION['fname'] = $customerData['fname'];
+                $_SESSION['lname'] = $customerData['lname'];
+                $_SESSION['street_addres'] = $customerData['street_addres'];
+                $_SESSION['c_city'] = $customerData['c_city'];
+                $_SESSION['c_state'] = $customerData['c_state'];
+                $_SESSION['zip'] = $customerData['zip'];
+                $_SESSION['phone'] = $customerData['phone'];
+                $_SESSION['clearance'] = $customerData['clearence'];
+                
+                
+                
+                
                 // $_SESSION['customerSessionData']['customerid'] = $customerid;
                 // $_SESSION['customerSessionData']['username'] = $username;
                 // $_SESSION['customerSessionData']['email'] = $email;

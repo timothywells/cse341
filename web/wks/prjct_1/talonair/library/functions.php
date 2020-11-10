@@ -18,7 +18,7 @@
         }
 
     //Session information Stored
-        function storedSession(){
+        //function storedSession(){
         //         $_SESSION['customerSessionData']['customerid'] = $customerid;
         //         $_SESSION['customerSessionData']['username'] = $username;
         //         $_SESSION['customerSessionData']['email'] = $email;
@@ -32,18 +32,18 @@
         //         $_SESSION['customerSessionData']['clearance'] = $clearance;
         // }
     
-        // function storedSession(){
-            $customerid = $customerId;
-            $username = $_SESSION['customerSessionData']['username'];
-            $email = $_SESSION['customerSessionData']['email'];
-            $fname = $_SESSION['customerSessionData']['fname'];
-            $lname = $_SESSION['customerSessionData']['lname'];
-            $street_address = $_SESSION['customerSessionData']['street_address'];
-            $c_city = $_SESSION['customerSessionData']['c_city'];
-            $c_state = $_SESSION['customerSessionData']['c_state'];
-            $zip = $_SESSION['customerSessionData']['zip'];
-            $phone = $_SESSION['customerSessionData']['phone'];
-            $clearance = $_SESSION['customerSessionData']['clearance'];
+        function storedSession(){
+            $customerid = $_SESSION['customerId'];
+            $username = $_SESSION['username'];
+            $email = $_SESSION['email'];
+            $fname = $_SESSION['fname'];
+            $lname = $_SESSION['lname'];
+            $street_address = $_SESSION['street_address'];
+            $c_city = $_SESSION['c_city'];
+            $c_state = $_SESSION['c_state'];
+            $zip = $_SESSION['zip'];
+            $phone = $_SESSION['phone'];
+            $clearance = $_SESSION['clearance'];
         }
 
 
