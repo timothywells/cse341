@@ -2,6 +2,7 @@
 session_start();
 require_once 'library/connections.php';
 require_once 'library/functions.php';
+//storedSession();
 
 
 $action = filter_input(INPUT_POST, 'action');
@@ -83,18 +84,18 @@ switch ($action){
                 $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
                 var_dump($customerData);
                 $_SESSION['customerSessionData'] = $customerData;
-                //$_SESSION['username'] = $customerData['username'];
-                $_SESSION['customerid'] = $customerId; //what does this refer to
-                $_SESSION['username'] = $username;
-                $_SESSION['email'] = $email;
-                $_SESSION['fname'] = $fname;
-                $_SESSION['lname'] = $lname;
-                $_SESSION['street_addres'] = $street_address;
-                $_SESSION['c_city'] = $c_city;
-                $_SESSION['c_state'] = $c_state;
-                $_SESSION['zip'] = $zip;
-                $_SESSION['phone'] = $phone;
-                $_SESSION['clearance'] = $clearence;
+                // $_SESSION['username'] = $customerData['username'];
+                // $_SESSION['customerid'] = $customerId; //what does this refer to
+                // $_SESSION['username'] = $username;
+                // $_SESSION['email'] = $email;
+                // $_SESSION['fname'] = $fname;
+                // $_SESSION['lname'] = $lname;
+                // $_SESSION['street_addres'] = $street_address;
+                // $_SESSION['c_city'] = $c_city;
+                // $_SESSION['c_state'] = $c_state;
+                // $_SESSION['zip'] = $zip;
+                // $_SESSION['phone'] = $phone;
+                // $_SESSION['clearance'] = $clearence;
                 $_SESSION['loggedIn'] = true;
                 include 'view/profile.php';
             break;
