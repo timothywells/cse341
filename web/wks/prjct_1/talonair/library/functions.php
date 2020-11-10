@@ -1,4 +1,40 @@
 <?php
+
+/******************** SESSION START INFORMATION ********************/
+    //Check to see if user is logged in
+        function login_check(){
+            if(isset($_SESSION['loggedIn'])){
+                if($_SESSION['loggedIn'] == false){
+                    include 'view/login.php';
+                exit;
+                }
+                // if(isset())[
+                //     include 'view/admin.php'
+                //     exit;
+                // ]
+            }
+            if(!(isset($_SESSION['loggedIn']))){
+                include 'view/login.php';
+                exit;
+            }
+        }
+
+    //Session information Stored
+        Function storedSession(){
+            $customerId;
+            $email;
+            $username = $_SESSION['customerSessionData']['username'];
+            $fname = $_SESSION['customerSessionData']['fname'];
+            $lname = $_SESSION['customerSessionData']['lname'];
+            $street_address = $_SESSION['customerSessionData']['street_addres'];
+            $c_state = $_SESSION['customerSessionData']['c_state'];
+            $c_state = $_SESSION['customerSessionData']['c_state'];
+            $zip = $_SESSION['customerSessionData']['zip'];
+            $phone = $_SESSION['customerSessionsData']['phone'];
+            $clearance = $_SESSION['customerSessionsData']['clearance'];
+        }
+
+
 /******************** SEND A MESSAGE INFORMATION ********************/
     //Record Message from index/send_message
         function message_record($fullname, $form_phone, $form_email, $form_subject, $form_message){
@@ -53,39 +89,7 @@
         }
     //
     
-    //Check to see if user is logged in
-        function login_check(){
-            if(isset($_SESSION['loggedIn'])){
-                if($_SESSION['loggedIn'] == false){
-                    include 'view/login.php';
-                exit;
-                }
-                // if(isset())[
-                //     include 'view/admin.php'
-                //     exit;
-                // ]
-            }
-            if(!(isset($_SESSION['loggedIn']))){
-                include 'view/login.php';
-                exit;
-            }
-        }
-    
-    //Session information Stored
-        Function storedSession(){
-            $customerId;
-            $email;
-            $username = $_SESSION['customerSessionData']['username'];
-            $fname = $_SESSION['customerSessionData']['fname'];
-            $lname = $_SESSION['customerSessionData']['lname'];
-            $street_address = $_SESSION['customerSessionData']['street_addres'];
-            $c_state = $_SESSION['customerSessionData']['c_state'];
-            $c_state = $_SESSION['customerSessionData']['c_state'];
-            $zip = $_SESSION['customerSessionData']['zip'];
-            $phone = $_SESSION['customerSessionsData']['phone'];
-            $clearance = $_SESSION['customerSessionsData']['clearance'];
-
-        }
+   
 
 /******************** CUSTOMER INFORMATION ********************/
     //Get profile by customer_info/customerid and set to $customerId

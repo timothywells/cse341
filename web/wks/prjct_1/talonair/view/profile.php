@@ -1,5 +1,4 @@
 <?php
-    storedSession();
     login_check();
     // if(isset($_SESSION['loggedIn'])){
     //     if($_SESSION['loggedIn'] == false){
@@ -13,9 +12,9 @@
     //     include 'view/login.php';
     //     exit;
     // }
-    // $fname = $_SESSION['customerSessionData']['fname'];
+    $fname = $_SESSION['customerSessionData']['fname'];
     // var_dump($_SESSION['customerSessionData']['fname']);
-
+    //storedSession();
     $pagetitle = 'Talon Air, Inc. | Profile';
 ?>
 <!DOCTYPE html>
