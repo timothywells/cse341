@@ -30,7 +30,7 @@
     //get login information fom the server based on email
         function signInUser($email, $password){
             $data = getHashed($email);
-            $hashedPassword = $data/*[0]*/['password'];
+            $hashedPassword = $data[0]['password'];
             $passwordCheck = password_verify($password, $hashedPassword);
             if ($passwordCheck == true) {
             return $data['customerid'];
@@ -47,7 +47,7 @@
             $sql = "SELECT * FROM customer_info WHERE email = '$email'";
             $stmt = $db->prepare($sql);
             $stmt->execute();
-            $response = $stmt->fetch(PDO::FETCH_ASSOC);
+            $response = $stmt->fetch/*All*/(PDO::FETCH_ASSOC);
             $stmt->closeCursor();
             return $response;
         }
@@ -73,9 +73,9 @@
     
     //Session information Stored
         Function storedSession(){
-            $customerId = $_SESSION['customerid'];
-            $username = $_SESSION['username'];
-            $email = $_SESSION['email'];
+            $customerId;
+            $email;
+            $username = $_SESSION['customerSessionData']['username'];
             $fname = $_SESSION['customerSessionData']['fname'];
             $lname = $_SESSION['customerSessionData']['lname'];
             $street_address = $_SESSION['customerSessionData']['street_addres'];
