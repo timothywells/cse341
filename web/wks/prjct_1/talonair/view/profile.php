@@ -1,6 +1,5 @@
 <?php
     login_check();
-    //storedSession();
     $pagetitle = 'Talon Air, Inc. | Profile';
 ?>
 <!DOCTYPE html>
