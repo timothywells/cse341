@@ -66,7 +66,7 @@
     //get login information fom the server based on email
         function signInUser($email, $password){
             $data = getHashed($email);
-            $hashedPassword = $data['password'];
+            $hashedPassword = $data[0]['password'];
             $passwordCheck = password_verify($password, $hashedPassword);
             if ($passwordCheck == true) {
             return $data['customerid'];
@@ -83,7 +83,7 @@
             $sql = "SELECT * FROM customer_info WHERE email = '$email'";
             $stmt = $db->prepare($sql);
             $stmt->execute();
-            $response = $stmt->fetch(PDO::FETCH_ASSOC);
+            $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
             $stmt->closeCursor();
             return $response;
         }
