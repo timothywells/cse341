@@ -21,15 +21,15 @@
         Function storedSession(){
             $customerId;
             $email;
-            $username = $_SESSION['customerSessionData']['username'];
-            $fname = $_SESSION['customerSessionData']['fname'];
-            $lname = $_SESSION['customerSessionData']['lname'];
-            $street_address = $_SESSION['customerSessionData']['street_addres'];
-            $c_state = $_SESSION['customerSessionData']['c_state'];
-            $c_state = $_SESSION['customerSessionData']['c_state'];
-            $zip = $_SESSION['customerSessionData']['zip'];
-            $phone = $_SESSION['customerSessionsData']['phone'];
-            $clearance = $_SESSION['customerSessionsData']['clearance'];
+            $username;
+            $fname;
+            $lname;
+            $street_address;
+            $c_state;
+            $c_state;
+            $zip;
+            $phone;
+            $clearance;
         }
 
 
