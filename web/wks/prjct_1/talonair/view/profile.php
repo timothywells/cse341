@@ -1,20 +1,6 @@
 <?php
     login_check();
-    // if(isset($_SESSION['loggedIn'])){
-    //     if($_SESSION['loggedIn'] == false){
-    //         echo 'we are in the profile 1';
-    //         include 'view/login.php';
-    //     exit;
-    //     }
-    // }
-    // if(!(isset($_SESSION['loggedIn']))){
-    //     //echo 'we are in the profile 2';
-    //     include 'view/login.php';
-    //     exit;
-    // }
-    $fname = $_SESSION['customerSessionData']['fname'];
-    // var_dump($_SESSION['customerSessionData']['fname']);
-    //storedSession();
+    storedSession();
     $pagetitle = 'Talon Air, Inc. | Profile';
 ?>
 <!DOCTYPE html>
