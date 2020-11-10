@@ -86,7 +86,7 @@ switch ($action){
                 $_SESSION['customerSessionData'] = $customerData;
                 $_SESSION['username'] = $customerData['username'];
                 $_SESSION['email'] = $email;
-                //$_SESSION['customerid'] = $customerId; //what does this refer to
+                $_SESSION['customerid'] = $customerId; //what does this refer to
                 $_SESSION['loggedIn'] = true;
                 include 'view/profile.php';
             break;
@@ -129,7 +129,8 @@ switch ($action){
             echo $zip . '<br>';
             $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
             echo $phone . '<br>';
-            update_cust_profile ($email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone);
+            $customerId = $_SESSION['customerid'];
+            update_cust_profile ($customerId,$email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone);
             include 'view/profile.php';
             break;
         //

@@ -88,9 +88,9 @@
 
 
     //Update Customer Profile
-        function update_cust_profile ($email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone) {  
+        function update_cust_profile ($customerId,$email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone) {  
             $db = herokuConnect();
-            $sql = "UPDATE customer_info SET email = '$email', fname = '$fname', lname = '$lname', c_city = '$c_city', c_state = '$c_state', zip = '$zip', phone = '$pjone' WHERE customerid = $customerId RETURNING *";
+            $sql = "UPDATE customer_info SET email = '$email', fname = '$fname', lname = '$lname', c_city = '$c_city', c_state = '$c_state', zip = '$zip', phone = '$phone' WHERE customerid = $customerId RETURNING *";
             $stmt = $db->prepare($sql);
             $stmt->execute();
             $response = $stmt->fetch(PDO::FETCH_ASSOC);
