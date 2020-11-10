@@ -13,9 +13,9 @@
     //     include 'view/login.php';
     //     exit;
     // }
+    $fname = $_SESSION['customerSessionData']['fname'];
 
     $pagetitle = 'Talon Air, Inc. | Profile';
-    $_SESSION['customerSessionData']['fname'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,7 +39,7 @@
                 <table class="profile">
                     <tr><td>Username:</td><td></td></tr>
                     <tr><td>E-mail:</td><td></td></tr>
-                    <tr><td>First Name:</td><td></td></tr>
+                    <tr><td>First Name:</td><td><?php echo $fname; ?></td></tr>
                     <tr><td>Last Name:</td><td></td></tr>
                     <tr><td>Street</td><td></td></tr>
                     <tr><td>City:</td><td></td></tr>
