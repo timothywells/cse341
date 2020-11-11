@@ -64,6 +64,37 @@ switch ($action){
         //
 
     /******************** LOGGING IN ********************/
+        //Nav bar change
+        case 'loginlink':
+            $loginlink = profilelink();
+            
+            
+            
+            
+            
+            
+            
+            
+            // if(isset($_SESSION['loggedIn'])){
+            //     if($_SESSION['loggedIn'] == false){
+            //         echo "Login/Register";
+            //         include 'view/login.php';
+            //     exit;
+            //     }
+            //     echo "Profile";
+            //     include "index.php?action=profile";
+            // }
+
+            // if (isset($_SESSION['clearence'])){
+            //     if($_SESSION['clearence'] == false){
+            //         echo "Login/Profile";
+            //         include 'view/login.php';
+            //         exit;
+            //     }
+            //     include 'index.php?action=admin';
+            //     }            
+            break;
+
         //Login view
             case 'login':
                 //Add content variables here
@@ -96,7 +127,7 @@ switch ($action){
                 $_SESSION['phone'] = $customerData['phone'];
                 $_SESSION['loggedIn'] = true;
                 if ($customerData['clearance'] == true || isset($customerData['clearance']) == true){
-                    include 'view/admin.php';
+                    include 'view/index.php?action=admin';
                 } else {
                 include 'view/profile.php';
                 }
@@ -194,7 +225,7 @@ switch ($action){
             //Add content variables here
             $deleteCustomer = $_GET['get_customer_id'];
             delete_cust_profile($deleteCustomer); //Referes to functions.php
-            $profile_del_message = "Profile Deleted for <?php echo $deleteCustomer ?>";
+            $profile_del_message = "Profile Deleted";
             include 'view/admin.php';
         break;  
     //
@@ -204,6 +235,7 @@ switch ($action){
             //Add content variables here
             $messageID = $_GET['get_message_by_id'];
             delete_message($messageID);
+            $message_del_message = "Message Deleted";
             include 'view/confirm_message_delete.php';
         break;
     //
@@ -212,6 +244,7 @@ switch ($action){
         case 'admin_delete_review':
             $reviewID = $_GET['get_review_by_id'];
             admin_delete_review($reviewID);
+            $review_del_message = "Review Deleted";
             include 'view/admin_confirm_review_delete.php';
         break;
     //

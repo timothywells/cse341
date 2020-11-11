@@ -27,6 +27,29 @@
             }
         }
     //
+    
+    //Change Signin to Profile
+    function profilelink(){
+        if(isset($_SESSION['loggedIn'])){
+            if($_SESSION['loggedIn'] == false){
+                echo "Login/Register";
+                include 'view/login.php';
+            exit;
+            }
+            echo "Profile";
+            include "index.php?action=profile";
+        }
+
+        if(isset($_SESSION['clearence'])){
+            if($_SESSION['clearence'] == false){
+                echo "Login/Profile";
+                include 'view/login.php';
+                exit;
+            }
+            echo "Admin";
+            include 'index.php?action=admin';
+            }
+        }         
 
     //Registration check
         // function reg_check(){
