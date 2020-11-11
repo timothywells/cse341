@@ -10,13 +10,13 @@
                 exit;
                 }
                 if(NULL == isset($_SESSION['clearence'])){
-                    if(!NULL == (isset($_SESSION['clearence']))){
+                    $login_fail_message = "You are NOT an ADMIN";
+                    include 'view/login.php';
+                    exit;
+                }
+                if(!NULL == (isset($_SESSION['clearence']))){
                     include 'view/admin.php';
                     exit;
-                    }
-                        $login_fail_message = "You are NOT an ADMIN";
-                        include 'view/login.php';
-                        exit;
                 }
             }
             if(!(isset($_SESSION['loggedIn']))){
