@@ -102,7 +102,7 @@ switch ($action){
                 break;
                 }
                 if ($customerData['clearance'] == false || isset($customerData['clearance']) == false){
-                    include 'index.php?action=profile';
+                    include 'view/profile.php';
                 break;
                 }
             break;
