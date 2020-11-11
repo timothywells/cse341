@@ -46,7 +46,7 @@ switch ($action){
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $confirm_register = register($email,$username,$hashed_password);
                 if($confirm_register){
-                    $_SESSION['registered'] == true;
+                    $_SESSION['registered'] == true; //Only things changed
                     $reg_message = "Registration Successful";
                     include 'view/confirm_register.php';
                 } else {
@@ -83,7 +83,6 @@ switch ($action){
                     exit;
                 }
                 $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
-                $clearance = clearance($custClearance); //If this doesnt work delete
                 $_SESSION['username'] = $customerData['username'];
                 $_SESSION['customerid'] = $customerData['customerid'];
                 $_SESSION['username'] = $customerData['username'];
@@ -95,8 +94,7 @@ switch ($action){
                 $_SESSION['c_state'] = $customerData['c_state'];
                 $_SESSION['zip'] = $customerData['zip'];
                 $_SESSION['phone'] = $customerData['phone'];
-                //$_SESSION['clearance'] = $customerData['clearence'];
-                $_SESSION{'clearance'} = $clearance; //if this doesn't work delte, replace with one line above
+                $_SESSION['clearance'] = $customerData['clearence'];
                 $_SESSION['loggedIn'] = true;
                 include 'view/profile.php';
             break;

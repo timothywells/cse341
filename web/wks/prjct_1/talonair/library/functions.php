@@ -15,12 +15,12 @@
                         $login_fail_message = "You are NOT an ADMIN";
                         include 'view/login.php';
                         exit;
-                    } else {
-                        include 'view/admin.php';
-                        exit;
+                    } 
+                    include 'view/admin.php';
+                    exit;
                     }
                 }
-            }
+            
             if(!(isset($_SESSION['loggedIn']))){
                 $login_fail_message = "You Must Sign in or Register";
                 include 'view/login.php';
@@ -96,29 +96,6 @@
         }
     //
 
-    //admin clearence if this doesn't work delete
-        function clearance($custClearance){
-            $data = get_cust_profile($customerId);
-            $clearance = $data['clearance'];
-            if ($clearance != NULL){
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-    //Get Clearance
-        // function getClearance($clearance){
-        //     $db = herokuConnect();
-        //     $sql = "SELECT * FROM customer_info WHERE clearance = $clearance";
-        //     $stmt = $db->prepare($sql);
-        //     $stmt->execute();
-        //     $response = $stmt->fetch(PDO::FETCH_ASSOC);
-        //     $stmt->closeCursor();
-        //     return $response;
-        //}
-
-
 /******************** CUSTOMER INFORMATION ********************/
     //Get profile by customer_info/customerid and set to $customerId
         function get_cust_profile($customerId){
@@ -128,8 +105,6 @@
             $stmt->execute();
             $response = $stmt->fetch(PDO::FETCH_ASSOC);
             $stmt->closeCursor();
-            // echo $customerId . '</br>';
-            // echo $response . '</br>';
             return $response;
         }
     //
