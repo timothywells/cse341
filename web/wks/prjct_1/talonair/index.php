@@ -83,9 +83,6 @@ switch ($action){
                     exit;
                 }
                 $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
-                if ($customerData['clearance'] == true || isset($customerData['clearance']) == true){
-                    include 'view/admin.php';
-                }
                 $_SESSION['username'] = $customerData['username'];
                 $_SESSION['customerid'] = $customerData['customerid'];
                 $_SESSION['username'] = $customerData['username'];
@@ -99,7 +96,7 @@ switch ($action){
                 $_SESSION['phone'] = $customerData['phone'];
                 $_SESSION['clearance'] = $customerData['clearence'];
                 $_SESSION['loggedIn'] = true;
-                if ($customerData['clearance'] == true || isset($customerData['clearance']) == true){
+                if ($_SESSION['clearance'] == true || isset($_SESSION['clearance']) == true){
                     include 'view/admin.php';
                 }
                 include 'view/profile.php';
