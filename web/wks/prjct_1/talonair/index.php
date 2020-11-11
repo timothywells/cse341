@@ -41,7 +41,7 @@ switch ($action){
         //Sends Registered information to server
             case 'registered':
                 $username=filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-                $email=filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+                $email=filter_input(INPUT_POST, 'e_mail', FILTER_SANITIZE_STRING);
                 $password=filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $confirm_register = register($email,$username,$hashed_password);
@@ -89,7 +89,7 @@ switch ($action){
                 $_SESSION['email'] = $customerData['email'];
                 $_SESSION['fname'] = $customerData['fname'];
                 $_SESSION['lname'] = $customerData['lname'];
-                $_SESSION['street_addres'] = $customerData['street_addres'];
+                $_SESSION['street_address'] = $customerData['street_address'];
                 $_SESSION['c_city'] = $customerData['c_city'];
                 $_SESSION['c_state'] = $customerData['c_state'];
                 $_SESSION['zip'] = $customerData['zip'];

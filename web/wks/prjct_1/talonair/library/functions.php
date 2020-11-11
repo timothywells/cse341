@@ -9,18 +9,18 @@
                     include 'view/login.php';
                 exit;
                 }
-                if(isset($_SESSION['clearence'])){
-                    include 'view/admin.php';
-                exit;
-                // }
-                // if(!NULL == isset($_SESSION['clearence'])){
+                // if(isset($_SESSION['clearence'])){
                 //     include 'view/admin.php';
                 // exit;
+                // }
+                if(!NULL == isset($_SESSION['clearence'])){
+                    include 'view/admin.php';
+                exit;
                 }
             }
             if(!(isset($_SESSION['loggedIn']))){
-                if(!(isset($_SESSION['clearence']))){
-                    $login_fail_message = "You Must Sign in or Register";
+                if(NULL == (isset($_SESSION['clearence']))){
+                    $login_fail_message = "You are NOT an ADMIN";
                     include 'view/login.php';
                     exit;
                 }
@@ -117,7 +117,7 @@
     //Update Customer Profile
         function update_cust_profile ($customerId,$email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone) {  
             $db = herokuConnect();
-            $sql = "UPDATE customer_info SET email = '$email', fname = '$fname', lname = '$lname', c_city = '$c_city', c_state = '$c_state', zip = '$zip', phone = '$phone' WHERE customerid = $customerId RETURNING *";
+            $sql = "UPDATE customer_info SET fname = '$fname', lname = '$lname', street_address = '$street_address', c_city = '$c_city', c_state = '$c_state', zip = '$zip', phone = '$phone' WHERE customerid = $customerId RETURNING *";
             $stmt = $db->prepare($sql);
             $stmt->execute();
             $response = $stmt->fetch(PDO::FETCH_ASSOC);
