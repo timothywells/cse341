@@ -46,6 +46,7 @@ switch ($action){
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $confirm_register = register($email,$username,$hashed_password);
                 if($confirm_register){
+                    $_SESSION['registered'] == true;
                     $reg_message = "Registration Successful";
                     include 'view/confirm_register.php';
                 } else {
@@ -57,6 +58,7 @@ switch ($action){
 
         //Confirm Registreation
             case 'confirm_register':
+
                 include 'view/confirm_register.php';
             break;
         //

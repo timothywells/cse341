@@ -5,18 +5,35 @@
         function login_check(){
             if(isset($_SESSION['loggedIn'])){
                 if($_SESSION['loggedIn'] == false){
-                    echo 'we are in the profile 1';
+                    $login_fail_message = "You Must Sign in or Register";
                     include 'view/login.php';
                 exit;
                 }
+                else if(isset($_SESSION['clearence'])){
+                    include 'view/admin.php';
+                exit;
+                }
             }
-            if(!(isset($_SESSION['loggedIn']))){
+            if(!(isset($_SESSION['loggedIn']) || !(isset($_SESSION['clearence'])))){
                 //echo 'we are in the profile 2';
+                $login_fail_message = "You Must Sign in or Register";
                 include 'view/login.php';
                 exit;
             }
         }
     //
+
+    //Registration check
+        // function reg_check(){
+        //     if(isset($_SESSION['registered'])){
+        //         include 'view/confirm_register.php';
+        //         exit;
+        //     }
+        //     if(!(isset($_SESSION['registered']))){
+        //         $reg_message = "You must register first";
+        //         include 'view/register.php';
+        //     }
+        // }
 
 /******************** SEND A MESSAGE INFORMATION ********************/
     //Record Message from index/send_message
@@ -55,6 +72,7 @@
             return $data['customerid'];
             }
             else {
+                //failed password check
                 return false;
             }
         }
@@ -71,8 +89,6 @@
             return $response;
         }
     //
-    
-   
 
 /******************** CUSTOMER INFORMATION ********************/
     //Get profile by customer_info/customerid and set to $customerId
@@ -88,12 +104,6 @@
             return $response;
         }
     //
-
-    //Customer Profile Information
-        function cust_profile_table ($get_cust_profile){
-
-        }
-
 
     //Update Customer Profile
         function update_cust_profile ($customerId,$email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone) {  

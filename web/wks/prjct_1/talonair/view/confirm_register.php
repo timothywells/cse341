@@ -1,7 +1,5 @@
 <?php 
-	
-	//somethhing to prevent multiple entries by entering in the action
-	
+	//reg_check();	
 	$pagetitle = 'Talon Air, Inc. | Confirm Registration';
 ?>
 <!DOCTYPE html>

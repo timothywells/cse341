@@ -1,4 +1,6 @@
-<?php 
+<?php
+    login_check();
+
     $pagetitle = 'Talon Air, Inc. | Confirm Message Deleted';
 ?>
 <!DOCTYPE html>

@@ -16,12 +16,12 @@
         <div class = "login_container">
             <div class="form_container">
                 <div class="form">
-                
-                    <form method="POST" action="index.php?action=login_user" id="login">
+                    <form method="POST" action="index.php" id="login">
                         <h3 class="center">Login</h3>
                         <h5><?php if(isset($login_fail_message)){echo $login_fail_message;};?></h5>
-                        <input type="email" name="email" id="email" required class="txtinput" placeholder="E-mail">
-                        <input type="password" name="password" id="password" required class="txtinput" placeholder="Password">
+                        <input type="email" name="email" id="email"  class="txtinput" placeholder="E-mail" required>
+                        <input type="password" name="password" id="password"  class="txtinput" placeholder="Password" required>
+                        <input type="hidden" name="action" value="login_user">
                         <input type="submit" id="submit" class="submit" value="Submit">
                     </form>
                 </div>

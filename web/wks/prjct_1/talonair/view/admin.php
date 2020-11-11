@@ -1,4 +1,5 @@
 <?php 
+    // login_check();
     $pagetitle = 'Talon Air, Inc. | Admin Home';
 ?>
 <!DOCTYPE html>
@@ -17,8 +18,6 @@
     <div class="formatted_view">
         <h3 class="center">Admin Profile</h3>
         <!-- Div needed to format tables, possibly skip the profile here cause it is just Admin in general -->
-
-
         <h3 class="center">Messages</h3>
         <!-- LEGEND BOX -->
         <!-- Div needed to format tables -->
@@ -27,12 +26,11 @@
                 echo $message_table;
             ?>
         </div>
-
         <h3 class="center reviews">Reviews</h3>
         <!-- Div needed to format tables -->
         <div class="reviews">
             <?php
-                echo $admin_reviews_table;
+                echo $admin_reviews;
             ?>
         </div>
         <h3 class="center">Customers</h3>
