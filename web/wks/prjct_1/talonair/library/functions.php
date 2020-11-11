@@ -83,8 +83,8 @@
             $stmt->execute();
             $response = $stmt->fetch(PDO::FETCH_ASSOC);
             $stmt->closeCursor();
-            echo $customerId . '</br>';
-            echo $response . '</br>';
+            // echo $customerId . '</br>';
+            // echo $response . '</br>';
             return $response;
         }
     //
