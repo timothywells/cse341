@@ -1,6 +1,5 @@
 <?php
     login_check();
-    storedSession();
     $pagetitle = 'Talon Air, Inc. | Profile';
 
 ?>
@@ -15,7 +14,6 @@
 	<nav>
         <?php include 'common/nav.php'; ?>
     </nav>
-    <?php echo storedSession(); ?>
 	<main>
         <div class="formatted_view profile">
             <h3 class="center">Profile</h3>

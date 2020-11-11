@@ -1,5 +1,6 @@
 <?php 
-    login_check();
+	login_check();
+	
     $pagetitle = 'Talon Air, Inc. | Change Profile';
 ?>
 <!DOCTYPE html>
@@ -22,7 +23,7 @@
 					<form method="POST" action="index.php?action=update_profile" id="profile_update">
 						<h3 class="center">Profile Update</h3>
 						<input type="text" name="email" value="email" id="email" class="txtinput" placeholder="E-mail"> <!-- set value to echo current email -->
-						<input type="text" name="fname" id="fname" class="txtinput" placeholder="First Name">
+						<input type="text" name="fname" value=<?php echo $_SESSION['fname']; ?> id="fname" class="txtinput" placeholder="First Name">
 						<input type="text" name="lname" id="lname" class="txtinput" placeholder="Last Name">
 						<input type="text" name="street_address" id="street_address" class="txtinput" placeholder="address">
 						<input type="text" name="c_city" id="c_city" class="txtinput" placeholder="City">

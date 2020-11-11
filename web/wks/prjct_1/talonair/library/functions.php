@@ -16,36 +16,7 @@
                 exit;
             }
         }
-
-    //Session information Stored
-        //function storedSession(){
-        //         $_SESSION['customerSessionData']['customerid'] = $customerid;
-        //         $_SESSION['customerSessionData']['username'] = $username;
-        //         $_SESSION['customerSessionData']['email'] = $email;
-        //         $_SESSION['customerSessionData']['fname'] = $fname;
-        //         $_SESSION['customerSessionData']['lname'] = $lname;
-        //         $_SESSION['customerSessionData']['street_address'] = $street_address;
-        //         $_SESSION['customerSessionData']['c_city'] = $c_city;
-        //         $_SESSION['customerSessionData']['c_state'] = $c_state;
-        //         $_SESSION['customerSessionData']['zip'] = $zip;
-        //         $_SESSION['customerSessionData']['phone'] = $phone;
-        //         $_SESSION['customerSessionData']['clearance'] = $clearance;
-        // }
-    
-        function storedSession(){
-            $customerid = $_SESSION['customerId'];
-            $username = $_SESSION['username'];
-            $email = $_SESSION['email'];
-            $fname = $_SESSION['fname'];
-            $lname = $_SESSION['lname'];
-            $street_address = $_SESSION['street_address'];
-            $c_city = $_SESSION['c_city'];
-            $c_state = $_SESSION['c_state'];
-            $zip = $_SESSION['zip'];
-            $phone = $_SESSION['phone'];
-            $clearance = $_SESSION['clearance'];
-        }
-
+    //
 
 /******************** SEND A MESSAGE INFORMATION ********************/
     //Record Message from index/send_message
