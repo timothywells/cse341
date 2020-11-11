@@ -19,7 +19,7 @@
 		<h3><?php if(isset($review_message)){echo $review_message;};?></h3>
 
 		<div class="confirm_links">
-			<a href="index.php">Return to Talon Air Home</a>
+			<a href="index.php">Talon Air Home</a>
 			<a href="index.php?action=profile">Go to Profile</a>
 			<a href="index.php?action=reviews">Go to Reviews</a>
 		</div>

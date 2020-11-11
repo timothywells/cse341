@@ -28,7 +28,7 @@
                     <tr><td>City:</td><td><?php echo $_SESSION['c_city']; ?></td></tr>
                     <tr><td>State:</td><td><?php echo $_SESSION['c_state']; ?></td></tr>
                     <tr><td>Zip:</td><td><?php echo $_SESSION['zip']; ?></td></tr>
-                    <tr><td>Phone:</td><td><?php echo $$_SESSION['phone'];; ?></td></tr>
+                    <tr><td>Phone:</td><td><?php echo $_SESSION['phone']; ?></td></tr>
                 </table>
             <h3 class="center review">Your Reviews</h3>
                 <?php echo $cust_review; ?>

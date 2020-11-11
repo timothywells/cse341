@@ -222,6 +222,9 @@ body{
 				&:hover {
 					background-color: red;
 				}
+			&.largebtn{
+				width: 20em;
+			}
 			}
 		}
 	}

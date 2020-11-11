@@ -1,5 +1,5 @@
 <?php 
-    // login_check();
+    login_check();
     $pagetitle = 'Talon Air, Inc. | Admin Home';
 ?>
 <!DOCTYPE html>
@@ -36,7 +36,7 @@
         <h3 class="center">Customers</h3>
         <!-- Div needed to format tables -->
         <div class="customers">
-            <p><?php if(isset($profile_del_message)){echo $profile_del_message;};?></p>
+            <h5><?php if(isset($profile_del_message)){echo $profile_del_message;};?></h5>
             <?php
                 echo $profiles_table;
             ?>

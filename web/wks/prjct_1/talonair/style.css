@@ -340,6 +340,9 @@ body .confirm_links a.log_out {
 body .confirm_links a.log_out:hover {
   background-color: red;
 }
+body .confirm_links a.log_out.largebtn {
+  width: 20em;
+}
 body .login_container, body .register_container, body .write_review_container, body .password_container {
   border-radius: 5px;
   background-color: #f2f2f2;

@@ -17,7 +17,7 @@
                 <!-- Div needed to format center and pic -->
         <div class="formatted_view">
             <h3 class="center">Review Deleted</h3>
-            <div class="confirm_links">
+            <div class="confirm_links largebtn">
                 <a href="index.php?action=profile">RETURN TO PROFILE</a>
                 <!-- <button type='button' id='yes'>Yes</Button><button type='button' id='no'>No</button> -->
             </div>
