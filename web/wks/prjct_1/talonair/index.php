@@ -101,7 +101,6 @@ switch ($action){
                 $_SESSION['loggedIn'] = true;
                 if ($customerData['clearance'] == true || isset($customerData['clearance']) == true){
                     include 'view/admin.php';
-                break;
                 }
                 include 'view/profile.php';
             break;
