@@ -11,7 +11,7 @@
                 }
             }
                 //if this doesnt work delete it
-            if(isset($_SESSION['clearence'])){
+            if(isset($_SESSION['clearence' == true])){
                 if($_SESSION['clearence'] == false){
                     $login_fail_message = "You are NOT an ADMIN";
                     include 'view/login.php';
@@ -28,34 +28,34 @@
         }
     //
 
-    function loginlink(){
-        if(isset($_SESSION['loggedIn'])){
-            if($_SESSION['loggedIn'] == false){
-                $login_message = "Login";
-                include 'view/login.php';
-            exit;
-            }
-            $login_message = "Profile";
-            include 'index.php?action=profile';
-            exit;
-        }
-        //if this doesnt work delete it
-        if(isset($_SESSION['clearence'])){
-            if($_SESSION['clearence'] == false){
-                $login_message = "Login";
-                include 'view/login.php';
-                exit;
-            }
-            $login_message = "Admin";
-            include 'index.php?action=admin';
-            exit;
-            }            
-        if(!(isset($_SESSION['loggedIn']))){
-            $login_message = "Login";
-            include 'view/login.php';
-            exit;
-        }
-    }
+    // function loginlink(){
+    //     if(isset($_SESSION['loggedIn'])){
+    //         if($_SESSION['loggedIn'] == false){
+    //             $login_message = "Login";
+    //             include 'view/login.php';
+    //         exit;
+    //         }
+    //         $login_message = "Profile";
+    //         include 'index.php?action=profile';
+    //         exit;
+    //     }
+    //     //if this doesnt work delete it
+    //     if(isset($_SESSION['clearence'])){
+    //         if($_SESSION['clearence'] == false){
+    //             $login_message = "Login";
+    //             include 'view/login.php';
+    //             exit;
+    //         }
+    //         $login_message = "Admin";
+    //         include 'index.php?action=admin';
+    //         exit;
+    //         }            
+    //     if(!(isset($_SESSION['loggedIn']))){
+    //         $login_message = "Login";
+    //         include 'view/login.php';
+    //         exit;
+    //     }
+    // }
 
     //Registration check
         // function reg_check(){

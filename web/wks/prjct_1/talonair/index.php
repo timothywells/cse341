@@ -99,8 +99,9 @@ switch ($action){
                 $_SESSION['loggedIn'] = true;
                 if ($customerData['clearance'] == true || isset($customerData['clearance']) == true){
                     include 'index.php?action=admin';
-                } else {
-                include 'view/profile.php';
+                }
+                if ($customerData['clearance'] == false || isset($customerData['clearance']) == false){
+                    include 'index.php?action=profile';
                 }
             break;
         //
