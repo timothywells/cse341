@@ -41,7 +41,7 @@ switch ($action){
         //Sends Registered information to server
             case 'registered':
                 $username=filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-                $email=filter_input(INPUT_POST, 'e_mail', FILTER_SANITIZE_STRING);
+                $email=filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
                 $password=filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $confirm_register = register($email,$username,$hashed_password);
@@ -83,6 +83,9 @@ switch ($action){
                     exit;
                 }
                 $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
+                if ($customerData['clearance'] == true || isset($customerData['clearance']) == true){
+                    include 'view/admin.php';
+                }
                 $_SESSION['username'] = $customerData['username'];
                 $_SESSION['customerid'] = $customerData['customerid'];
                 $_SESSION['username'] = $customerData['username'];
@@ -96,6 +99,10 @@ switch ($action){
                 $_SESSION['phone'] = $customerData['phone'];
                 $_SESSION['clearance'] = $customerData['clearence'];
                 $_SESSION['loggedIn'] = true;
+                if ($customerData['clearance'] == true || isset($customerData['clearance']) == true){
+                    include 'view/admin.php';
+                break;
+                }
                 include 'view/profile.php';
             break;
         //

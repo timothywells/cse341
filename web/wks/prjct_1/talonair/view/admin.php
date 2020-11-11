@@ -18,7 +18,6 @@
 
     <div class="formatted_view profile">
         <h3 class="center">Admin Profile</h3>
-
                 <table class="profile">
                     <tr><td>Username:</td><td><?php echo $_SESSION['username']; ?></td></tr>
                     <tr><td>E-mail:</td><td><?php echo $_SESSION['email']; ?></td></tr>
@@ -40,6 +39,9 @@
                     <a class="log_out" href="index.php?action=log_out">Log Out</a>
                 </div>
             <br>
+        </div>
+        <div class="formatted_view profile">
+
             <h3 class="center">Messages</h3>
                 <div class="messages">
                     <?php echo $message_table; ?>
