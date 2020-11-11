@@ -67,9 +67,8 @@ switch ($action){
         //Login view
             case 'login':
                 //Add content variables here
-
-                $loginlink = 'Login';
-                $loginlink = profilelink();
+                // $loginlink = 'Login';
+                // $loginlink = profilelink();
                 include 'view/login.php';
             break;
         //

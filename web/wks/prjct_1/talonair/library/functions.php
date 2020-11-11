@@ -28,7 +28,7 @@
         }
     //
 
-    function login(){
+    function loginlink(){
         if(isset($_SESSION['loggedIn'])){
             if($_SESSION['loggedIn'] == false){
                 $login_message = "Login";
