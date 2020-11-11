@@ -9,12 +9,21 @@
                     include 'view/login.php';
                 exit;
                 }
-                else if(isset($_SESSION['clearence'])){
+                if(isset($_SESSION['clearence'])){
                     include 'view/admin.php';
                 exit;
+                // }
+                // if(!NULL == isset($_SESSION['clearence'])){
+                //     include 'view/admin.php';
+                // exit;
                 }
             }
-            if(!(isset($_SESSION['loggedIn']) || !(isset($_SESSION['clearence'])))){
+            if(!(isset($_SESSION['loggedIn']))){
+                if(!(isset($_SESSION['clearence']))){
+                    $login_fail_message = "You Must Sign in or Register";
+                    include 'view/login.php';
+                    exit;
+                }
                 //echo 'we are in the profile 2';
                 $login_fail_message = "You Must Sign in or Register";
                 include 'view/login.php';
