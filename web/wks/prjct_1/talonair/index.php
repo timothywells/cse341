@@ -97,10 +97,10 @@ switch ($action){
                 $_SESSION['zip'] = $customerData['zip'];
                 $_SESSION['phone'] = $customerData['phone'];
                 $_SESSION['loggedIn'] = true;
-                if ($customerData['clearance'] == true || isset($customerData['clearance']) == true){
-                    include 'index.php?action=admin';
-                break;
-                }
+                // if ($customerData['clearance'] == true || isset($customerData['clearance']) == true){
+                //     include 'index.php?action=admin';
+                // break;
+                // }
                 // if ($customerData['clearance'] == false || isset($customerData['clearance']) == false){
                 //     include 'view/profile.php';
                 // break;
