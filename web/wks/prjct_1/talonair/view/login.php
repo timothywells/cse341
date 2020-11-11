@@ -21,7 +21,6 @@
                         <h5><?php if(isset($login_fail_message)){echo $login_fail_message;};?></h5>
                         <input type="email" name="email" id="email"  class="txtinput" placeholder="E-mail" required>
                         <input type="password" name="password" id="password"  class="txtinput" placeholder="Password" required>
-                        <input type="hidden" name="action" value="login_user">
                         <input type="submit" id="submit" class="submit" value="Submit">
                     </form>
                 </div>
