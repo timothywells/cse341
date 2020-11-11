@@ -23,7 +23,7 @@
 
                 <!-- Div needed to format -->
                 <table class="profile">
-                    <tr><td>Username:</td><td><?php echo $username; ?></td></tr>
+                    <tr><td>Username:</td><td><?php echo $_SESSION['username']; ?></td></tr>
                     <tr><td>E-mail:</td><td><?php echo $email; ?></td></tr>
                     <tr><td>First Name:</td><td><?php echo $fname; ?></td></tr>
                     <tr><td>Last Name:</td><td><?php echo $lname; ?></td></tr>

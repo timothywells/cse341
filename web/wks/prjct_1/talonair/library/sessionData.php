@@ -2,7 +2,7 @@
 $cusomerid=$username=$email=$fname=$lname=$street_address=$c_city=$c_state=$zip=$phone=$clearance = "";
 if(count($_SESSION) != 0 && isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'])
 {
-    $customerid = $_SESSION['customerId'];
+    $customerid = $_SESSION['customerid'];
     $username = $_SESSION['username'];
     $email = $_SESSION['email'];
     $fname = $_SESSION['fname'];
