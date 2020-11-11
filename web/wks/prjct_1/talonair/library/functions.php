@@ -9,14 +9,16 @@
                     include 'view/login.php';
                 exit;
                 }
-                if(NULL == isset($_SESSION['clearence'])){
-                    $login_fail_message = "You are NOT an ADMIN";
-                    include 'view/login.php';
-                    exit;
-                }
-                if(!NULL == (isset($_SESSION['clearence']))){
-                    include 'view/admin.php';
-                    exit;
+                //if this doesnt work delete it
+                if(isset($_SESSION['clearence'])){
+                    if($_SESSION['clearence'] == false){
+                        $login_fail_message = "You are NOT an ADMIN";
+                        include 'view/login.php';
+                        exit;
+                    } else {
+                        include 'view/admin.php';
+                        exit;
+                    }
                 }
             }
             if(!(isset($_SESSION['loggedIn']))){
@@ -93,6 +95,29 @@
             return $response;
         }
     //
+
+    //admin clearence if this doesn't work delete
+        function clearance($custClearance){
+            $data = get_cust_profile($customerId);
+            $clearance = $data['clearance'];
+            if ($clearance != NULL){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+    //Get Clearance
+        // function getClearance($clearance){
+        //     $db = herokuConnect();
+        //     $sql = "SELECT * FROM customer_info WHERE clearance = $clearance";
+        //     $stmt = $db->prepare($sql);
+        //     $stmt->execute();
+        //     $response = $stmt->fetch(PDO::FETCH_ASSOC);
+        //     $stmt->closeCursor();
+        //     return $response;
+        //}
+
 
 /******************** CUSTOMER INFORMATION ********************/
     //Get profile by customer_info/customerid and set to $customerId
@@ -284,4 +309,5 @@
             return $response;
         }
     //
+
 ?>

@@ -83,6 +83,7 @@ switch ($action){
                     exit;
                 }
                 $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
+                $clearance = clearance($custClearance); //If this doesnt work delete
                 $_SESSION['username'] = $customerData['username'];
                 $_SESSION['customerid'] = $customerData['customerid'];
                 $_SESSION['username'] = $customerData['username'];
@@ -94,7 +95,8 @@ switch ($action){
                 $_SESSION['c_state'] = $customerData['c_state'];
                 $_SESSION['zip'] = $customerData['zip'];
                 $_SESSION['phone'] = $customerData['phone'];
-                $_SESSION['clearance'] = $customerData['clearence'];
+                //$_SESSION['clearance'] = $customerData['clearence'];
+                $_SESSION{'clearance'} = $clearance; //if this doesn't work delte, replace with one line above
                 $_SESSION['loggedIn'] = true;
                 include 'view/profile.php';
             break;
