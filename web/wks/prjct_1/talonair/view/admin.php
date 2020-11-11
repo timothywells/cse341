@@ -30,9 +30,9 @@
                     <tr><td>Phone:</td><td><?php echo $_SESSION['phone']; ?></td></tr>
                 </table>
             <h3 class="center review">Profile Options</h3>
-            <p><?php if(isset($review_message)){echo $review_message;}; ?></p>
-            <p><?php if(isset($profile_change_message)){echo $profile_change_message;};?></p>
-            <p><?php if(isset($password_change_message)){echo $password_change_message;};?></p>
+                <p><?php if(isset($review_message)){echo $review_message;}; ?></p>
+                <p><?php if(isset($profile_change_message)){echo $profile_change_message;};?></p>
+                <p><?php if(isset($password_change_message)){echo $password_change_message;};?></p>
                 <div class="confirm_links">
                     <a class="links" href="index.php?action=change_profile">Update Profile</a>
                     <a class="links" href="index.php?action=change_password">Change Password</a>
@@ -40,7 +40,7 @@
                 </div>
             <br>
         </div>
-        <div class="formatted_view profile">
+        <div class="formatted_view">
 
             <h3 class="center">Messages</h3>
                 <div class="messages">
