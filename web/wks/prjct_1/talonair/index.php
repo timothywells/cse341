@@ -101,10 +101,11 @@ switch ($action){
                     include 'index.php?action=admin';
                 break;
                 }
-                if ($customerData['clearance'] == false || isset($customerData['clearance']) == false){
-                    include 'view/profile.php';
-                break;
-                }
+                // if ($customerData['clearance'] == false || isset($customerData['clearance']) == false){
+                //     include 'view/profile.php';
+                // break;
+                // }
+                include 'view/profile.php';
             break;
             
         //
