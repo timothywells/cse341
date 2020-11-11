@@ -9,22 +9,17 @@
                     include 'view/login.php';
                 exit;
                 }
-                // if(isset($_SESSION['clearence'])){
-                //     include 'view/admin.php';
-                // exit;
-                // }
-                if(!NULL == isset($_SESSION['clearence'])){
+                if(NULL == isset($_SESSION['clearence'])){
+                    if(!NULL == (isset($_SESSION['clearence']))){
                     include 'view/admin.php';
-                exit;
+                    exit;
+                    }
+                        $login_fail_message = "You are NOT an ADMIN";
+                        include 'view/login.php';
+                        exit;
                 }
             }
             if(!(isset($_SESSION['loggedIn']))){
-                if(NULL == (isset($_SESSION['clearence']))){
-                    $login_fail_message = "You are NOT an ADMIN";
-                    include 'view/login.php';
-                    exit;
-                }
-                //echo 'we are in the profile 2';
                 $login_fail_message = "You Must Sign in or Register";
                 include 'view/login.php';
                 exit;
