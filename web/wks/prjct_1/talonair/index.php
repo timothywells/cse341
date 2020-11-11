@@ -64,40 +64,12 @@ switch ($action){
         //
 
     /******************** LOGGING IN ********************/
-        //Nav bar change
-        case 'loginlink':
-            $loginlink = profilelink();
-            
-            
-            
-            
-            
-            
-            
-            
-            // if(isset($_SESSION['loggedIn'])){
-            //     if($_SESSION['loggedIn'] == false){
-            //         echo "Login/Register";
-            //         include 'view/login.php';
-            //     exit;
-            //     }
-            //     echo "Profile";
-            //     include "index.php?action=profile";
-            // }
-
-            // if (isset($_SESSION['clearence'])){
-            //     if($_SESSION['clearence'] == false){
-            //         echo "Login/Profile";
-            //         include 'view/login.php';
-            //         exit;
-            //     }
-            //     include 'index.php?action=admin';
-            //     }            
-            break;
-
         //Login view
             case 'login':
                 //Add content variables here
+
+                $loginlink = 'Login';
+                $loginlink = profilelink();
                 include 'view/login.php';
             break;
         //
@@ -127,7 +99,7 @@ switch ($action){
                 $_SESSION['phone'] = $customerData['phone'];
                 $_SESSION['loggedIn'] = true;
                 if ($customerData['clearance'] == true || isset($customerData['clearance']) == true){
-                    include 'view/index.php?action=admin';
+                    include 'index.php?action=admin';
                 } else {
                 include 'view/profile.php';
                 }
