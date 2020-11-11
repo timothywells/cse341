@@ -125,14 +125,6 @@ switch ($action){
             $c_state = filter_input(INPUT_POST, 'c_state', FILTER_SANITIZE_STRING);
             $zip = filter_input(INPUT_POST, 'zip', FILTER_SANITIZE_STRING);
             $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
-            // echo $email . '<br>';
-            // echo $fname . '<br>';
-            // echo $lname . '<br>';
-            // echo $street_address . '<br>';
-            // echo $c_city . '<br>';
-            // echo $c_state . '<br>';
-            // echo $zip . '<br>';
-            // echo $phone . '<br>';
             $customerId = $_SESSION['customerid']; //Add to customerSession(); function
             update_cust_profile ($customerId,$email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone);
             include 'view/profile.php';
@@ -199,7 +191,8 @@ switch ($action){
             //Add content variables here
             $deleteCustomer = $_GET['get_customer_id'];
             delete_cust_profile($deleteCustomer); //Referes to functions.php
-            include 'view/confirm_delete_profile.php';
+            $profile_del_message = "Profile Deleted for <?php echo $deleteCustomer ?>";
+            include 'view/admin.php';
         break;  
     //
 

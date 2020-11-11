@@ -9,18 +9,17 @@
                     include 'view/login.php';
                 exit;
                 }
+            }
                 //if this doesnt work delete it
-                if(isset($_SESSION['clearence'])){
-                    if($_SESSION['clearence'] == false){
-                        $login_fail_message = "You are NOT an ADMIN";
-                        include 'view/login.php';
-                        exit;
-                    } 
-                    include 'view/admin.php';
+            if(isset($_SESSION['clearence'])){
+                if($_SESSION['clearence'] == false){
+                    $login_fail_message = "You are NOT an ADMIN";
+                    include 'view/login.php';
                     exit;
-                    }
                 }
-            
+                include 'view/admin.php';
+                exit;
+                }            
             if(!(isset($_SESSION['loggedIn']))){
                 $login_fail_message = "You Must Sign in or Register";
                 include 'view/login.php';
