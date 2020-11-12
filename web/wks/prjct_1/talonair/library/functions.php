@@ -11,10 +11,10 @@
                 }
             
             //if this doesnt work delete it
-            if(isset($_SESSION['clearence'])){
+            if(isset($_SESSION['clearance'])){
                 if($_SESSION['clearence'] == false){
                     include 'view/profile.php';
-                    exit;
+                exit;
                 }
                 include 'view/admin.php';
                 exit;

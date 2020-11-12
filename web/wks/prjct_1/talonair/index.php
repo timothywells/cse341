@@ -115,16 +115,16 @@ switch ($action){
                 $_SESSION['phone'] = $customerData['phone'];
                 $_SESSION['clearance'] = $customerData['clearance'];
                 $_SESSION['loggedIn'] = true;
-                // if ($_SESSION['clearance'] == false){
-                //     include 'view/profile.php';
-                // } else {
-                //     include 'index.php?action=admin';
-                // }
+                if ($_SESSION['clearance'] == false){
+                    include 'view/profile.php';
+                } else {
+                    include 'index.php?action=admin';
+                }
                 // if ($customerData['clearance'] == false || isset($customerData['clearance']) == false){
                 //     include 'view/profile.php';
                 // break;
                 // }
-                include 'view/profile.php';
+                //include 'view/profile.php';
             break;
             
         //
