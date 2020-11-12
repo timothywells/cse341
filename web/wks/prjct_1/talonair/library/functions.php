@@ -60,16 +60,16 @@
     // }
 
     //Registration check
-        function reg_check(){
-            if(isset($_SESSION['registered']) == true){
-                include 'view/confirm_register.php';
-                exit;
-            }
-            if(!(isset($_SESSION['registered']))){
-                $reg_message = "You must register first";
-                include 'view/register.php';
-            }
-        }
+        // function reg_check(){
+        //     if(isset($_SESSION['registered']) == true){
+        //         include 'view/confirm_register.php';
+        //         exit;
+        //     }
+        //     if(!(isset($_SESSION['registered']))){
+        //         $reg_message = "You must register first";
+        //         include 'view/register.php';
+        //     }
+        // }
 
 /******************** SEND A MESSAGE INFORMATION ********************/
     //Record Message from index/send_message

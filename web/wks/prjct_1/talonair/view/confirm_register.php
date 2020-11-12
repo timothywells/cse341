@@ -1,5 +1,5 @@
 <?php 
-	reg_check();	
+	// reg_check();	
 	$pagetitle = 'Talon Air, Inc. | Confirm Registration';
 ?>
 <!DOCTYPE html>
