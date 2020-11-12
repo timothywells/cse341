@@ -58,11 +58,7 @@ switch ($action){
 
         //Confirm Registreation
             case 'confirm_register':
-                if(isset($_SESSION['registered'])){
-                    if($_SESSION['registered'] == false){
-                        $reg_message = "Registration was NOT Successful";
-                        include 'view/register.php';
-                    }
+                if($_SESSION['registered'] == true){
                     $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
                     $_SESSION['customerid'] = $customerData['customerid'];
                     $_SESSION['username'] = $customerData['username'];
