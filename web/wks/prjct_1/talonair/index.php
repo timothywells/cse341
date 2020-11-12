@@ -48,7 +48,7 @@ switch ($action){
                 if($confirm_register){
                     $_SESSION['registered'] = true; //Only things changed
                     $reg_message = "Registration Successful";
-                    include 'indes.php?action=confirm_register';
+                    include 'index.php?action=confirm_register';
                 } else {
                     $reg_message = "Registration was NOT Successful";
                     include 'view/register.php';
@@ -58,7 +58,11 @@ switch ($action){
 
         //Confirm Registreation
             case 'confirm_register':
-                if(isset($_SESSION['registered']) == true){
+                if(isset($_SESSION['registered'])){
+                    if($_SESSION['registered'] == false){
+                        $reg_message = "Registration was NOT Successful";
+                        include 'view/register.php';
+                    }
                     $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
                     $_SESSION['customerid'] = $customerData['customerid'];
                     $_SESSION['username'] = $customerData['username'];

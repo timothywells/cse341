@@ -130,7 +130,7 @@
     //Get profile by customer_info/customerid and set to $customerId
         function get_cust_profile($customerId){
             $db = herokuConnect();
-            $sql = "SELECT * FROM customer_info WHERE customerid = $customerId";
+            $sql = "SELECT * FROM customer_info WHERE customerid = '$customerId'";
             $stmt = $db->prepare($sql);
             $stmt->execute();
             $response = $stmt->fetch(PDO::FETCH_ASSOC);
