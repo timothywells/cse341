@@ -2,7 +2,7 @@
 session_start();
 require_once 'library/connections.php';
 require_once 'library/functions.php';
-require_once 'library/sessionData.php';
+//require_once 'library/sessionData.php';
 
 $action = filter_input(INPUT_POST, 'action');
  if ($action == NULL){
