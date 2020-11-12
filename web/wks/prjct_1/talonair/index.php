@@ -46,7 +46,7 @@ switch ($action){
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $confirm_register = register($email,$username,$hashed_password);
                 if($confirm_register){
-                    $_SESSION['registered'] = true; //Only things changed
+                    // $_SESSION['registered'] = true; //Only things changed
                     $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
                     $_SESSION['customerid'] = $customerData['customerid'];
                     $_SESSION['username'] = $customerData['username'];
