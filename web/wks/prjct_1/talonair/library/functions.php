@@ -61,7 +61,7 @@
 
     //Registration check
         function reg_check(){
-            if(isset($_SESSION['registered'])){
+            if(isset($_SESSION['registered']) == true){
                 include 'view/confirm_register.php';
                 exit;
             }
