@@ -288,7 +288,7 @@ body .logos {
 body .customers table, body .messages table, body .reviews table {
   table-layout: auto;
   width: 100%;
-  margin: 0 auto 5% auto;
+  margin: 0 auto;
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid #ddd;
@@ -310,7 +310,7 @@ body .formatted_view p {
 }
 body .confirm_links {
   display: inline-flex;
-  margin: 1em;
+  margin: 4em auto;
   width: 100%;
 }
 @media screen and (max-width: 900px) {
@@ -325,7 +325,7 @@ body .confirm_links a {
   text-align: center;
   line-height: 1em;
   padding: 1em;
-  margin: 1em auto;
+  margin: auto;
   color: white;
   font-size: 1em;
   font-weight: 600;
