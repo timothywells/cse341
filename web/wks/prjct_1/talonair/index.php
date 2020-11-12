@@ -59,28 +59,6 @@ switch ($action){
         //Confirm Registreation
             case 'confirm_register':
                 
-                
-                
-                
-                // if($_SESSION['registered'] == true){
-                //     $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
-                //     $_SESSION['customerid'] = $customerData['customerid'];
-                //     $_SESSION['username'] = $customerData['username'];
-                //     $_SESSION['email'] = $customerData['email'];
-                //     $_SESSION['fname'] = $customerData['fname'];
-                //     $_SESSION['lname'] = $customerData['lname'];
-                //     $_SESSION['street_address'] = $customerData['street_address'];
-                //     $_SESSION['c_city'] = $customerData['c_city'];
-                //     $_SESSION['c_state'] = $customerData['c_state'];
-                //     $_SESSION['zip'] = $customerData['zip'];
-                //     $_SESSION['phone'] = $customerData['phone'];
-                //     $_SESSION['clearance'] = $customerData['clearance'];
-                //     $_SESSION['loggedIn'] = true;
-                //     include 'view/confirm_register.php';
-                // } else {
-                //     $reg_message = "Registration was NOT Successful";
-                //     include 'view/register.php';
-                // }
             break;
         //
 
