@@ -9,14 +9,14 @@
                     include 'view/login.php';
                 exit;
                 }
+                if ($_SESSION['clearance'] == false) {
+                    include 'view/profile.php';
+                exit;
+                }
             }
             //if this doesnt work delete it
-            if($_SESSION['clearance'] == true){
+            if($_SESSION['clearance'] == true || isset($_SESSION['clearance']) == true){
                 include 'view/admin.php';
-                exit;
-            } elseif ($_SESSION['clearance'] == false) {
-                    $login_fail_message = "You Must be an Admin";
-                    include 'view/profile.php';
                 exit;
             }
             
