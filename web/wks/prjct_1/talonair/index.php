@@ -46,7 +46,8 @@ switch ($action){
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $confirm_register = register($email,$username,$hashed_password);
                 if($confirm_register){
-                    $_SESSION['registered'] == true; //Only things changed
+                    $_SESSION['registered'] = true; //Only things changed
+                    $_SESSION['loggedIn'] = true; //Added to attempt to be loggedin
                     $reg_message = "Registration Successful";
                     include 'view/confirm_register.php';
                 } else {
@@ -135,6 +136,15 @@ switch ($action){
             $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
             $customerId = $_SESSION['customerid']; //Add to customerSession(); function
             update_cust_profile ($customerId,$email,$fname,$lname,$street_address,$c_city,$c_state,$zip,$phone);
+            $customerData = get_cust_profile($customerId); //Refers to get_cust_profile in functions.php
+            $_SESSION['email'] = $customerData['email'];
+            $_SESSION['fname'] = $customerData['fname'];
+            $_SESSION['lname'] = $customerData['lname'];
+            $_SESSION['street_address'] = $customerData['street_address'];
+            $_SESSION['c_city'] = $customerData['c_city'];
+            $_SESSION['c_state'] = $customerData['c_state'];
+            $_SESSION['zip'] = $customerData['zip'];
+            $_SESSION['phone'] = $customerData['phone'];
             include 'view/profile.php';
             break;
         //
