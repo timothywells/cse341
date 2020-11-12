@@ -29,7 +29,7 @@
 						<input type="text" name="c_state" value="<?php echo $_SESSION['c_state']; ?>" id="c_state" class="txtinput" placeholder="State" required>
 						<input type="text" name="zip" value="<?php echo $_SESSION['zip']; ?>" id="zip" class="txtinput" placeholder="Zip" required>
 						<input type="text" name="phone" value="<?php echo $_SESSION['phone']; ?>" id="phone" class="txtinput" placeholder="Phone Number" required>
-						<input type="hidden" name="action" value="password_update">
+						<input type="hidden" name="action" value="update_profile">
 						<input type="submit" id="submit" class="submit" value="Submit">
 					</form>
 				</div>
