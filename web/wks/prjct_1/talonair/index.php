@@ -115,8 +115,9 @@ switch ($action){
                 $_SESSION['phone'] = $customerData['phone'];
                 $_SESSION['clearance'] = $customerData['clearance'];
                 $_SESSION['loggedIn'] = true;
-                if ($_SESSION['clearance'] == false){
+                if ($_SESSION['clearance'] == false || isset($_SESSION['clearance']) == false){
                     include 'view/profile.php';
+                break;
                 } else {
                     include 'index.php?action=admin';
                 }

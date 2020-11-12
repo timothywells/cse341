@@ -12,7 +12,7 @@
             
             //if this doesnt work delete it
             if(isset($_SESSION['clearance'])){
-                if($_SESSION['clearence'] == false){
+                if($_SESSION['clearance'] == false || isset($_SESSION['clearance']) == false){
                     include 'view/profile.php';
                 exit;
                 }
