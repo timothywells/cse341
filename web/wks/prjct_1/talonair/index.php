@@ -63,7 +63,6 @@ switch ($action){
 
         //Confirm Registreation
             case 'confirm_register':
-
                 include 'view/confirm_register.php';
             break;
         //
@@ -130,6 +129,7 @@ switch ($action){
 
     //Update the profile information based on customerid
         case 'update_profile';
+            login_check();
             $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
             $fname = filter_input(INPUT_POST, 'fname', FILTER_SANITIZE_STRING);
             $lname = filter_input(INPUT_POST, 'lname', FILTER_SANITIZE_STRING);
@@ -160,13 +160,13 @@ switch ($action){
     
     //Update Password
         case 'password_update':
-
             include 'view/profile.php';
         break;
     //
 
     //Write a review view
         case 'write_review':
+            
             include 'view/write_review.php';
         break;
     //
