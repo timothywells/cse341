@@ -1,7 +1,14 @@
 <?php 
     login_check();
     admin_check();
-    admin_var();
+
+    $messages_list = get_message_list();
+    $message_table = message_table($messages_list);
+    $admin_get_reviews = get_reviews();
+    $admin_reviews_table = admin_reviews_table($admin_get_reviews);
+    $get_profiles = get_profile();
+    $profiles_table = profiles_table($get_profiles);
+
     $pagetitle = 'Talon Air, Inc. | Admin Home';
 ?>
 <!DOCTYPE html>
