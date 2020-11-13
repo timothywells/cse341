@@ -15,12 +15,12 @@
                 include 'view/login.php';
                 exit;
             }
-            if($_SESSION['clearance'] == false){
+            if((isset($_SESSION['clearance']))){
                 if($_SESSION['clearance'] == true){
                     include 'index?action=admin';
                     exit;
-                        }
-                    }
+                }
+            }
         }
         
     
@@ -32,7 +32,6 @@
                     include 'view/profile.php';
                     exit;
                         }
-
                     }
                 }
 
