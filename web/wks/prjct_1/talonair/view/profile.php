@@ -17,9 +17,9 @@
         <div class="formatted_view profile">
             <h3 class="center">Profile</h3>
             <?php if(isset($admin_fail_message)){echo '<h5>' . $admin_fail_message . '</h5>';}; ?>
-            <?php if(isset($review_message)){echo $review_message;}; ?>
+            <?php if(isset($review_message)){echo '<h5>' . $review_message . '</h5?';}; ?>
             <?php if(isset($profile_change_message)){echo '<h5>' . $profile_change_message . '</h5>';};?>
-            <?php if(isset($password_change_message)){echo $password_change_message;};?>
+            <?php if(isset($password_change_message)){echo '<h5>' . $password_change_message . '</h5>';};?>
                 <table class="profile">
                     <tr><td>Username:</td><td><?php echo $_SESSION['username']; ?></td></tr>
                     <tr><td>E-mail:</td><td><?php echo $_SESSION['email']; ?></td></tr>

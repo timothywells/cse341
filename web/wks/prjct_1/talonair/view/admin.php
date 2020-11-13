@@ -27,6 +27,8 @@
 
         <div class="formatted_view profile">
             <h3 class="center">Admin Profile</h3>
+                <?php if(isset($profile_change_message)){echo '<h5>' . $profile_change_message . '</h5>';};?>
+                <?php if(isset($password_change_message)){echo '<h5>' . $password_change_message . '</h5>';};?>
                 <table class="profile">
                     <tr><td>Username:</td><td><?php echo $_SESSION['username']; ?></td></tr>
                     <tr><td>E-mail:</td><td><?php echo $_SESSION['email']; ?></td></tr>
@@ -51,24 +53,25 @@
     <br>
         <div class="formatted_view">
                 <h3 class="center">Messages</h3>
-                    <div class="messages">
                     <?php if(isset($message_del_message)){echo "<h5>" . $message_del_message . "</h5>";}; ?>
+                    <div class="messages">
+                    
                         <?php
                             echo $message_table;
                         ?>
                     </div>
                     <br>
                 <h3 class="center">Reviews</h3>
-                    <div class="reviews">
                     <?php if(isset($review_del_message)){echo "<h5>" . $review_del_message . "</h5>";}; ?>
+                    <div class="reviews">
                         <?php
                             echo $admin_reviews;
                         ?>
                     </div>
                 <br>
                 <h3 class="center">Customers</h3>
+                    <?php if(isset($profile_del_message)){echo "<h5>" . $profile_del_message . "</h5>";}; ?>    
                     <div class="customers">
-                        <?php if(isset($profile_del_message)){echo "<h5>" . $profile_del_message . "</h5>";}; ?>
                         <?php
                             echo $profiles_table;
                         ?>
