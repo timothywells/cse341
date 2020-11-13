@@ -97,7 +97,8 @@ switch ($action){
                 // if ($_SESSION['clearance'] == true || isset($_SESSION['clearance']) == true){
                 //     include 'index.php?action=admin';
                 // break;
-                include 'view/profile.php';
+                // include 'view/profile.php';
+                include 'index.php?action=profile';
             break;
         //
 
@@ -180,7 +181,14 @@ switch ($action){
 
     //Profile View
         case 'profile':
-            include 'view/profile.php';
+            if(isset($_SESSION['clearance'])){
+                if($_SESSION['clearance'] == false){
+                    //$admin_fail_message = "You must be an Admin";
+                    include 'view/profile.php';
+                break;
+                    }
+                }
+            include 'index.php?action=admin';
         break;
     //
 
