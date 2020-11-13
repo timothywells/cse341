@@ -21,13 +21,13 @@ switch ($action){
     /******************** SEND MESSAGE FROM HOME SCREEN INFORMATION ********************/
         //Collect Message information send information to MESSAGE_RECORD in FUNCTIONS.PHP
             case 'send_message':
-                    $fullname=$_POST['fullname'];
-                    $form_phone=$_POST['form_phone'];
-                    $form_email=$_POST['form_email'];
-                    $form_subject=$_POST['form_subject'];
-                    $form_message=$_POST['form_message'];
-                    message_record($fullname, $form_phone, $form_email, $form_subject, $form_message);
-                    include 'view/confirm_message_sent.php';
+                $fullname=$_POST['fullname'];
+                $form_phone=$_POST['form_phone'];
+                $form_email=$_POST['form_email'];
+                $form_subject=$_POST['form_subject'];
+                $form_message=$_POST['form_message'];
+                message_record($fullname, $form_phone, $form_email, $form_subject, $form_message);
+                include 'view/confirm_message_sent.php';
             break;
         //
 
@@ -59,6 +59,7 @@ switch ($action){
         //Confirm Registreation
             case 'confirm_register':
                 
+                include 'view/profile.php';
             break;
         //
 
@@ -93,19 +94,11 @@ switch ($action){
                 $_SESSION['phone'] = $customerData['phone'];
                 $_SESSION['clearance'] = $customerData['clearance'];
                 $_SESSION['loggedIn'] = true;
-                // if ($_SESSION['clearance'] == false || isset($_SESSION['clearance']) == false){
-                //     include 'view/profile.php';
-                // break;
-                // } else {
+                // if ($_SESSION['clearance'] == true || isset($_SESSION['clearance']) == true){
                 //     include 'index.php?action=admin';
-                // }
-                // if ($customerData['clearance'] == false || isset($customerData['clearance']) == false){
-                //     include 'view/profile.php';
                 // break;
-                // }
                 include 'view/profile.php';
             break;
-            
         //
 
         //Log out
@@ -145,6 +138,7 @@ switch ($action){
             $_SESSION['c_state'] = $customerData['c_state'];
             $_SESSION['zip'] = $customerData['zip'];
             $_SESSION['phone'] = $customerData['phone'];
+            $profile_change_message = "Profile Changed Successfully";
             include 'view/profile.php';
             break;
         //
@@ -210,7 +204,7 @@ switch ($action){
             $deleteCustomer = $_GET['get_customer_id'];
             delete_cust_profile($deleteCustomer); //Referes to functions.php
             $profile_del_message = "Profile Deleted";
-            include 'view/admin.php';
+            include 'index.php?action=admin';
         break;  
     //
 
@@ -220,7 +214,7 @@ switch ($action){
             $messageID = $_GET['get_message_by_id'];
             delete_message($messageID);
             $message_del_message = "Message Deleted";
-            include 'view/confirm_message_delete.php';
+            include 'index.php?action=admin';
         break;
     //
 
@@ -229,7 +223,7 @@ switch ($action){
             $reviewID = $_GET['get_review_by_id'];
             admin_delete_review($reviewID);
             $review_del_message = "Review Deleted";
-            include 'view/admin_confirm_review_delete.php';
+            include 'index.php?action=admin';
         break;
     //
 

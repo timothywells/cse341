@@ -16,9 +16,10 @@
 	<main>
         <div class="formatted_view profile">
             <h3 class="center">Profile</h3>
-            <p><?php if(isset($review_message)){echo $review_message;}; ?></p>
-            <p><?php if(isset($profile_change_message)){echo $profile_change_message;};?></p>
-            <p><?php if(isset($password_change_message)){echo $password_change_message;};?></p>
+            <?php if(isset($admin_fail_message)){echo '<h5>' . $admin_fail_message . '</h5>';}; ?>
+            <?php if(isset($review_message)){echo $review_message;}; ?>
+            <?php if(isset($profile_change_message)){echo '<h5>' . $profile_change_message . '</h5>';};?>
+            <?php if(isset($password_change_message)){echo $password_change_message;};?>
                 <table class="profile">
                     <tr><td>Username:</td><td><?php echo $_SESSION['username']; ?></td></tr>
                     <tr><td>E-mail:</td><td><?php echo $_SESSION['email']; ?></td></tr>
@@ -32,6 +33,7 @@
                 </table>
             <h3 class="center review">Your Reviews</h3>
                 <?php echo $cust_review; ?>
+            <h3 class="center review">Profile Updates</h3>
                 <div class="confirm_links">
                     <a class="links" href="index.php?action=change_profile">Update Profile</a>
                     <a class="links" href="index.php?action=write_review">Write a Review</a>

@@ -10,30 +10,32 @@
                 exit;
                 }
             }
-        
-                // if ($_SESSION['clearance'] == true){
-                //     include 'view/admin.php';
-                //     exit;
-                // }
-                // This is one option
-                // if(isset($_SESSION['clearance'] == false)){
-                //     if($_SESSION['clearance'] == true){
-                //     $login_fail_message = "You must be an Admin";
-                //     include 'view/profile.php';
-                //     exit;
-                //     }
-                //     include 'view/admin.php';
-                //     exit;
-                // }
-            
-            
             if(!(isset($_SESSION['loggedIn']))){
                 $login_fail_message = "You Must Sign in or Register";
                 include 'view/login.php';
                 exit;
             }
+            // if($_SESSION['clearance'] == false){
+            //     if($_SESSION['clearance'] == true){
+            //         include 'index?action=admin';
+            //         exit;
+            //             }
+            //         }
         }
-    //
+        
+    
+    //Admin Check
+        function admin_check(){
+            if($_SESSION['clearance'] == true){
+                if($_SESSION['clearance'] == false){
+                    $admin_fail_message = "You must be an Admin";
+                    include 'view/profile.php';
+                    exit;
+                        }
+
+                    }
+                }
+
 
     // function loginlink(){
     //     if(isset($_SESSION['loggedIn'])){

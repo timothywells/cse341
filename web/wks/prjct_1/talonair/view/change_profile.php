@@ -1,6 +1,5 @@
 <?php 
 	login_check();
-	
     $pagetitle = 'Talon Air, Inc. | Change Profile';
 ?>
 <!DOCTYPE html>
@@ -11,7 +10,6 @@
 	<header>
         <?php include 'common/header.php'; ?>
 	</header>
-	
 	<nav>
         <?php include 'common/nav.php'; ?>
 	</nav>

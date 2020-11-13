@@ -1,5 +1,6 @@
 <?php 
     login_check();
+    admin_check();
     $pagetitle = 'Talon Air, Inc. | Admin Home';
 ?>
 <!DOCTYPE html>
@@ -43,7 +44,7 @@
         <div class="formatted_view">
                 <h3 class="center">Messages</h3>
                     <div class="messages">
-                    <?php if(isset($message_del_message)){echo "<h5>" . $message_del_message . "</h5";}; ?>
+                    <?php if(isset($message_del_message)){echo "<h5>" . $message_del_message . "</h5>";}; ?>
                         <?php
                             echo $message_table;
                         ?>
@@ -51,7 +52,7 @@
                     <br>
                 <h3 class="center">Reviews</h3>
                     <div class="reviews">
-                    <?php if(isset($review_del_message)){echo "<h5>" . $review_del_message . "</h5";}; ?>
+                    <?php if(isset($review_del_message)){echo "<h5>" . $review_del_message . "</h5>";}; ?>
                         <?php
                             echo $admin_reviews;
                         ?>
@@ -59,7 +60,7 @@
                 <br>
                 <h3 class="center">Customers</h3>
                     <div class="customers">
-                        <?php if(isset($profile_del_message)){echo "<h5>" . $profile_del_message . "</h5";}; ?>
+                        <?php if(isset($profile_del_message)){echo "<h5>" . $profile_del_message . "</h5>";}; ?>
                         <?php
                             echo $profiles_table;
                         ?>
