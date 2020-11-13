@@ -208,21 +208,16 @@ nav ul li {
     display: inline;
   }
 }
-nav ul li .logout {
-  background-color: red;
-}
-nav ul li .logout:hover:not(.active) {
-  background-color: rgba(255, 0, 0, 0.75);
-}
-nav ul li .logout a {
+nav ul li a {
   display: block;
   color: white;
   text-decoration: none;
 }
-nav ul li .logout a:hover:not(.active) {
+nav ul li a:hover:not(.active) {
   background-color: #3498D8;
 }
-nav body {
+
+body {
   margin: 0;
   padding: 0;
   display: flex;
@@ -230,7 +225,7 @@ nav body {
   align-items: stretch;
   min-height: 100%;
 }
-nav body main {
+body main {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -238,24 +233,24 @@ nav body main {
   flex-grow: 1;
   flex-direction: column;
 }
-nav body .banner {
+body .banner {
   align-content: center;
   width: 100%;
   height: 20vh;
   padding: 0;
   margin: 0;
 }
-nav body .desc {
+body .desc {
   color: white;
   padding: 3vw;
 }
-nav body .image {
+body .image {
   margin: 0;
   padding: 0;
   height: auto;
   width: auto;
 }
-nav body .firstblock {
+body .firstblock {
   display: flex;
   width: 100%;
   height: auto;
@@ -265,11 +260,11 @@ nav body .firstblock {
   background-color: slategray;
 }
 @media screen and (max-width: 900px) {
-  nav body .firstblock {
+  body .firstblock {
     flex-direction: column-reverse;
   }
 }
-nav body .secondblock {
+body .secondblock {
   display: flex;
   width: 100%;
   height: auto;
@@ -279,18 +274,18 @@ nav body .secondblock {
   background-color: royalblue;
 }
 @media screen and (max-width: 900px) {
-  nav body .secondblock {
+  body .secondblock {
     flex-direction: column;
   }
 }
-nav body .logos {
+body .logos {
   width: auto;
   height: 30vh;
   padding: 0;
   margin: 1vh 2vw;
   background: url("scss/images/brands/logos.svg") no-repeat center center;
 }
-nav body .customers table, nav body .messages table, nav body .reviews table {
+body .customers table, body .messages table, body .reviews table {
   table-layout: auto;
   width: 100%;
   margin: 0 auto;
@@ -298,32 +293,32 @@ nav body .customers table, nav body .messages table, nav body .reviews table {
   border-spacing: 0;
   border: 1px solid #ddd;
 }
-nav body .customers table th, nav body .customers table td, nav body .messages table th, nav body .messages table td, nav body .reviews table th, nav body .reviews table td {
+body .customers table th, body .customers table td, body .messages table th, body .messages table td, body .reviews table th, body .reviews table td {
   text-align: left;
   padding: 10px;
 }
-nav body .customers table tr:nth-child(even), nav body .messages table tr:nth-child(even), nav body .reviews table tr:nth-child(even) {
+body .customers table tr:nth-child(even), body .messages table tr:nth-child(even), body .reviews table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-nav body .formatted_view {
+body .formatted_view {
   margin: 0 auto;
   width: 80%;
 }
-nav body .formatted_view p {
+body .formatted_view p {
   color: black;
   text-align: center;
 }
-nav body .confirm_links {
+body .confirm_links {
   display: inline-flex;
   margin: 1em auto;
   width: 100%;
 }
 @media screen and (max-width: 900px) {
-  nav body .confirm_links {
+  body .confirm_links {
     display: inline;
   }
 }
-nav body .confirm_links a {
+body .confirm_links a {
   display: block;
   width: 8em;
   text-decoration: none;
@@ -336,19 +331,19 @@ nav body .confirm_links a {
   font-weight: 600;
   background-color: #005096;
 }
-nav body .confirm_links a:hover {
+body .confirm_links a:hover {
   background-color: #006496;
 }
-nav body .confirm_links a.log_out {
+body .confirm_links a.log_out {
   background-color: rgba(255, 0, 0, 0.75);
 }
-nav body .confirm_links a.log_out:hover {
+body .confirm_links a.log_out:hover {
   background-color: red;
 }
-nav body .confirm_links a.log_out.largebtn {
+body .confirm_links a.log_out.largebtn {
   width: 20em;
 }
-nav body .login_container, nav body .register_container, nav body .write_review_container, nav body .password_container {
+body .login_container, body .register_container, body .write_review_container, body .password_container {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
@@ -356,7 +351,7 @@ nav body .login_container, nav body .register_container, nav body .write_review_
   text-align: center;
   width: 50%;
 }
-nav body .login_container input[type=text], nav body .register_container input[type=text], nav body .write_review_container input[type=text], nav body .password_container input[type=text] {
+body .login_container input[type=text], body .register_container input[type=text], body .write_review_container input[type=text], body .password_container input[type=text] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -365,7 +360,7 @@ nav body .login_container input[type=text], nav body .register_container input[t
   border-radius: 4px;
   box-sizing: border-box;
 }
-nav body .login_container input[type=email], nav body .register_container input[type=email], nav body .write_review_container input[type=email], nav body .password_container input[type=email] {
+body .login_container input[type=email], body .register_container input[type=email], body .write_review_container input[type=email], body .password_container input[type=email] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -374,7 +369,7 @@ nav body .login_container input[type=email], nav body .register_container input[
   border-radius: 4px;
   box-sizing: border-box;
 }
-nav body .login_container input[type=submit], nav body .register_container input[type=submit], nav body .write_review_container input[type=submit], nav body .password_container input[type=submit] {
+body .login_container input[type=submit], body .register_container input[type=submit], body .write_review_container input[type=submit], body .password_container input[type=submit] {
   width: 100%;
   background-color: #4CAF50;
   color: white;
@@ -384,7 +379,7 @@ nav body .login_container input[type=submit], nav body .register_container input
   border-radius: 4px;
   cursor: pointer;
 }
-nav body .login_container input[type=password], nav body .register_container input[type=password], nav body .write_review_container input[type=password], nav body .password_container input[type=password] {
+body .login_container input[type=password], body .register_container input[type=password], body .write_review_container input[type=password], body .password_container input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -393,7 +388,7 @@ nav body .login_container input[type=password], nav body .register_container inp
   border-radius: 4px;
   box-sizing: border-box;
 }
-nav body .login_container input[type=date], nav body .register_container input[type=date], nav body .write_review_container input[type=date], nav body .password_container input[type=date] {
+body .login_container input[type=date], body .register_container input[type=date], body .write_review_container input[type=date], body .password_container input[type=date] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -402,7 +397,7 @@ nav body .login_container input[type=date], nav body .register_container input[t
   border-radius: 4px;
   box-sizing: border-box;
 }
-nav body .login_container textarea, nav body .register_container textarea, nav body .write_review_container textarea, nav body .password_container textarea {
+body .login_container textarea, body .register_container textarea, body .write_review_container textarea, body .password_container textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -411,29 +406,29 @@ nav body .login_container textarea, nav body .register_container textarea, nav b
   border-radius: 4px;
   box-sizing: border-box;
 }
-nav body .login_container input[type=submit]:hover, nav body .register_container input[type=submit]:hover, nav body .write_review_container input[type=submit]:hover, nav body .password_container input[type=submit]:hover {
+body .login_container input[type=submit]:hover, body .register_container input[type=submit]:hover, body .write_review_container input[type=submit]:hover, body .password_container input[type=submit]:hover {
   background-color: #45a049;
 }
-nav body .login_container a, nav body .register_container a, nav body .write_review_container a, nav body .password_container a {
+body .login_container a, body .register_container a, body .write_review_container a, body .password_container a {
   text-decoration: none;
   font-weight: 300;
   text-transform: uppercase;
 }
-nav body .login_container h5, nav body .register_container h5, nav body .write_review_container h5, nav body .password_container h5 {
+body .login_container h5, body .register_container h5, body .write_review_container h5, body .password_container h5 {
   color: red;
 }
-nav body .about p, nav body .about h {
+body .about p, body .about h {
   color: black;
 }
-nav body .profile h5 {
+body .profile h5 {
   color: red;
   text-align: center;
 }
-nav body .profile p {
+body .profile p {
   color: black;
   text-align: center;
 }
-nav body .profile table {
+body .profile table {
   width: 50%;
   margin: 0 auto;
   table-layout: auto;
@@ -441,11 +436,11 @@ nav body .profile table {
   border-spacing: 0;
   border: 1px solid #ddd;
 }
-nav body .profile table th, nav body .profile table td {
+body .profile table th, body .profile table td {
   text-align: left;
   padding: 10px;
 }
-nav body .profile table tr:nth-child(even) {
+body .profile table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
