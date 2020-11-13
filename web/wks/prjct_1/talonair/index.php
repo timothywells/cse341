@@ -188,7 +188,7 @@ switch ($action){
                 break;
                     }
                 }
-            include 'index.php?action=admin';
+            include 'view/admin.php';
         break;
     //
 
@@ -212,7 +212,7 @@ switch ($action){
             $deleteCustomer = $_GET['get_customer_id'];
             delete_cust_profile($deleteCustomer); //Referes to functions.php
             $profile_del_message = "Profile Deleted";
-            include 'index.php?action=admin';
+            include 'view/admin.php';
         break;  
     //
 
@@ -222,7 +222,7 @@ switch ($action){
             $messageID = $_GET['get_message_by_id'];
             delete_message($messageID);
             $message_del_message = "Message Deleted";
-            include 'index.php?action=admin';
+            include 'view/admin.php';
         break;
     //
 
@@ -231,7 +231,7 @@ switch ($action){
             $reviewID = $_GET['get_review_by_id'];
             admin_delete_review($reviewID);
             $review_del_message = "Review Deleted";
-            include 'index.php?action=admin';
+            include 'view/admin.php';
         break;
     //
 
