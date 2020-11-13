@@ -6,7 +6,7 @@ if($_SESSION['loggedIn'] == true){
     $loginLinks = "<a href=index.php?action=profile>Profile/Logout</a>";
     }
 if($_SESSION['clearance'] == true){
-    $loginLinks = "<a href=index.php?action=admin>Adminisrtator</a>";
+    $loginLinks = "<a href=index.php?action=profile>Adminisrtator</a>";
 }
 ?>
 <ul>
