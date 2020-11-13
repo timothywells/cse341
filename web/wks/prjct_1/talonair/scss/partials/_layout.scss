@@ -69,6 +69,11 @@ nav{
 			line-height: 3em;
 			margin: 0;
 			padding: 0;
+			.logout{
+				background-color: red;
+				&:hover:not(.active) {
+					background-color: rgba(255, 0, 0, 0.75);
+			}
 			a{
 				display: block;
 				color: white;
@@ -80,6 +85,7 @@ nav{
 		}
 	}
 }
+
 //Body Formatting
 body{
 	margin: 0;
@@ -224,7 +230,7 @@ body{
 				}
 			&.largebtn{
 				width: 20em;
-			}
+				}
 			}
 		}
 	}
@@ -303,8 +309,8 @@ body{
 		}
 	h5{
 		color: red;
-	}
-}
+		}
+	}	
 
 	//About Page Format
 	.about{
@@ -340,6 +346,7 @@ body{
 			}
 		}
 	}
+}
 //Body End
 
 
@@ -367,5 +374,3 @@ footer{
 		}
 	}
 }
-
-	
