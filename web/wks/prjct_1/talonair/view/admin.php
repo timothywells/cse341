@@ -51,7 +51,7 @@
                 </div>
         </div>
     <br>
-        <div class="formatted_view profile">
+        <div class="formatted_view adminprofile">
                 <h3 class="center">Messages</h3>
                     <?php if(isset($message_del_message)){echo "<h5>" . $message_del_message . "</h5>";}; ?>
                     <div class="messages">

@@ -432,6 +432,10 @@ body .login_container h5, body .register_container h5, body .write_review_contai
 body .about p, body .about h {
   color: black;
 }
+body .adminprofile {
+  color: red;
+  text-align: center;
+}
 body .profile h5 {
   color: red;
   text-align: center;
