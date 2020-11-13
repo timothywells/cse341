@@ -98,7 +98,7 @@ switch ($action){
                 //     include 'index.php?action=admin';
                 // break;
                 // include 'view/profile.php';
-                include 'index.php?action=profile';
+                include "index.php?action=profile";
             break;
         //
 
