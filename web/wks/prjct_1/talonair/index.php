@@ -95,10 +95,11 @@ switch ($action){
                 $_SESSION['clearance'] = $customerData['clearance'];
                 $_SESSION['loggedIn'] = true;
                 // if ($_SESSION['clearance'] == true || isset($_SESSION['clearance']) == true){
-                //     include 'index.php?action=admin';
+                //     include 'view/admin.php';
                 // break;
-                // include 'view/profile.php';
-                include "index.php?action=profile";
+                // }
+                include 'view/profile.php';
+                // include "index.php?action=profile";
             break;
         //
 
@@ -196,12 +197,12 @@ switch ($action){
     //Admin Profile with Messages, Reviews and Customer Infromation
         case 'admin':
             //Add content variables here
-            $messages_list = get_message_list();
-            $message_table = message_table($messages_list);
-            $admin_get_reviews = get_reviews();
-            $admin_reviews_table = admin_reviews_table($admin_get_reviews);
-            $get_profiles = get_profile();
-            $profiles_table = profiles_table($get_profiles);
+            // $messages_list = get_message_list();
+            // $message_table = message_table($messages_list);
+            // $admin_get_reviews = get_reviews();
+            // $admin_reviews_table = admin_reviews_table($admin_get_reviews);
+            // $get_profiles = get_profile();
+            // $profiles_table = profiles_table($get_profiles);
             include 'view/admin.php';
         break;
     //
