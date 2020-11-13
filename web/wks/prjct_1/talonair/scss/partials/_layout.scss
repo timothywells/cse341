@@ -80,8 +80,14 @@ nav{
 				display: block;
 				color: white;
 				text-decoration: none;
-					&:hover:not(.active) {
+					&:hover {
     					background-color: #3498D8;
+				}
+				.logout{
+					background-color: red;
+						&:hover {
+							background-color: rgba(255, 0, 0, 0.849);
+					}
 				}
 				
 			}

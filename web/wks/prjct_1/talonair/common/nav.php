@@ -4,11 +4,11 @@ if($_SESSION['loggedIn'] == false){
 }
 if($_SESSION['loggedIn'] == true){
     $loginLinks = "<a href=index.php?action=profile>Profile</a>";
-    $logOut = "<a href=index.php?action=log_out>Logout</a>";
+    $logOut = "<li><a class=logout href=index.php?action=log_out>Logout</a></li>";
     }
 if($_SESSION['clearance'] == true){
     $loginLinks = "<a href=index.php?action=profile>Adminisrtator</a>";
-    $logOut = "<li class=logout><a href=index.php?action=log_out>Logout</a></li>";
+    $logOut = "<li><a class=logout href=index.php?action=log_out>Logout</a></li>";
 }
 ?>
 <ul>
