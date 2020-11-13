@@ -77,7 +77,7 @@ nav{
 					&:hover:not(.active) {
     					background-color: #3498D8;
 				}
-				&.logout{
+				.logout{
 					background-color: red;
 						&:hover:not(.active) {
 							background-color: rgba(255, 0, 0, 0.849);

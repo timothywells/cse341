@@ -216,10 +216,10 @@ nav ul li a {
 nav ul li a:hover:not(.active) {
   background-color: #3498D8;
 }
-nav ul li a.logout {
+nav ul li a .logout {
   background-color: red;
 }
-nav ul li a.logout:hover:not(.active) {
+nav ul li a .logout:hover:not(.active) {
   background-color: rgba(255, 0, 0, 0.849);
 }
 
