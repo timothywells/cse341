@@ -15,12 +15,12 @@
                 include 'view/login.php';
                 exit;
             }
-            // if($_SESSION['clearance'] == false){
-            //     if($_SESSION['clearance'] == true){
-            //         include 'index?action=admin';
-            //         exit;
-            //             }
-            //         }
+            if($_SESSION['clearance'] == false){
+                if($_SESSION['clearance'] == true){
+                    include 'index?action=admin';
+                    exit;
+                        }
+                    }
         }
         
     
