@@ -94,10 +94,10 @@ switch ($action){
                 $_SESSION['phone'] = $customerData['phone'];
                 $_SESSION['clearance'] = $customerData['clearance'];
                 $_SESSION['loggedIn'] = true;
-                // if ($_SESSION['clearance'] == true || isset($_SESSION['clearance']) == true){
-                //     include 'view/admin.php';
-                // break;
-                // }
+                if ($_SESSION['clearance'] == true || isset($_SESSION['clearance']) == true){
+                    include 'view/admin.php';
+                break;
+                }
                 include 'view/profile.php';
                 // include "index.php?action=profile";
             break;
