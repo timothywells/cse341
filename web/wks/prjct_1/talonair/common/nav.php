@@ -17,5 +17,5 @@ if($_SESSION['clearance'] == true){
     <li><a href="index.php?action=services">Services</a></li>
     <li><a href="index.php?action=reviews">Reviews</a></li>
     <li><?php echo $loginLinks ?></li>
-    <?php echo $logout ?>
+    <?php echo $logOut ?>
 </ul>
