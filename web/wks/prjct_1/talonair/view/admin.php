@@ -1,6 +1,7 @@
 <?php 
     login_check();
     admin_check();
+    admin_var();
     $pagetitle = 'Talon Air, Inc. | Admin Home';
 ?>
 <!DOCTYPE html>

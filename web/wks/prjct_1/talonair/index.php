@@ -94,7 +94,7 @@ switch ($action){
                 $_SESSION['phone'] = $customerData['phone'];
                 $_SESSION['clearance'] = $customerData['clearance'];
                 $_SESSION['loggedIn'] = true;
-                if ($_SESSION['clearance'] == true || isset($_SESSION['clearance']) == true){
+                if ($_SESSION['clearance'] == true){
                     include 'view/admin.php';
                 break;
                 }

@@ -26,13 +26,16 @@
     
     //Admin Check
         function admin_check(){
-            if(isset($_SESSION['clearance'])){
+            if($_SESSION['clearance'] == true){
                 if($_SESSION['clearance'] == false){
                     $admin_fail_message = "You must be an Admin";
                     include 'view/profile.php';
                     exit;
-                        }
-                    }
+                }
+            }
+        }
+    //Admin Get Variables
+        function admin_var(){
             $messages_list = get_message_list();
             $message_table = message_table($messages_list);
             $admin_get_reviews = get_reviews();
@@ -40,7 +43,6 @@
             $get_profiles = get_profile();
             $profiles_table = profiles_table($get_profiles);
         }
-    //
     //Registration check
         // function reg_check(){
         //     if(isset($_SESSION['registered']) == true){
