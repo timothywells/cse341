@@ -208,6 +208,12 @@ nav ul li {
     display: inline;
   }
 }
+nav ul li .logout {
+  background-color: red;
+}
+nav ul li .logout:hover:not(.active) {
+  background-color: rgba(255, 0, 0, 0.849);
+}
 nav ul li a {
   display: block;
   color: white;
@@ -215,12 +221,6 @@ nav ul li a {
 }
 nav ul li a:hover:not(.active) {
   background-color: #3498D8;
-}
-nav ul li a .logout {
-  background-color: red;
-}
-nav ul li a .logout:hover:not(.active) {
-  background-color: rgba(255, 0, 0, 0.849);
 }
 
 body {
