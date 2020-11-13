@@ -15,9 +15,9 @@
                 include 'view/login.php';
                 exit;
             }
-            if((isset($_SESSION['clearance']))){
+            if(isset($_SESSION['clearance'])){
                 if($_SESSION['clearance'] == true){
-                    include 'index?action=admin';
+                    include 'index.php?action=admin';
                     exit;
                 }
             }
@@ -26,7 +26,7 @@
     
     //Admin Check
         function admin_check(){
-            if($_SESSION['clearance'] == true){
+            if(isset($_SESSION['clearance'])){
                 if($_SESSION['clearance'] == false){
                     $admin_fail_message = "You must be an Admin";
                     include 'view/profile.php';
