@@ -12,11 +12,24 @@ $action = filter_input(INPUT_POST, 'action');
   }
  }
 
+
+
 /******************** INDEX SWITCHING INFORMATION ********************/
 switch ($action){
     case 'home':
         include 'view/home.php';
     break;
+
+    /******************** Login/Register or Pofile/Logout ********************/
+    // case 'loginLinks':
+    //     if($_SESSION['loggedIn'] == false){
+    //         $loginStatus = '';
+    //     }
+    
+    // {($_SESSION['loggedIn'])
+    //     Log in or Register
+
+    // break;
 
     /******************** SEND MESSAGE FROM HOME SCREEN INFORMATION ********************/
         //Collect Message information send information to MESSAGE_RECORD in FUNCTIONS.PHP

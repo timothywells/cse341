@@ -34,26 +34,20 @@
                 }
             }
         }
-    //Admin Get Variables
-        function admin_var(){
-            $messages_list = get_message_list();
-            $message_table = message_table($messages_list);
-            $admin_get_reviews = get_reviews();
-            $admin_reviews_table = admin_reviews_table($admin_get_reviews);
-            $get_profiles = get_profile();
-            $profiles_table = profiles_table($get_profiles);
+
+    //Link Change
+        function loginLink(){
+            if($_SESSION['loggedIn'] == false || isset($_SESSION['loggedIn']) == false){
+                $loginLinks = "<a href='index.php?action=login'>Log in or Register</a>";
+            }
+            if($_SESSION['loggedIn'] == true || isset($_SESSION['loggedIn']) == true){
+                $loginLinks = "<a href='index.php?action=profile'>Profile/Logout</a>";
+                if($_SESSION['clearance'] == true || isset($_SESSION['clearance']) == true){
+                    $loginLinks = "<a href='index.php?action=admin'>Adminisrtator</a>";
+                }
+            }
         }
-    //Registration check
-        // function reg_check(){
-        //     if(isset($_SESSION['registered']) == true){
-        //         include 'view/confirm_register.php';
-        //         exit;
-        //     }
-        //     if(!(isset($_SESSION['registered']))){
-        //         $reg_message = "You must register first";
-        //         include 'view/register.php';
-        //     }
-        // }
+
 
 /******************** SEND A MESSAGE INFORMATION ********************/
     //Record Message from index/send_message
