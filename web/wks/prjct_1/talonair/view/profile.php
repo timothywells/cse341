@@ -38,7 +38,7 @@
                     <a class="links" href="index.php?action=change_profile">Update Profile</a>
                     <a class="links" href="index.php?action=write_review">Write a Review</a>
                     <a class="links" href="index.php?action=change_password">Change Password</a>
-                    <a class="log_out" href="index.php?action=log_out">Log Out</a>
+                    <!-- <a class="log_out" href="index.php?action=log_out">Log Out</a> -->
                 </div>
         </div>
     </main>
