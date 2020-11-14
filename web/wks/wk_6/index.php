@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Week 5 | CSE 341 - Back End Development II</title>
+        <title>Week 6 | CSE 341 - Back End Development II</title>
         <?php include $_SERVER['DOCUMENT_ROOT'].'/common/head.php'; ?>
     </head>
     <header>
@@ -17,6 +17,7 @@
             <p>This week we learned about how to access, select, insert, update and change our databases. Which is a major portion of finishing the project but getting it all to work took far longer than I expected.</p>
         <h2>Team Activity</h2>
             <p>This week the team worked on setting up PHP files to access the database so that the sciptures that we entered the week before could be searched by the user and be brought back to them to read.</p>
+            <p>Repository - <a href="https://github.com/Blake-Collin/cs313-php-Channel1/tree/master/06Teach">Here</a></p>
         <h2>Assignment - Database Update</h2>
             <h3>Assignment Links</h3>
                 <p>Talon Air Website - <a href="https://morning-inlet-48465.herokuapp.com/wks/prjct_1/talonair/">Here</a></p>
