@@ -15,6 +15,11 @@
                 include 'view/login.php';
                 exit;
             }
+            if($_SESSION['loggedIn'] == false){
+                $login_fail_message = "You Must Sign in or Register";
+                include 'view/login.php';
+            exit;
+            }
             // if(isset($_SESSION['clearance'])){
             //     if($_SESSION['clearance'] == true){
             //         include 'view/admin.php';
