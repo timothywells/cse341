@@ -21,7 +21,7 @@
         <h2>Assignment - Hello World Node.js</h2>
             <h3>Assignment Links</h3>
                 <p>You can find the assignment in my node.js file on my repository.</p>
-                <p>Repository - <a href="https://github.com/timothywells/cse341">Here</a></p>
+                <p>Repository - <a href="https://github.com/timothywells/cse341/tree/master/web/node.js">Here</a></p>
             <h3>Briefly describe any pieces of the assignment that are not yet working correctly.</h3>
                 <p>At the moment I have everything working within the application.</p>
             <h3>Briefly describe the "coolest" thing you learned while completing this assignment.</h3>
