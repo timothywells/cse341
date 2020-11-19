@@ -13,13 +13,31 @@
     </nav> 
     <main>
         <h1>Week 8</h1>
-            <h2>Team Assignment</h2>
-                <p>This week we created a database, added information to it, stylized a site, set up a way to search for information on that database, retrieve it and then print that information for the user. This was an especially interesting week because of the search engine part. I plan on using it on my second project.</p>
-                <p>Repository - <a href="https://github.com/Blake-Collin/cs313-php-Channel1/tree/master/05Teach">Here</a></p>
-            <h2>Individual Assignment</h2>
-                <p>This week we needed to set up the visual look of our site and connect something to the database that can write and read the information to the database. In this case it is the Contact form. You can see the stored information by clicking Messages. This page will eventually be behind a login check for the admin to view.</p>
-                <p>Talon Air Website - <a href="https://morning-inlet-48465.herokuapp.com/wks/prjct_1/talonair/">Here</a></p>
-                <p>Repository - <a href="https://github.com/timothywells/cse341/tree/master/web/wks/prjct_1/talonair">Here</a></p>
+        <h2>Reading</h2>
+            <p></p>
+        <h2>Team Activity</h2>
+            <p>This week we worked on the learnyounode project that can be found at <a href="https://nodeschool.io/">nodeschool.io</a></P>
+            <p>Repository -  the repository doesn't exist, sorry.</p>
+        <h2>Assignment - Hello World Node.js</h2>
+            <h3>Assignment Links</h3>
+                <p>You can find the assignment in my node.js file on my repository.</p>
+                <p>Repository - <a href="https://github.com/timothywells/cse341">Here</a></p>
+            <h3>Briefly describe any pieces of the assignment that are not yet working correctly.</h3>
+                <p>At the moment I have everything working within the application.</p>
+            <h3>Briefly describe the "coolest" thing you learned while completing this assignment.</h3>
+                <p>Honestly, this project being an introduction to NODE.js was cool enough. This is my first experience in using NODE and I have wanted to learn it since it is something that constantly shows up as a requirement for anything related to the internet.</p>
+            <h3>Describe anything you did to go above and beyond with this assignment.</h3>
+                <p>As for above and beyond I mixed what was shown in the example with what I learned on the NODE home website. I also did some html editing but I could have added some CSS I assume.</p>
+            <h3>Please select the category you feel best describes your assignment:</h3>
+                <ol>
+                    <li>Some attempt was made</li>
+                    <li>Developing, but significantly deficient</li>
+                    <li>Slightly deficient, but still mostly adequate</li>
+                    <li><b>Meets requirements</b></li>
+                    <li>Shows creativity and excels above and beyond requirements</li>
+                </ol>
+            <h3>Provide a brief justification (1-2 sentences) for selecting that category.</h3>
+                <p>Since I didn’t do anything to fancy like add CSS or any real styling I couldn’t justify the full points. So at the very least it meets the requirements.</p>
     </main>
 </div>
     <footer>

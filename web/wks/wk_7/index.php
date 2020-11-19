@@ -19,6 +19,7 @@
             <h2>Team Assignment</h2>
                 <p>Our team this week ended up doing this assignment twice. Which isn't a problem its just that only Collin and I were able to meet Tuesday but the other two did could not meet. While I met with Collin it was difficult to follow what he was doing because he had already used what was being taught in the assignment on his project. So instead of making it simple for me to follow and understand he duplicated his content from his site and spent the better part of two hours altering while I could not follow along. The following Saturday the other members of the group met and I joined them so as to get a better understanding of how to use security authentication. I was able to use what I learned that day for my project.</p>                
                 <p>Repository - <a href="https://github.com/Blake-Collin/cs313-php-Channel1/tree/master/07Teach">Here</a></p>
+            
             <h2>Project 1 Submission</h2>
             
                 <h3>Project Title / One sentence description:</h3>
