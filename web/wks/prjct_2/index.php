@@ -27,7 +27,8 @@
                 <br>
                 <p>I am not sure how I will be using AJAX. I have tried to familiarize myself with it but I have gotten better at JavaScript as it is in its current state. However, some of the upcoming assignments will cover that.</p>
             <h3>User Accounts / Sessions</h3>
-                <p>I will try and implement a simple username, password and email system like the one that I have for my other project but done locally and verified on the server. Part of this system is to allow the user the opportunity to save books to a favorites list.</p>    
+                <p>I will try and implement a simple username, password and email system like the one that I have for my other project but done locally and verified on the server. Part of this system is to allow the user the opportunity to save books to a favorites list.</p>
+        <h2>Submission</h2>
     </main>
 </div>
     <footer>
