@@ -1,8 +1,14 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #E6E6E6;
     font-family: helvetica;
     margin: 0px auto;
     padding: 0px;
+    width: 900px;
 }
 
 #cart_button {
@@ -32,8 +38,6 @@ body {
 #mycart {
     display: none;
     background-color: white;
-    width: 800px;
-    margin-left: 100px;
 }
 
 #mycart .cart_items {
@@ -60,22 +64,16 @@ h1 {
     text-align: center;
 }
 
-#item_div {
-    float: left;
-    margin-left: 60px;
-}
 
 .items {
     padding: 20px;
     background-color: white;
     width: 250px;
     height: 350px;
-    margin-top: 20px;
+    margin: 20px 0;
     box-shadow: 0px 0px 10px 0px #A4A4A4;
     box-sizing: border-box;
     float: left;
-    margin: 20px;
-    position: relative;
 }
 
 .items:hover input[type="button"] {
