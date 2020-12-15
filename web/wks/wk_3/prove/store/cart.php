@@ -1,1 +1,0 @@
-<?php require 'common/session.php'?>

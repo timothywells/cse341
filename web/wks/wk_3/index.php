@@ -18,6 +18,7 @@
             <p>Repository - <a href="https://github.com/Blake-Collin/cs313-php-Channel1/tree/master/03Teach">Here</a></p>
         <h2>Individual Assignment</h2>
             <p>Unfortunately the shopping cart was too overwhelming for me and I let it take up too much of my time, which led to me being late for all my other assignments up to Week 5. I plan on coming back to this as soon as I can in order to get it done and get some credit. I have an idea on what to do but the assignment requires using sessions instead of a database. So it will require a little more work but I have some information down.</p>
+            <p><a href="https://morning-inlet-48465.herokuapp.com/wks/wk_3/prove/pindex.php">Prove</a></p>
             <p>Repository - <a href="https://github.com/timothywells/cse341/tree/master/web/wks/wk_3/prove">Here</a></p>
     </main>
 </div>
