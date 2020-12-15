@@ -7,7 +7,7 @@ body {
     background-color: #E6E6E6;
     font-family: helvetica;
     margin: 0px auto;
-    padding: 0px;
+    padding: 20px 0;
     min-width: 600px;
     max-width: 1200px;
 }
@@ -30,7 +30,6 @@ body {
     border-radius: 100%;
     height: 30px;
     width: 30px;
-    margin-top: 0px;
     color: white;
     font-size: 17px;
     cursor: pointer;
@@ -65,7 +64,6 @@ h1 {
     text-align: center;
 }
 
-
 .items {
     padding: 20px;
     background-color: white;
@@ -92,6 +90,7 @@ h1 {
     color: white;
     top: 325px;
     cursor: pointer;
+    position: absolute;
 }
 
 .items img {
