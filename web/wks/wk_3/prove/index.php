@@ -12,7 +12,6 @@ session_start();
 </head>
 
 <body>
-    <main>
         <div id="product-display">
             <h2 class="title"><a href="shop.php">Our Products</a></h2>
         </div>
@@ -22,6 +21,8 @@ session_start();
         </p>
         <div id="mycart">
         </div>
+    <main>
+        
         <div id="item_div">
             <form class="items" id="item1" action="#" onclick="return addToCart(this);">
                 <img src="images/products/bomb.png">
