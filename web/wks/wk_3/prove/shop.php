@@ -57,6 +57,6 @@ session_start();
             </div>
         </section>
     </main>
-    <script type="text/javascript" src="js/shopping-cart.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

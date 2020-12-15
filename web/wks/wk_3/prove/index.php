@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <title>Home | Prove - Shopping Cart | CSE341 - Back End Development II</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&Oswald&display=swap" rel="stylesheet">
 </head>
 
@@ -73,6 +73,6 @@ session_start();
         </div>
         </div>
     </main>
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
