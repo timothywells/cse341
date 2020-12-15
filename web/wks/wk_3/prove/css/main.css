@@ -85,6 +85,7 @@ h1 {
 .items input[type="button"] {
     display: none;
     background: none;
+    background-color: rgba(0, 0, 0, 0);
     background-color: #3ADF00;
     width: 200px;
     height: 50px;
@@ -95,6 +96,7 @@ h1 {
     top: 150px;
     left: 25px;
     cursor: pointer;
+    position: relative;
 }
 
 .items img {
